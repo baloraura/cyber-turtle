@@ -3,7 +3,6 @@
     <nav>
       <a href="{{ '/' | relative_url }}">Home</a>
       <a href="{{ '/about' | relative_url }}">About</a>
-      <a href="{{ '/posts' | relative_url }}">Posts</a>
     </nav>
     <h1>{{ page.title }}</h1>
 
@@ -14,6 +13,8 @@
     </li>
   {% endfor %}
     </section>
+  
+    
     {% include footer.html %}
   </body>
 </html>
