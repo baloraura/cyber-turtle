@@ -6,4 +6,4 @@ layout: default
 title: Home
 ---
 
-{% include_relative homepage/index.html %}
+{% include_relative _layouts/default.html %}
