@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>A Secret Mission: ICA Vulnerable Machine Walkthrough | Cyber Turtle</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="A Secret Mission: ICA Vulnerable Machine Walkthrough" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="“According to information from our intelligence network, ICA is working on a secret project. We need to find out what the project is." />
+<meta property="og:description" content="“According to information from our intelligence network, ICA is working on a secret project. We need to find out what the project is." />
+<link rel="canonical" href="http://localhost:4000/post/hacking/2023/06/05/ICA_walkthrough.html" />
+<meta property="og:url" content="http://localhost:4000/post/hacking/2023/06/05/ICA_walkthrough.html" />
+<meta property="og:site_name" content="Cyber Turtle" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-06-05T18:53:33-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="A Secret Mission: ICA Vulnerable Machine Walkthrough" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-06-05T18:53:33-04:00","datePublished":"2023-06-05T18:53:33-04:00","description":"“According to information from our intelligence network, ICA is working on a secret project. We need to find out what the project is.","headline":"A Secret Mission: ICA Vulnerable Machine Walkthrough","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/post/hacking/2023/06/05/ICA_walkthrough.html"},"url":"http://localhost:4000/post/hacking/2023/06/05/ICA_walkthrough.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Cyber Turtle" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Cyber Turtle</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/">Home</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">A Secret Mission: ICA Vulnerable Machine Walkthrough</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2023-06-05T18:53:33-04:00" itemprop="datePublished">Jun 5, 2023
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>“According to information from our intelligence network, ICA is working on a secret project. We need to find out what the project is.</p>
+
+<p>Once you have the access information, send them to us. We will place a backdoor to access the system later. You just focus on what the project is. You will probably have to go through several layers of security. The Agency has full confidence that you will successfully complete this mission. Good Luck, Agent!”</p>
+
+<p>ICA: 1 is a vulnerable machine found on Vulnhub, rated easy. From the description, I knew this was a top secret mission only the top agents in the world could undertake.</p>
+
+<p>To start out, after getting the machine set up on VirtualBox, I made sure it was attached to the same network as my Kali machine.</p>
+
+<p>To do that, I used the nmap command. I like to ouput the results of those scans to a file.</p>
+
+<p>Ports 22, 80, and 3306 were open. I went to the http website to see what I could find.</p>
+
+<p>I inspected the HTML and JavaScript to see if there was anything I could find, but nothing there stood out to me.</p>
+
+<p>The next step was to check the versions of the services that were running, see if there were any vulnerabilities I could exploit. I used nmap again, this time with -sV to get the versions.</p>
+
+<p>And then I did a dirb scan of the website, to find some directories worth looking into.</p>
+
+<p>While that was going on, I researched some vulnerabilties for those versions. I didn’t find anything useful, although that version of apache httpd did have a pretty serious vulnerability, I didn’t think I would be able to exploit it.</p>
+
+<p>I instead decided to look for vulnerabilities in QDPM, the web project management service the website was running. I used searchsploit to try to find something.</p>
+
+<p>Password exposure stood out to me, and it was for the version this website was running too. I looked further into it.</p>
+
+<p>“Password and connection string for the database are stored in a yml file”. This website was also running mysql, so maybe I could find some credentials there. I tested that out and went to the the link in the description: http://192.168.191.6/core/config/databases.yml in this case, and I found what I was looking for.</p>
+
+<p>With a username and password, it was time to try to look around the database. I used mysql to get in, and with that username and password I was able to gain access.</p>
+
+<p>And then it was time to poke around. First thing to do was to see the databases.</p>
+
+<p>Staff looked the most intriguing. I selected staff, and I did find some really juicy information.</p>
+
+<p>Usernames and passwords. The machine was also running ssh, so I might have just found my way in.</p>
+
+<p>First thing to do was to get all the usernames into a text file. I did that using leafpad, but any text editor of choice would do. The second thing to do was to decode the passwords. I did that on the command line, but any online decoder (like Cyberchef) would do.</p>
+
+<p>Then, it was time to use the usernames and passwords to brute force the login. I did that using hydra.</p>
+
+<p>Now I had some passwords that worked, so it was time to get in. I used Travis and his credentials to get in. Although seeing as how Dexter’s role was as a Cyber Security Analyst, maybe I should have used his credentials for the irony?</p>
+
+<p>I was in, and I immediately used the ls command to see what I could find.</p>
+
+<p>Hooray! The first flag! I transfered it over to my Kali machine using scp, and now it was time to get the root flag.</p>
+
+<p>I had another look around. I looked to see what kind of active processes were running and checked to see if I could get the /etc/shadow file (the file with all the hashed passwords).</p>
+
+<p>Some screenshots of my reconnaissance</p>
+
+<p>And then I ran this little command, and found something very interesting.</p>
+
+<p>So this is the find command, with specific parameters to find binaries to run as the owner, not the user who started them. This is a useful privilege escalation technique, because those binaries can be used to gain higher access.</p>
+
+<p>That first binary, /opt/get_access, looked really promising.</p>
+
+<p>I first ran it, and got this output. I used the strings command to take a look at the binary’s human readable parts (I did not take a screenshot, but I should have). Using the strings command on binaries is useful because you can see if the binary calls on other binaries. If their full path isn’t used, then that is a potential security risk.</p>
+
+<p>So this /opt/get_access binary was calling on the cat command. Seeing an exploit, I created a bash script, put it in a file called cat and changed it so it was executable.</p>
+
+<p>There’s actually a big mistake here
+I then changed the PATH variable to include the /tmp directory. When you type a command, ‘ls’ for instance, Linux looks in the PATH variable to see where that binary might be located. Adding the /tmp directory means when the ‘cat’ command is called, it’ll look in there instead of the usual place.</p>
+
+<p>I then called on the /opt/get_access binary in order to get to root.</p>
+
+<p>Unfortunately, the first time I did it, I made a mistake and put ‘bin/bash’ instead of ‘/bin/bash’ in the binary. So I ran the command a few dozen times and wondered why my sinister plot to gain root access had failed.</p>
+
+<p>I did a quick fix, and then when I called on it again, I became root.</p>
+
+<p>I had to use the full path for the ‘cat’ command, due to my previous machinations, but I got the root flag.</p>
+
+
+  </div><a class="u-url" href="/post/hacking/2023/06/05/ICA_walkthrough.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Cyber Turtle</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Cyber Turtle</li><li><a class="u-email" href="mailto:lukegearty@gmail.com">lukegearty@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/LukeGearty"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">LukeGearty</span></a></li><li><a href="https://www.linkedin.com/in/luke-gearty"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">luke-gearty</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>A cybersecurity student writing about cybersecurity things</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

