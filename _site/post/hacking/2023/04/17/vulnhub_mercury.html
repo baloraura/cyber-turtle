@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>The Planets: Mercury Walkthrough | Cyber Turtle</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="The Planets: Mercury Walkthrough" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="When I went on to Vulnhub to look for a vulnerable machine to test my hacking skills, I found one called The Planets: Earth. I immediately started with that one, not knowing it was the third in a series. For this post, I’m going to be going through the first one, Mercury. I would eventually like to get to Venus at some point as well." />
+<meta property="og:description" content="When I went on to Vulnhub to look for a vulnerable machine to test my hacking skills, I found one called The Planets: Earth. I immediately started with that one, not knowing it was the third in a series. For this post, I’m going to be going through the first one, Mercury. I would eventually like to get to Venus at some point as well." />
+<link rel="canonical" href="http://localhost:4000/post/hacking/2023/04/17/vulnhub_mercury.html" />
+<meta property="og:url" content="http://localhost:4000/post/hacking/2023/04/17/vulnhub_mercury.html" />
+<meta property="og:site_name" content="Cyber Turtle" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-17T06:00:00-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Planets: Mercury Walkthrough" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-17T06:00:00-04:00","datePublished":"2023-04-17T06:00:00-04:00","description":"When I went on to Vulnhub to look for a vulnerable machine to test my hacking skills, I found one called The Planets: Earth. I immediately started with that one, not knowing it was the third in a series. For this post, I’m going to be going through the first one, Mercury. I would eventually like to get to Venus at some point as well.","headline":"The Planets: Mercury Walkthrough","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/post/hacking/2023/04/17/vulnhub_mercury.html"},"url":"http://localhost:4000/post/hacking/2023/04/17/vulnhub_mercury.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Cyber Turtle" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Cyber Turtle</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/">Home</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">The Planets: Mercury Walkthrough</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2023-04-17T06:00:00-04:00" itemprop="datePublished">Apr 17, 2023
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>When I went on to Vulnhub to look for a vulnerable machine to test my hacking skills, I found one called The Planets: Earth. I immediately started with that one, not knowing it was the third in a series. For this post, I’m going to be going through the first one, Mercury. I would eventually like to get to Venus at some point as well.</p>
+
+<p>There are two flags I needed to look for, a user flag and a root flag. The first thing I did was make a directory on the Kali machine that is going to hold all the enumeration/reconnaissance information. I didn’t want to have to run multiple nmap scans every time I wanted to check something, so I was going to make a habit of putting it all into files.</p>
+
+<p>After setting up the machines, I wanted to figure out the IP address for the vulnerable machine. I did it the same way I did it in the Earth walkthrough, with an nmap scan of the network. The -o option for nmap puts it into a text file.</p>
+
+<p>The IP address is 192.168.56.24, and there are two ports open: port 22 for SSH, and port 8080 for HTTP. After that, I wanted to check out the web application. Since it’s on port 8080, I would have to browse to 192.168.56.24:8080.</p>
+
+<p>Initially, there is nothing there. Checking the page source also didn’t give me anything fruitful, so I went back to the command line to do a few scans.</p>
+
+<p>I don’t know why all that information was in the nmap scan, as I had never seen that happen. But I got the service versions for SSH and http, and I got the operating system (linux 4.15–5.6).</p>
+
+<p>I then used dirb to try to enumerate directories on the service. Doing that returned one directory, the robots.txt file. Going to that file didn’t really return anything useful.</p>
+
+<p>I did find, however, that trying directories that don’t exist gets a debug screen instead of the standard 404 error. Debugs are very useful for attackers, because they give information about how the service is operating. The more information it reveals, the better.</p>
+
+<p>This one gives a directory, /mercuryfacts.</p>
+
+<p>This page has two pages: the first one is a fact about Mercury, and the second is a todo list.</p>
+
+<p>The todo list is interesting, because of ‘direct mysql call’. A direct mysql call implies that there will be a page that is vulnerable to a SQL injection. Which is good, because I don’t know how to exploit django.</p>
+
+<p>Going on the Mercury Fact Page . If you look at the URL, http://192.168.56.24:8080/mercuryfacts/1/</p>
+
+<p>There is a number at the end of the URL. There are no other links to other facts, but if you change the number, you get the other facts.</p>
+
+<p>Playing around with it, if you put in a number larger than 8, it won’t return anything. Knowing that errors get a whole debug page, I started playing around with different inputs, and I got the below error message.</p>
+
+<p>So this is telling me that changing the number changes the SQL query. I want to exploit that even further. Through some googling, and finding this page, I figured out how I was going to word the SQL injection. I wanted to list the contents of the database, and since I know this is mysql, the way to do that would be through the way down below.</p>
+
+<p>To try to explain how this works, the original SQL query is “SELECT fact FROM facts where id = 1”. The SQL query in the above is listing the tables in the database. If you go to the link above, which is a SQL injection cheat sheet, that is just listing the tables in the database. The AND 1=1 in there was necessary, because leaving it out would give me the debug screen. It doesn’t have to be AND 1=1, it could be AND 1=2 or something like that, and it would work.</p>
+
+<p>Through that output, I can see that there is a table called users. The next part took a few tries, but I managed to get a list of users.</p>
+
+<p>Going even further, if I change the SQL query just a little bit further, I can get their passwords.</p>
+
+<p>So now I have a list of passwords and usernames. I put them both into separate text files, and planned on brute forcing the ssh login. I could technically guess which password belongs to which user, but I wanted to test out a few different tools. There are a couple of ways to do this, and I’m going to show both of them.</p>
+
+<p>The first way is through hydra, a password brute forcing tool. This tool can be used for many different services, but this one is for SSH. The screenshot above shows the password for the webmaster user. -L is for the list of usernames, -P is for the list of passwords, and the service (SSH) needs to be stated. The -t 4 is the number of tasks running. After I get the username, I use ssh to log in to the system.</p>
+
+<p>The second option is to use metasploit, where there is an ssh_login module that will allow you to essentially do the exact same thing.</p>
+
+<p>You need to set the RHOSTS (target IP), and there are also a few other options. I set PASS_FILE and USER_FILE to my password file and username file. And then you just type run, and the module runs and sets up a session.</p>
+
+<p>Regardless of which way I choose to login, I am now in the system as the webmaster user. I got the first flag.</p>
+
+<p>Now I need to get to root in order to get to the second flag.</p>
+
+<p>I tried sudo -l, but this user is not allowed to run sudo on the machine. I tried to open /etc/passwd and /etc/shadow, but this user didn’t have the permissions to do that. I then tried to find binaries where the permissions are set.</p>
+
+<p>This didn’t really give anything either, as webmaster isn’t allowed to run sudo.</p>
+
+<p>Then I went and looked around mercury_proj, the only directory in the webmaster’s home directory. While I was there, I found a notes.txt file. It had a reference to project accounts, and linuxmaster, another user. Next to the usernames, it had what looked like base64 encoding.</p>
+
+<p>And I was right. I switched over, and I was now linuxmaster instead of webmaster. This is horizontal privilege escalation, and is essentially switching over to another user instead of trying to get to root.</p>
+
+<p>And I found that I could run sudo -l to figure out what I could do as this user.</p>
+
+<p>So this is the one command that this user can run as sudo. It is literally just a binary that calls the tail command on the syslog file. Not really anything interesting about that by itself, but the interesting part of it is that it just calls the command without the full path.</p>
+
+<p>So when you execute a command in Linux, the system looks for the first executable with that name in the user’s path variable. It’s why when you type in a command, ‘pwd’ for instance, you don’t have to type in /usr/bin/pwd. That path is part of the user’s path variable, and so it looks for ‘pwd’ in that directory. You can set a custom path just by typing in ‘export PATH=[your path here]’. And you can see the path variable by using ‘echo $PATH’.</p>
+
+<p>Bash scripts calling on commands that don’t have the full path run the risk of attackers exploiting the PATH variable. If that bash script can be run as root, then it is a vulnerability for privilege escalation. An attacker can change the path to whatever they want, make a script with the same name as the command, and then run the original bash script as sudo. When the script runs, it’ll run the malicious script instead of the original.</p>
+
+<p>To explain what I did, I added my current directory to the path variable, created a file named tail that would switch over to root, changed it so that it was executable, and ran the command with sudo privileges. Sudo — -preserve-env=PATH basically says to use the current environmental factors, which I had changed. The binary was run, with the ‘tail’ script that was actually to switch user to root.</p>
+
+<p>And after that, I went over to the root directory to get the flag.</p>
+
+  </div><a class="u-url" href="/post/hacking/2023/04/17/vulnhub_mercury.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Cyber Turtle</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Cyber Turtle</li><li><a class="u-email" href="mailto:lukegearty@gmail.com">lukegearty@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/LukeGearty"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">LukeGearty</span></a></li><li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jekyllrb</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>A cybersecurity student writing about cybersecurity things</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

