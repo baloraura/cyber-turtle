@@ -1,20 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-01-09T15:24:57-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cyber Turtle</title><subtitle>A cybersecurity student writing about cybersecurity things</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2025/01/08/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2025-01-08T17:53:33-05:00</published><updated>2025-01-08T17:53:33-05:00</updated><id>http://localhost:4000/jekyll/update/2025/01/08/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2025/01/08/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
-
-<p>Jekyll requires blog post files to be named according to the following format:</p>
-
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
-
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
-
-<p>Jekyll also offers powerful support for code snippets:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
-
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">My Experience Working the Night Shift</title><link href="http://localhost:4000/post/personal/2023/10/08/graveyard_shift.html" rel="alternate" type="text/html" title="My Experience Working the Night Shift" /><published>2023-10-08T18:53:33-04:00</published><updated>2023-10-08T18:53:33-04:00</updated><id>http://localhost:4000/post/personal/2023/10/08/graveyard_shift</id><content type="html" xml:base="http://localhost:4000/post/personal/2023/10/08/graveyard_shift.html"><![CDATA[<p>It was November of 2017. Eleven months after graduating from college, I was working in the job of nobody’s dreams: retail stock associate. Holiday season was fast approaching, and my manager at work approached me to ask a simple question.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-01-09T16:32:39-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cyber Turtle</title><subtitle>A cybersecurity student writing about cybersecurity things</subtitle><entry><title type="html">My Experience Working the Night Shift</title><link href="http://localhost:4000/post/personal/2023/10/08/graveyard_shift.html" rel="alternate" type="text/html" title="My Experience Working the Night Shift" /><published>2023-10-08T18:53:33-04:00</published><updated>2023-10-08T18:53:33-04:00</updated><id>http://localhost:4000/post/personal/2023/10/08/graveyard_shift</id><content type="html" xml:base="http://localhost:4000/post/personal/2023/10/08/graveyard_shift.html"><![CDATA[<p>It was November of 2017. Eleven months after graduating from college, I was working in the job of nobody’s dreams: retail stock associate. Holiday season was fast approaching, and my manager at work approached me to ask a simple question.</p>
 
 <p>“Are you available for overnights?”</p>
 
@@ -642,4 +626,65 @@ This post is going to be a walkthrough of the vulnhub machine Empire: Breakout. 
 
 <p>The next part took a long time, but I eventually found something in the /var/backups directory. There was a hidden file called old_pass.bak. I used the tar binary to get the contents of that file.</p>
 
-<p>And that was the root password. I used that to switch to root, went to the root directory, and got the final flag.</p>]]></content><author><name></name></author><category term="post" /><category term="hacking" /><category term="post" /><category term="hacking" /><summary type="html"><![CDATA[Vulnhub Empire: Breakout Walkthrough This post is going to be a walkthrough of the vulnhub machine Empire: Breakout. Although this machine was rated as an easy machine, there were still some challenges.]]></summary></entry></feed>
+<p>And that was the root password. I used that to switch to root, went to the root directory, and got the final flag.</p>]]></content><author><name></name></author><category term="post" /><category term="hacking" /><category term="post" /><category term="hacking" /><summary type="html"><![CDATA[Vulnhub Empire: Breakout Walkthrough This post is going to be a walkthrough of the vulnhub machine Empire: Breakout. Although this machine was rated as an easy machine, there were still some challenges.]]></summary></entry><entry><title type="html">Active Directory Help Desk Lab</title><link href="http://localhost:4000/post/active%20directory/2023/04/20/active_directory_helpdesk.html" rel="alternate" type="text/html" title="Active Directory Help Desk Lab" /><published>2023-04-20T06:00:00-04:00</published><updated>2023-04-20T06:00:00-04:00</updated><id>http://localhost:4000/post/active%20directory/2023/04/20/active_directory_helpdesk</id><content type="html" xml:base="http://localhost:4000/post/active%20directory/2023/04/20/active_directory_helpdesk.html"><![CDATA[<p>Active Directory Help Desk Lab: Using PowerShell
+In this blog post, I wanted to test my current knowledge of Active Directory and PowerShell in order to emulate a few real world scenarios. While the last few posts were all about installing and learning the basics, this post will be about implementing those basics in a real world scenario.</p>
+
+<p>Changing Password</p>
+
+<p>The first ‘lab’ or scenario that I want to do is a very simple password reset for a user. People forget their passwords all the time, they reuse passwords, they change passwords only slightly when they have to (think changing password to Password), they leave their passwords on a sticky note right next to their computer (or in a file on a desktop).</p>
+
+<p>One thing that people do often is forget their passwords and get locked out of their own accounts. So for this scenario, a user gets locked out of their account and needs their password reset. The goal is to just reset a user’s password.</p>
+
+<p>The first thing I need to do is get an unlucky user from my AD. I could just look at the list of users and grab somebody at random. However, to make it a little bit more interesting, and to keep experimenting with PowerShell, I want to use a script.</p>
+
+<p>A simple cmdlet saved as a .ps1 file. Get-ADUser -Filter * just gets all the AD users, and Get-Random picks out a random object. When I run it for the first time, it gives me this:</p>
+
+<p>Hildegarde Mortenson has been locked out of their account, and needs their password reset.</p>
+
+<p>Doing a little bit of research on resetting a user’s password, I found that you need to have a password that it is going to be reset to, and the user’s identity. I already have the identity, so now I just need to set the password.</p>
+
+<p>First, to set the password, you need to do something like this:</p>
+
+<p>In the screenshot, I’m essentially just setting a password variable, that way when I do the cmdlet to change passwords, I just call that variable.</p>
+
+<p>Next, I need to use this command to set the password for Hildegarde:</p>
+
+<p>The next part is optional, but in a real world scenario, this password would obviously need to be changed. So I used the below cmdlet to force Hildegarde to change the password at logon.</p>
+
+<p>In a previous lab, I think I set passwords to never expire, which is why I had to do the first command in the screenshot. So for Hildegarde, the password will expire, and she will need to change it at the next logon.</p>
+
+<p>To test out if this worked, I booted up the Client1 virtual machine to try to log in as hmortenson.</p>
+
+<p>Logging in, the new password worked, and it prompted the user to change the password. With a new password, Hildegarde can move on and do their work in peace, and hopefully she will remember the password.</p>
+
+<p>Creating a New User</p>
+
+<p>This challenge is going to be creating a new user using PowerShell. I’m sure there are countless scenarios where a new user needs to be added this way.</p>
+
+<p>Instead of going to my script to generate a random user, I went to fakenamegenerator.com to generate a new user.</p>
+
+<p>So I am creating the new user of William Shaeffer using cmdlets.</p>
+
+<p>To go over the cmdlet, New-ADUser is the cmdlet to create new users, with all the parameters. -Name is the account name, -GivenName is the first name, -SamAccountName is the login name, and Account Password is the user’s password. All is well and good, however the one problem is that in the original cmdlet I forgot to enable the user.</p>
+
+<p>The way to fix that is just to use the Enable-ADAccount cmdlet. Now this new employee is ready to get to work.</p>
+
+<p>Creating a Group and Adding Users</p>
+
+<p>For the next scenario, I’m going to be creating a group in AD. Higher management wants a whole group filled with every employee that has the letter ‘x’ in their name. They want the group to be called “The X Group”.</p>
+
+<p>This task has a few steps. The first step is to get all the users with ‘x’ in their names. The second step is to create a new group, and the third step is to add all those users into that group.</p>
+
+<p>So, as a disclaimer, I did try to do this all in one powershell script, but I kept on running into errors and couldn’t figure out how to do it that way.</p>
+
+<p>In order to get all the members, I did this cmdlet, which is just Get-ADUser with a few filters that are looking for the letter ‘x’ in the name. I then used Select-Object SamAccountName to get only their login names. I then put it all in a text document.</p>
+
+<p>After that, I created a .ps1 file that will create the group and add all the members to that group.</p>
+
+<p>The powershell script is essentially just going through each user in the text file and adding it to ‘The X Group’.</p>
+
+<p>I ran the script, and the group was created. When I checked the server manager, the group was there with all the members.</p>
+
+<p>Doing a couple of these tasks got me a little bit more comfortable with using PowerShell alongside Active Directory. The two of them are incredibly useful skills to have in any IT job, because so many organizations use AD. PS offers users many ways to play around with AD, ways that you can’t do in the server manager.</p>
+
+<p>I’m looking forward to exploring more and developing my understanding of Active Directory and PowerShell.</p>]]></content><author><name></name></author><category term="post" /><category term="active directory" /><category term="post" /><category term="active directory" /><summary type="html"><![CDATA[Active Directory Help Desk Lab: Using PowerShell In this blog post, I wanted to test my current knowledge of Active Directory and PowerShell in order to emulate a few real world scenarios. While the last few posts were all about installing and learning the basics, this post will be about implementing those basics in a real world scenario.]]></summary></entry></feed>

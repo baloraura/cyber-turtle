@@ -1,0 +1,75 @@
+/* General reset */
+body, h1, h2, nav, section, header, main, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    background-color: #000; /* Black background */
+    color: #00ff00; /* Bright green text */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for CLI look */
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Navigation bar */
+nav {
+    background-color: #111; /* Slightly lighter black for distinction */
+    padding: 10px;
+    border-bottom: 1px solid #00ff00; /* Green border for separation */
+}
+
+nav a {
+    color: #00ff00;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+nav a:hover {
+    text-decoration: underline; /* Highlight links on hover */
+}
+
+/* Headers */
+h1, h2 {
+    color: #00ff00;
+}
+
+/* Section styling */
+section {
+    padding: 20px;
+    border: 1px dashed #00ff00; /* Dashed green border to separate content */
+    margin: 20px;
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+}
+
+/* Links */
+a {
+    color: #00ff00;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Highlight links on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    color: #00ff00;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #00ff00;
+    font-size: 14px;
+}
+
+@keyframes blink {
+    50% {
+        background-color: transparent;
+    }
+}

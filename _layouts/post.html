@@ -1,0 +1,13 @@
+{% include header.html %}
+
+<header>
+    <h1>{{ site.title }}</h1>
+</header>
+
+<main>
+    <h2>{{ page.title }}</h2>
+    {{ content }}
+
+    <a href="/">Back Home</a>
+    {% include footer.html %}
+</main>
