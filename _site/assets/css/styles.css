@@ -1,11 +1,16 @@
+:root {
+    --text-color: #ff4234;
+    --background-color: #000;
+}
+
 body, h1, h2, nav, section, header, main, a {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body {
-    background-color: #000;
-    color: #00ff00;
+    background-color: var(--background-color);
+    color: var(--text-color);
     font-family: 'Courier New', Courier, monospace; 
     font-size: 16px;
     line-height: 1.5;
@@ -13,18 +18,15 @@ body {
 
 nav {
     background-color: #111; 
+    /* So it is a little different from the background */
     padding: 10px;
-    border-bottom: 1px solid #00ff00;
+    border-bottom: 1px solid var(--text-color);
 }
 
 nav a {
-    color: #00ff00;
+    color: var(--text-color);
     text-decoration: none;
     margin-right: 15px;
-}
-
-a {
-    color:#ff9b9b;
 }
 
 nav a:hover {
@@ -32,12 +34,12 @@ nav a:hover {
 }
 
 h1, h2 {
-    color: #00ff00;
+    color: var(--text-color);
 }
 
 section {
     padding: 20px;
-    border: 1px dashed #00ff00; 
+    border: 1px dashed var(--text-color); 
     margin: 20px;
 }
 
@@ -46,7 +48,7 @@ main {
 }
 
 a {
-    color: #00ff00;
+    color: var(--text-color);
     text-decoration: none;
 }
 
@@ -54,12 +56,22 @@ a:hover {
     text-decoration: underline;
 }
 
+#back-home {
+    color: var(--text-color);
+    font-weight: bolder;
+}
+
+#back-home:hover {
+    font-size: 18px;
+    text-decoration: underline;
+}
+
 footer {
     background-color: #111;
-    color: #00ff00;
+    color: var(--text-color);
     text-align: center;
     padding: 10px;
-    border-top: 1px solid #00ff00;
+    border-top: 1px solid var(--text-color);
     font-size: 14px;
 }
 
