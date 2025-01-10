@@ -4,17 +4,17 @@ body, h1, h2, nav, section, header, main, a {
     box-sizing: border-box;
 }
 body {
-    background-color: #000; /* Black background */
-    color: #00ff00; /* Bright green text */
-    font-family: 'Courier New', Courier, monospace; /* Monospace font for CLI look */
+    background-color: #000;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace; 
     font-size: 16px;
     line-height: 1.5;
 }
 
 nav {
-    background-color: #111; /* Slightly lighter black for distinction */
+    background-color: #111; 
     padding: 10px;
-    border-bottom: 1px solid #00ff00; /* Green border for separation */
+    border-bottom: 1px solid #00ff00;
 }
 
 nav a {
@@ -23,8 +23,12 @@ nav a {
     margin-right: 15px;
 }
 
+a {
+    color:#ff9b9b;
+}
+
 nav a:hover {
-    text-decoration: underline; /* Highlight links on hover */
+    text-decoration: underline;
 }
 
 h1, h2 {
@@ -33,7 +37,7 @@ h1, h2 {
 
 section {
     padding: 20px;
-    border: 1px dashed #00ff00; /* Dashed green border to separate content */
+    border: 1px dashed #00ff00; 
     margin: 20px;
 }
 
@@ -47,7 +51,7 @@ a {
 }
 
 a:hover {
-    text-decoration: underline; /* Highlight links on hover */
+    text-decoration: underline;
 }
 
 footer {

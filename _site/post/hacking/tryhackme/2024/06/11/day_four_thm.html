@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Turtle</title>
+    <link rel="stylesheet" href="/cyber-turtle/assets/css/styles.css">
+</head>
+
+<header>
+    <h1>Cyber Turtle</h1>
+</header>
+
+<nav>
+    <a href="/cyber-turtle/">Home</a>
+    <a href="/cyber-turtle/about">About</a>
+  </nav>
+
+<main>
+    <h2>30 Days of THM: Day 4</h2>
+    <p>30 Days of TryHackMe: Day 4
+Welcome to 30 Days of TryHackMe, where I try to build up a streak of 30 days of learning using the popular website, TryHackMe. Today is Day 4, and I am still on the complete beginners pathway. Yesterday was the Network Exploitation Basics section. Today, I am doing the Web Hacking Fundamentals section, and I am excited to continue on this path.</p>
+
+<p>The first section is the basic introduction of how websites work. The two major components are the front end (what you see), and the back end (the server processing the requests your browser makes). When you go to a website, you make a request through a browser. The browser can be called the client. The website’s server responds to that request. It goes over HTML, Javascript, and an HTML injection.</p>
+
+<p>The second section goes over HTTP in detail. The Hyper Text Transfer Protocol, this is how we communicate with websites. There is also HTTPS, which is the secure version of HTTP (meaning it is encrypted).</p>
+
+<p>It goes over HTTP requests, the different methods (GET, POST, PUT, and DELETE), the status codes, headers, cookies, and how to make requests.</p>
+
+<p>And then the next room goes over the security tool Burp Suite. This room is all about learning what Burp Suite is and what it does, while future rooms (that are not part of this section) are more about using Burp Suite. At it’s most basic form, Burp Suite allows a user to intercept an HTTP request and manipulate it. There are a few version of Burp Suite, but the free one, Burp Suite Community Edition, is the one used in this room.</p>
+
+<p>The features of Burp Suite Community are:</p>
+<ol>
+  <li>
+    <p>Proxy: allows the interception and modification of HTTP requests.</p>
+  </li>
+  <li>
+    <p>Repeater: allows the capture and resending of multiple requests.</p>
+  </li>
+  <li>
+    <p>Intruder: allows spraying endpoints with requests, common in brute-force attacks.</p>
+  </li>
+  <li>
+    <p>Decoder: Can decode captured information and encode payloads.</p>
+  </li>
+  <li>
+    <p>Comparer: Can compare two pieces of data at either word or byte-level.</p>
+  </li>
+  <li>
+    <p>Sequencer: Analyzes the randomness of things like cookies.</p>
+  </li>
+</ol>
+
+<p>The room goes into the basics of Burp Suite, how to use it and configure it, but future rooms will go into greater detail.</p>
+
+<p>The next room goes into detail about the OWASP Top 10, the 10 most critcal web vulnerabilities. Those vulnerabilities are:</p>
+<ol>
+  <li>
+    <p>Broken Access Control: a user being able to view something on a website that they aren’t supposed to view. For example, being able to view an administrative page.</p>
+  </li>
+  <li>
+    <p>Cryptographic Failure: Cryptography ensures that any data, either being sent or being stored, is encrypted.</p>
+  </li>
+  <li>
+    <p>Injection: When the application interprets user controlled input as commands or parameters. SQL Injections and command injections are common types of injections.</p>
+  </li>
+  <li>
+    <p>Insecure Design: The design of the application itself is flawed.</p>
+  </li>
+  <li>
+    <p>Security Misconfiguration: There is a part of the application that has been configured incorrectly.</p>
+  </li>
+  <li>
+    <p>Vulnerable and Outdated Components: Using a program with a well-known vulnerability.</p>
+  </li>
+  <li>
+    <p>Identification and Authentication Failures: Gaining access to other user’s accounts through weak authentication.</p>
+  </li>
+  <li>
+    <p>Software and Data Integrity Failures: The data has been modified in some way.</p>
+  </li>
+  <li>
+    <p>Security Logging and Monitoring Failures: No logs to determine what an attacker might have done.</p>
+  </li>
+  <li>
+    <p>Server-side request forgery: An attacker causes a server to send requests to unintended destinations.</p>
+  </li>
+</ol>
+
+<p>The next room is OWASP Juice Shop, which goes over the different vulnerabilities in a web application. This one is kind of like a tutorial of a vulnerable machine, where you are being pointed to on where to go next. This also gives you more experience with Burp Suite.</p>
+
+<p>The neat thing about this room is that it also has a score board, and if you want you can solve more challenges after the room is complete.</p>
+
+<p>The next room is Upload Vulnerabilities, which is all about file upload vulnerabilities in websites. This section went into great detail about all the ways mechanisms for uploading files can be exploited. How files can be overwritten, used for RCE, how websites use client-side and server-side filtering to make sure the proper files are uploaded and how that can be worked around. It went over file signatures and how to manipulate that (for the challenge I used the Wikipedia article here).</p>
+
+<p>And the final project in this room is using all of the above content to breach a room with no hand holding. I found this part to be really difficult, but when I finally got it I felt so good about it.</p>
+
+<p>The final part of this section is Pickle Rick, a CTF where you have to find three flags in order to turn Rick back into a human.</p>
+
+<p>As a bit of a mini-waltkthrough, here is mine:</p>
+
+<p>Once I had the machine setup, I went to the web application to poke around. I opened up the page and looked at the HTML and found the username.</p>
+
+<p>I then used nmap to look at the first 1000 ports, and saw that port 22 (ssh) and port 80 (http) were open.</p>
+
+<p>With a few more scans of the website, I saw that there was a robots.txt file.</p>
+
+<p>I have no idea what this means, I have seen maybe two episodes of Rick and Morty in my life. But, maybe a password? I tried to use ssh to get into the machine, but that was denied. So maybe there was another thing?</p>
+
+<p>With a little bit more enumeration, I saw there was an /assets directory. In there, there was a file called portal.jpg. A little bit more enumeration showed me there was a /portal.php page. I imputed the credentials I found and was in.</p>
+
+<p>A place I could execute some code. I first ran whoami, pwd, and ls to figure out which user I was, the directory I was in, and the contents of that directory, and I saw the first flag.</p>
+
+<p>I tried to open the file, but I found that was disabled. At least with the cat command. With another command, I was able to open it. I used that same command to open the file clue.txt which says to look around the file system. I found the second ingredient in the home directory. I found the last ingredient in the root directory.</p>
+
+<p>This section was a pretty involved section, and it did take me a lot longer to complete than just a day. I will still consider this ‘day 4’ because ’30 Sections of TryHackMe’ just didn’t sound as good.</p>
+
+
+
+    <a href="/cyber-turtle/">Back Home</a>
+    <footer>
+    &copy;
+    <a href="https://github.com/LukeGearty">Github</a>
+    <a href="https://www.linkedin.com/in/luke-gearty/">LinkedIn</a>
+  </footer>
+</main>
