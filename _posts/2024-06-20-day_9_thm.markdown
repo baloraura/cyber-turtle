@@ -1,0 +1,31 @@
+---
+layout: post
+title: "30 Days of THM Day 9"
+date: 2024-06-20 10:00:00 +0000
+categories: [post, hacking]
+tags: [post, hacking]
+---
+
+Welcome to 30 Days of TryHackMe, where I go through a room on the cybersecurity website TryHackMe every day. Today, the room I will be going through is the Linux Privesc room, a continuation of yesterday’s room, where the goal is to learn and gain experience with all sorts of privilege escalation techniques on Linux boxes.
+
+
+As some practice of the room from yesterday, we will be going through quite a bit of privilege escalation techniques, utilizing an intentionally vulnerable Debian virtual machine as the target. A lot of the things covered here are just reiterating things from yesterday.
+
+The first thing done in this room is exploiting the MySQL service running, utilizing this exploit:
+https://www.exploit-db.com/exploits/1518.
+
+The second thing done is exploiting a world readable /etc/shadow file. This file contains all the hashes of the passwords, and a hacker who gets this file could eventually crack the hashes and get the passwords.
+
+If the /etc/shadow file is world writable, then a hacker could generate their own hashes of their passwords and replace the passwords already in there. Some Linux versions will have the password in the /etc/passwd file, and if that file is writable, the same issue can occur.
+
+Typing in sudo -l in a Linux box will show which binaries can be run as sudo, and visiting GTFObins can provide ways of using those binaries for privilege escalation. You can also use the environment variables in sudo -l for privilege escalation. Just because a binary isn’t on GTFObin doesn’t mean it can’t be used for privilege escalation though.
+
+Cron jobs are scheduled programs or scripts. These jobs are found in crontabs, and the system wide crontab is located at /etc/crontab.
+
+Finding the SUID/SGID executables are an great way of trying to get some privilege escalation done. The command shown in the room 
+find / -type f -a \( -perm -u+s -o -perm -g+s \) -exec ls -l {} \; 2> /dev/null
+
+Other things to look for are the history of commands, as users might have accidentally typed in a password in the command line instead of a password prompt. They can also be in configuration files. There may also be ssh keys that are around.
+
+And finally there are kernel exploits, but those do a lot of damage and are best left as a last resort.
+

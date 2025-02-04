@@ -1,0 +1,28 @@
+---
+layout: post
+title: "30 Days of THM Day 14"
+date: 2024-06-26 10:00:00 +0000
+categories: [post, hacking]
+tags: [post, hacking]
+---
+
+Welcome to 30 Days of TryHackMe, where I try to build a learning streak using the cybersecurity training platform TryHackMe. Since I completed the Complete Beginner pathway, I’m going to continue on the Web Fundamentals path, since there is a lot of overlap. The first section of this room is How the Web Works, and the first room that I did not do in this section is DNS in Detail.
+
+
+
+DNS is Domain Name System. Every computer has an IP address, 4 sets of numbers ranging from 0 to 255, all separated by a period. Something like 16.45.12.23 is a valid IP address, while something like 278.128.222.12 is not valid. Remembering all these IP addresses would be rather inconvenient, so Domain Name System is the service that maps domain names (like example.com) to an IP address.
+
+In the Domain Hierarchy, there is a Top-Level Domain (TLD), which is something like the .com part of the domain name. There are Generic Top Level Domains, which are things like .com (for commercial), .org (for organization), .edu for education, .gov for government. There is also Country Code Top Level Domain, which are for countries.
+
+Then there is the Second-Level Domain, which in example.com, would be example. The second-level domain can only use alphanumeric characters and hyphens. It cannot start or end with hyphens, and the hyphens cannot be consecutive.
+
+There is also a subdomain, and it is the left hand side of a second-level domain. For example,
+
+admin.example.om, admin is the subdomain. It has the same restrictions as the second-level domain, but you can use multiple subdomains. For example, admin.network.example.com, but the entire entire length must be 253 characters or less. There is no limit to the amount of subdomains you can create.
+
+There are multiple types of DNS Records:
+
+A Records resolve to IPv4 (the above mentioned IP address scheme). AAAA Records resolve to IPv6, which is another type of IP address. CNAME resolves to another domain, also known as an alias. MX Records resolve to the address of the server that handles mail, and TXT Records are free text fields.
+
+When a request is made, the computer first checks its local cache to see if you’ve looked up the address recently. If it hasn’t, then a request to the recursive DNS server is made, which is provided by the ISP. The recursive DNS server also has a local cache, and checks if it can resolve the domain. If it cannot, then it redirects to the TLD Server. If you are searching for example.com, then it will refer to the TLD server for .com addresses. The TLD server then refers to the authoritative server (also called the nameserver) to resolve the request. The record is then cached in the recursive DNS server with a TTL value. TTL is time to live, and it is the time, in seconds, that it will remain cached.
+

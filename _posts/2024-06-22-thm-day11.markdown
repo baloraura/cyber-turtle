@@ -1,0 +1,53 @@
+---
+layout: post
+title: "30 Days of THM Day 11"
+date: 2024-06-22 10:00:00 +0000
+categories: [post, hacking]
+tags: [post, hacking]
+---
+
+Welcome to 30 Days of TryHackMe, where I try to build a learning streak using the online cybersecurity training platform, TryHackMe. Today, I will be tackling the next room in the Basic Computer Exploitation section.
+
+Continuing with the theme from yesterday, this room is all about exploiting an intentionally vulnerable machine. This room is a little bit less handholding than the previous room. This room promises to teach brute forcing, hash cracking, service enumeration, and Linux enumeration.
+
+After the machine started, I started with an nmap scan of the target. I put the scan in a file for future reference.
+
+
+I found these services open on the target:
+
+22/tcp open ssh
+
+80/tcp open http
+
+139/tcp open netbios-ssn
+
+445/tcp open microsoft-ds
+
+8009/tcp open ajp13
+
+8080/tcp open http-proxy
+
+I headed over to the web application and found a page that said they were undergoing maintenance. Inspecting the page and the HTML, however, did give me a clue.
+
+
+
+Changing the port to 8080 also gave me this:
+
+
+And learning a little bit more about port 8009 and ajp13, that protocol is used for communication between Tomcat and the apache web server.
+
+
+I started up a gobuster scan of the web app to look for some directories. I found the /development directory, and in there found dev.txt and j.txt.
+
+
+
+In j.txt, I found out that J’s password is easy to crack. That probably meant that their password is in a common wordlist. This meant that if I found out who J was, I could brute force my way in through ssh. I also gathered that K’s password wouldn’t be easily cracked.
+
+
+I used smbclient to get in and found staff.txt, which contained J and K’s full names, Jan and Kay. Since Jan’s credentials were weaker, I used that username to make initial access. Firing up the hydra tool, I tried to brute force the ssh password for Jan. The syntax for this was hydra -l jan -P /usr/share/wordlists/rockyou.txt <IP Address> ssh.
+
+Once I was in, I took a look around. Jan’s home directory had nothing of value, but Kay had a home directory. There was a file, called pass.bak, which is the user’s password. And there was a hidden .ssh directory. There Kay’s public and private keys were located.
+
+
+I brought over the private key to the attack box, and followed this guide to get john the ripper to crack the password. After cracking the password, I was able to use the key to ssh into Kay’s account. After that, I was able to actually open up pass.bak and figure out Kay’s password.
+

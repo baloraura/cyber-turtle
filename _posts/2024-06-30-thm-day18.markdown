@@ -1,0 +1,24 @@
+---
+layout: post
+title: "30 Days of THM Day 18"
+date: 2024-06-28 10:00:00 +0000
+categories: [post, hacking]
+tags: [post, hacking]
+---
+
+Welcome back to 30 Days of TryHackMe, where I try to build a learning streak using the cybersecurity training tool, TryHackMe. Today, I am tackling the next room on the Web Fundamentals path, Subdomain Enumeration.
+
+
+Subdomain enumeration is the process of finding valid subdomains for a domain. The reasoning for doing this is to expand the attack surface.
+
+When a certificate is created for a domain by a CA, there are things called Certificate Transparency logs that are available for domains. The purpose of these logs is to stop malicious certificates from being used. There are websites like https://crt.sh and https://ui.ctsearch.entrust.com/ui/ctsearchui that offers a database of certificates.
+
+Search engines will also be an excellent way of finding new subdomains. This search: “-site:www.domain.com site:*.domain.com” would exclude any links to domain.com, and only include subdomains belonging to domain.com.
+
+Looking up “-site:www.medium.com site:*.medium.com” brings the following results.
+
+
+You can also brute force subdomains through the use of Bruteforce DNS enumeration, using wordlists of commonly listed subdomains. A useful tool to do this is called Sublist3r.
+
+Some subdomains, particularly development version or administrative, are not publicly accessible via DNS, and instead the DNS records might be stored in the host files on the developer’s machine. Web servers know which website the client wants from the Host header, and we can make changes to the host header to monitor the response to see if we discovered a new website.
+

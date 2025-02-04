@@ -1,0 +1,61 @@
+---
+layout: post
+title: "30 Days of THM Day 10"
+date: 2024-06-21 10:00:00 +0000
+categories: [post, hacking]
+tags: [post, hacking]
+---
+
+Welcome to 30 Days of TryHackMe, where I try to build a learning streak using the online cybersecurity training platform, TryHackMe. Today, I am going through Vulnversity, in the Basic Computer Exploitation section. This section is all about exploiting different applications.
+
+
+Vulnversity is about using active recon tools like nmap and gobuster for initial access, and using SUID for privilege escalation.
+
+The first section of the room is Active Recon, where I used nmap to look for the services on the target. The room recommends -sV is for service versions of the protocols running on the target network.
+
+Other useful nmap flags:
+
+-p<port>: port scan
+
+-p-: scan all ports
+
+-Pn: disables host discovery
+
+-A Enables OS and version detection
+
+-sC: default nmap scripts
+
+-v: verbose
+
+-sU: UDP port scans
+
+-sS: TCP SYN port scan
+
+Scanning the network using -sV got these services:
+
+Scanning gets these ports:
+
+FTP on port 21
+
+SSH on port 22
+
+netbios on 139, 445
+
+http-proxy on 3128, and http on 3333
+
+
+After scanning the network, I used gobuster to scan for directories on the web server. Normally http is on port 80, but since the port was 3333, I needed to specify that in the url. I used the -u flag in order to specify the URL, and -w to specify the wordlist.
+
+
+And through there, I found an interesting looking directory.
+
+
+I then used burpsuite to figure out what kind of file extension I could upload to the server, and used a php reverse shell start a listener on the target machine. To make the shell a little bit nicer, I used this command:
+
+python3 -c ‘import pty; pty.spawn(“/bin/bash”)’
+
+I then searched for SUID binaries, looked for ways to exploit those binaries, and spawned a root shell.
+
+
+This was a bit of a hand-holding CTF, and I do believe that the rest of these challenges will be much of the same. It is nice to get some guidance, and since this path is for complete beginners, I can understand how it would be helpful.
+

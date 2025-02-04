@@ -1,0 +1,54 @@
+---
+layout: post
+title: "30 Days of THM Day 13"
+date: 2024-06-24 10:00:00 +0000
+categories: [post, hacking]
+tags: [post, hacking]
+---
+
+Welcome to 30 Days of TryHackMe, where I try to build a learning streak using the cybersecurity platform TryHackMe. Today, I am completing the last section of the Complete Beginner pathway, and completing Steel Mountain.
+
+
+This room is a Mr. Robot themed Windows machine, which is interesting because the other machines in this section were Linux. The goals are to gain initial access using Metasploit, use powershell to find weaknesses, and then escalate to Administrator.
+
+
+After the machine started up, I immediately did an nmap scan to see what was running. This is what I found:
+
+80/tcp open http Microsoft IIS httpd 8.5
+
+135/tcp open msrpc Microsoft Windows RPC
+
+139/tcp open netbios-ssn Microsoft Windows netbios-ssn
+
+445/tcp open microsoft-ds Microsoft Windows Server 2008 R2–2012 microsoft-ds
+
+3389/tcp open ssl Microsoft SChannel TLS
+
+8080/tcp open http HttpFileServer httpd 2.3
+
+49152/tcp open msrpc Microsoft Windows RPC
+
+49153/tcp open msrpc Microsoft Windows RPC
+
+49154/tcp open msrpc Microsoft Windows RPC
+
+49155/tcp open msrpc Microsoft Windows RPC
+
+49156/tcp open msrpc Microsoft Windows RPC
+
+Two HTTP servers: One on port 80, and the other on port 8080. The one on port 80 has the answer to one question, but the other is the one we’re most interested in.
+
+It is running Rejetto HTTP file server, which is vulnerable to a particular exploit. I searched for it, then opened up Metasploit to make the initial access. I searched for Rejetto, and set the proper settings. Once I ran it, I had a meterpreter shell.
+
+
+
+After getting the user flag, it was all about getting to Administrator. The instructions said to upload a powershell script provided, run the script, and find a service with an unquoted service path vulnerability. That is a path that contains spaces.
+
+
+
+
+Once I found the service, I generated a payload using msfvenom, started up a netcat listener, and got the payload onto the machine under the name of the service. I restarted the service, and caught an Administrator level shell.
+
+
+And with this, I completed this pathway.
+

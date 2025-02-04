@@ -1,0 +1,22 @@
+---
+layout: post
+title: "30 Days of THM Day 16"
+date: 2024-06-28 10:00:00 +0000
+categories: [post, hacking]
+tags: [post, hacking]
+---
+
+
+Welcome to 30 Days of TryHackMe, where I try to build a learning streak using the cybersecurity training platform, TryHackMe. Today, I am starting the Introduction to Web Hacking section, with the first room, Walking An Application.
+
+
+Walking an application is manually reviewing a web application for security issues. This is using your own built-in browser tools. View Source, the Inspector, the debugger, and Network are some of the tools you can use when walking an application.
+
+The first thing you want to do when walking an application is simply looking around the website and finding some of the noteworthy pages and figuring out their purpose. These can be signup pages, interesting URLs, login pages, logout, and account pages.
+
+The page source is the code that is returned to the browser from the server. It is made up of HTML, CSS, and JavaScript. It tells the browser what content to display. To view the page source, you can right click on the page and click on View Page Source (depending on your browser). Sometimes in the HTML are comments that can hold a lot of information, but other times it will give you insight into the way the website is structured. For example, CSS and JavaScript files are often external files, but they will show up in the page source. You can figure out the name of the directory they are in, and if you can view that directory, there is a misconfiguration. You can also figure out the framework used, and frameworks have a lot of public information about them available.
+
+The Developer Tools allows us to view what the CSS and JavaScript currently being rendered to us, as opposed to the static view of viewing the page source. These tools also allow us to edit and interact with the elements of a page. One of these tools is called the Inspector. This is used by web developers for debugging issues, but it can also be used to play around with the settings and appearance of the website.
+
+And then finally there is the Network tool, which allows us to see requests and what they look like. If we make requests, we can also sometimes see the response to them.
+

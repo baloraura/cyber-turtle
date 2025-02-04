@@ -1,0 +1,54 @@
+---
+layout: post
+title: "30 Days of THM Day 12
+date: 2024-06-23 10:00:00 +0000
+categories: [post, hacking]
+tags: [post, hacking]
+---
+
+Welcome to 30 Days of TryHackMe, where I try to build a learning streak using the cybersecurity training platform TryHackMe. Today I am tackling Kenobi, the next room the Basic Computer Exploitation section.
+
+
+This room is all about using a Samba share to enumerate and gather information, exploiting a proftpd vulnerability, and utilizing an SUID binary to get to root.
+
+Once the machine starts up, I immediately started an nmap scan of the target while directing the output to a file.
+
+
+I found these open ports:
+21/tcp open ftp ProFTPD 1.3.5
+
+22/tcp open ssh OpenSSH 7.2p2 Ubuntu 4ubuntu2.7 (Ubuntu Linux; protocol 2.0)
+
+80/tcp open http Apache httpd 2.4.18 ((Ubuntu))
+
+111/tcp open rpcbind 2–4 (RPC #100000)
+
+139/tcp open netbios-ssn Samba smbd 3.X — 4.X (workgroup: WORKGROUP)
+
+445/tcp open netbios-ssn Samba smbd 3.X — 4.X (workgroup: WORKGROUP)
+
+2049/tcp open nfs_acl 2–3 (RPC #100227)
+
+An http server is also up, but since the point of the room is for Samba, I didn’t visit the website or enumerate web pages.
+
+Samba is a network file sharing system, and it is an implementation of SMB. SMB is for Windows only, while Samba is for non-Windows systems like Linux. Without Samba, Linux boxes would be unable to communicate with Windows machines.
+
+I used nmap again to look for Samba shares, and then used smbclient to access that share. Through there, I found a log.txt, which gave a lot of information about the network, including that the FTP server is running as kenobi and there is an ssh key for that user.
+
+
+I then used nmap once again to enumerate the rpc service on port 111.
+
+
+Utilizing an exploit in the proftpd version 1.3.5, which allows unauthenticated users to copy files from any part of the file system, I copied the ssh key and used that to make initial access.
+
+
+Using searchsploit to find vulnerability for this version of proftpd
+
+Getting the ssh key
+
+After making access, I looked for SUID binaries, and found one called menu. This one was an unusual one. I ran the binary to see what happens, and then used the strings command to see what is going on.
+
+
+
+The vulnerability here is that the binary is calling a command without using the full path name. Through manipulating the path variable, we can set it so that instead of the ‘curl’ it initially is trying to get, it instead gets a binary we created, called ‘curl’, that gets us over to root.
+

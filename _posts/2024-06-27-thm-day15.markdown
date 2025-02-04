@@ -1,0 +1,33 @@
+---
+layout: post
+title: "30 Days of THM Day 15"
+date: 2024-06-26 10:00:00 +0000
+categories: [post, hacking]
+tags: [post, hacking]
+---
+
+Welcome to 30 Days of TryHackMe, where I try to build a learning streak using the cybersecurity platform TryHackMe. Today, I am finishing the section of How the Web Works, with the final section, Putting it All Together. These are some of the notes I took while completing this room.
+
+
+When you request a website, the browser needs to know the IP address. It talks to the server with HTTP requests, and the server will return images, text, videos, etc. The browser knows how to format this with HTML, CSS, and JavaScript.
+
+Sometimes website traffic gets so high that a single webserver is not able to do the job. Load Balancers are used to ensure high traffic websites can handle the load, and providing a failsafe in case a server becomes unresponsive. When a website has a load balancer, requests go to the load balancer first, and then it forwards the request to one of the servers. There are a few algorithms to decide which server is best suited:
+
+Round-Robin: sends it to each server in turn
+
+Weighted: Checks how many requests a server is dealing with and sends it to the least busy server.
+
+Content Delivery Networks hosts static files, such as JavaScript files, and hosts them across different servers. When a user requests a hosted file, the CDN sends the request to the nearest server.
+
+Websites store information for their users in databases. These databases can be a simple text file or a plethora of multiple servers. Some common databases are MySQL and Postgres.
+
+A web application firewall sits between the web request and the server, and its primary purpose is to protect the webserver from hacking or denial of service attacks. It will analyze requests, checks if there are excessive amounts of web requests, and only allow a certain amount of requests from an IP per second.
+
+Web servers are software that listen for incoming connections and utilize the HTTP protocol to deliver web content. Common web servers are Apache, Nginx, IIS, and NodeJS. It delivers files from its root directory, defined in the software settings. Apache will deliver from /var/www/html in Linux.
+
+It can host multiple websites with different domain names using virtual hosts, text based configuration files.
+
+Static Content on a website is content that never changes. JavaScript, CSS, images, never change, and are served directly from the server with no changes made. Dynamic content is content that will constantly change, for example a blog page with the most updated entry first shown.
+
+The website has a Frontend, which is what the user sees when they look at the website, and the Backend, which is the behind the scenes of the website. Some Backend languages are PHP, Python, and Ruby.
+

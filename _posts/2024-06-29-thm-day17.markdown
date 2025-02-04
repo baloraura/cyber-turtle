@@ -1,0 +1,35 @@
+---
+layout: post
+title: "30 Days of THM Day 16"
+date: 2024-06-28 10:00:00 +0000
+categories: [post, hacking]
+tags: [post, hacking]
+---
+
+
+Welcome to 30 Days of TryHackMe, where I try to build a learning streak using the cybersecurity platform, TryHackMe. This part of the series is, I’m realizing, more about my notes than about how to get through the room. These rooms have been more about teaching the theory behind web application hacking, which I have been appreciating. Today, I am continuing on the Web Fundamentals path in the room, Content Discovery.
+
+Content, in the context of a web application, can be a file, video, a picture, among other things. Content Discovery is not just discovering what is available publicly, but also things that are not meant for the public.
+
+One of those things is the robots.txt file. The robots.txt file tells search engines what pages they aren’t allowed to show in their results. Certain website areas can be restricted so they don’t show up, like administration areas.
+
+Favicons can also be content that is discovered. Favicons are small icons that are in the browser address window, and they are used for branding purposes. Sometimes a favicon is leftover from a framework, and can tell what framework was used to create the website. By establishing the framework, we can then look for vulnerabilities for that framework.
+
+The sitemap.xml file tells search engines what files they want to be listed on a search engine.
+
+HTTP headers can contain valuable information, such as the programming/scripting language in use, so running curl requests from a command line can also give good info.
+
+A powerful OSINT tool is google dorking, which is utilizing google’s advanced search engine features. This is essentially filtering your results. You can use this technique to search for specific things on websites, look for specific filetypes, among many others.
+
+Other OSINT tools include:
+
+Wappalyzer: an online tool and browser extension that helps identify what technologies a website uses.
+
+Wayback Machine: A historical archive of websites
+
+GitHub: a hosted version of Git (a version control system that tracks changes to files in a project).
+
+S3 Buckets: A storage service provided by Amazon AWS that allows people to save files in the cloud over HTTP and HTTPs. Sometimes, if the permissions are misconfigured, these files are public. The url format is {name}.s3.amazonaws.com.
+
+There is automated discovery, which is using tools to find content rather than going through the content manually. For example, using dirb or gobuster and a wordlist to check for directories.
+
