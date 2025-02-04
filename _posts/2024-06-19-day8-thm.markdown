@@ -1,0 +1,29 @@
+---
+layout: post
+title: "30 Days of THM: Day 8"
+date: 2024-06-19 10:00:00 +0000
+categories: [post, hacking]
+tags: [post, hacking]
+---
+
+Welcome to 30 Days of TryHackMe, where I try to build a streak of learning about cybersecurity through the website TryHackMe. Today we are picking up where we left off on the complete beginner path in the room Common Linux Privesc. Privesc stands for privilege escalation.
+
+When a hacker makes initial access onto a network, they usually do not have all the permissions that they would need to do everything they set out to do. Reset a password, look at specific files, enable persistence, get the root flag in CTFs, these are all some of the things that a hacker would like to do. Privilege escalation is when that hacker tries to get more permissions, all the way up to the system administrator level. In Linux, that level is called the root level.
+
+Privilege escalation can go from one user to another user of the same level, called horizontal privilege escalation, or going from one user to a user of a higher level, called vertical privilege escalation.
+
+After gaining initial access, there is a data gathering phase called enumeration. To help with numeration, there is a bash script called “LinEnum.sh”, which can be found here. You can get this onto the target by hosting a webserver on the attacking machine and downloading it, or you can copy it directly to a text editor like vim or nano if you are able to use it on the target.
+
+One of the first things to do when looking for ways to get to a higher level is look for files with the SUID/GUID bits set. This means that those files can be run with the permissions of the owner. In the context of privilege escalation, this means running binaries as the root user. Permissions in Linux are set with numbers of bits. 4 means read, 2 means write, 1 means execute, with the maximum being 7. An extra 4 means the SUID is set, and an extra 2 means the SGID is set. You can do find these binaries with these commands:
+SUID: find / -perm -u=s -type f 2>/dev/null.
+
+GUID: find / -perm -g=s -type f 2>/dev/null.
+
+A particularly valuable file in Linux is the /etc/passwd file, which contains the usernames in the system, along with other information such as info about the shell, the password (the hash of the password is stored in /etc/shadow), the user ID and the group ID. This passwd file is usually only readable, and if it is writable then it can be used for privilege escalation.
+
+A useful tool for privilege escalation is GTFObin,which includes information on how to exploit binaries. If you can run these commands as the root user, you can potentially use that for privilege escalation. To find commands you would be able to run, type in sudo -l.
+
+The PATH variable is essentially which directory the operating system looks for commands and binaries it is going to execute. To see the PATH variable, you can just type in echo $PATH. We can set the PATH variable to directories of our own choosing, such as the tmp directory, using export PATH=/:$tmp. If we have an SUID binary that is calling a certain command, we can use the PATH variable for further privilege escalation.
+
+This room was pretty simple and straightforward, but it was good to get all the different methods. The next room will be trying to apply these techniques in practice, so I am looking forward to that.
+

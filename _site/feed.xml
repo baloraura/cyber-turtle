@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/cyber-turtle/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/cyber-turtle/" rel="alternate" type="text/html" /><updated>2025-01-10T15:10:52-05:00</updated><id>http://localhost:4000/cyber-turtle/feed.xml</id><title type="html">Cyber Turtle</title><subtitle>A cybersecurity student writing about cybersecurity things</subtitle><entry><title type="html">30 Days of THM: Day 5</title><link href="http://localhost:4000/cyber-turtle/post/hacking/tryhackme/2024/06/13/day_five_thm.html" rel="alternate" type="text/html" title="30 Days of THM: Day 5" /><published>2024-06-13T06:00:00-04:00</published><updated>2024-06-13T06:00:00-04:00</updated><id>http://localhost:4000/cyber-turtle/post/hacking/tryhackme/2024/06/13/day_five_thm</id><content type="html" xml:base="http://localhost:4000/cyber-turtle/post/hacking/tryhackme/2024/06/13/day_five_thm.html"><![CDATA[<p>30 Days of TryHackMe: Day 5
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/cyber-turtle/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/cyber-turtle/" rel="alternate" type="text/html" /><updated>2025-02-04T15:01:00-05:00</updated><id>http://localhost:4000/cyber-turtle/feed.xml</id><title type="html">Cyber Turtle</title><subtitle>A cybersecurity student writing about cybersecurity things</subtitle><entry><title type="html">30 Days of THM: Day 7</title><link href="http://localhost:4000/cyber-turtle/post/hacking/2024/06/16/day6-thm.html" rel="alternate" type="text/html" title="30 Days of THM: Day 7" /><published>2024-06-16T06:00:00-04:00</published><updated>2024-06-16T06:00:00-04:00</updated><id>http://localhost:4000/cyber-turtle/post/hacking/2024/06/16/day6-thm</id><content type="html" xml:base="http://localhost:4000/cyber-turtle/post/hacking/2024/06/16/day6-thm.html"><![CDATA[<p>Welcome to 30 Days of TryHackMe, where I try to build a streak of learning through the cybersecurity training website TryHackMe. Today I am picking up where I left off on the Complete Beginner Pathway, and I am going to do the Windows Exploitation Basics section.</p>
+
+<p>The first room is Windows Fundamentals 1, and this is going through the basics of the Windows operating system. It starts out with a brief history history of Windows as it went through it’s many iterations and updates. It was published before Windows 11, and it included some information on that in an update. This room goes over the file system as well. It goes over users and groups, and goes over the task manager.</p>
+
+<p>This room is an introduction to the Window operating system, and this room does end with text that says that every topic in the room can be delved into in a deeper way.</p>
+
+<p>The next room, Windows Fundamentals 2, goes into more detail about some other utilities in the Windows operating system. This room goes over the various system configuration tools. Type in msconfig into the search bar on a Windows machine and you can bring it up. This room goes over UAC settings (User Account Control), computer management, system information, the resource monitor, command prompt and the registry editor.</p>
+
+<p>I think the thing about this section that I liked most so far is the deep dive into an operating system that I never really did a deep dive into. Windows is ubiquitous, but beyond the most basic things I never really used any of this stuff.</p>
+
+<p>The next section is Active Directory Basics. If you have ever worked in a corporate environment, or at a university, chances are that they used Active Directory to manage their computers.</p>
+
+<p>It goes into the why of Active Directory, how to use it to perform basic tasks. This section would be useful for anyone in IT, not just cybersecurity, but properly utilizing Active Directory is essential to securing an organization.</p>
+
+<p>The next few sections are all about Metasploit, the security and penetration testing framework. The first section is Metasploit: Introduction. This is, as the title suggests, an introduction metasploit. It goes into just looking around when you type in msfconsole into the command line, while also setting all the options when you might use a certain exploit.</p>
+
+<p>Next up is Metasploit: Exploitation, which gives a little bit more hands-on experience with metasploit. This was a really helpful room for me, because it went over a lot of things that I didn’t know to do in metasploit. I didn’t know how to set up multiple workspaces, for example, and I was only slightly familiar with meterpreter, so getting more experience was nice.</p>
+
+<p>And the next room is Metasploit: Meterpreter, which is all about meterpreter. Meterpreter is kind of like a reverse shell on steroids. It adds a lot more functionality to a shell, and adds a lot more things to play around with. This room is all about using Meterpeter to find some secrets in a system. It walks you through most of it, but it does a good job of giving hands on skills.</p>
+
+<p>And the final room in this section is the culmination of everything learned. It is called Blue, and it is all about exploiting a vulnerable machine. It’s not meant to be a complete vulnerable machine, and it isn’t really meant to be super difficult, it is more meant to gain hands on practice.</p>
+
+<p>This machine is vulnerable to MS17–010, aka eternalblue. You exploit it using metasploit and a meterpreter shell, and you gain access and look for valuable information.</p>]]></content><author><name></name></author><category term="post" /><category term="hacking" /><category term="post" /><category term="hacking" /><summary type="html"><![CDATA[Welcome to 30 Days of TryHackMe, where I try to build a streak of learning through the cybersecurity training website TryHackMe. Today I am picking up where I left off on the Complete Beginner Pathway, and I am going to do the Windows Exploitation Basics section.]]></summary></entry><entry><title type="html">30 Days of THM: Day 5</title><link href="http://localhost:4000/cyber-turtle/post/hacking/tryhackme/2024/06/13/day_five_thm.html" rel="alternate" type="text/html" title="30 Days of THM: Day 5" /><published>2024-06-13T06:00:00-04:00</published><updated>2024-06-13T06:00:00-04:00</updated><id>http://localhost:4000/cyber-turtle/post/hacking/tryhackme/2024/06/13/day_five_thm</id><content type="html" xml:base="http://localhost:4000/cyber-turtle/post/hacking/tryhackme/2024/06/13/day_five_thm.html"><![CDATA[<p>30 Days of TryHackMe: Day 5
 Welcome to 30 Days of TryHackMe, where I try to build a streak of learning through the website TryHackMe. Today I am picking up right where I left off on the Complete Beginner Path and tackle Cryptography.</p>
 
 <p>The first room is Hashing — Crypto 101, a kind of introduction to the concept of cryptography. It goes over some definitions, and it goes over hashing. Hashing is taking an input of any size and creating a ‘digest’ of the input, of a fixed size. The output needs to be unique (even changing a little bit of the text should give out a new hash). A hash is, in theory, irreversible, but some hashes are more secure than others.</p>
@@ -393,70 +415,4 @@ As someone who was in the digital art world at the time, it was rather interesti
 
 <p>None of these things, on their own, would be a huge cause for alarm, except for the last three. However, for fake job emails, I usually see a few of them together.</p>
 
-<p>If you’re having trouble figuring out if a job posting is fake or not, in my experience if there is something about it that doesn’t look right, doing my research on the company will usually prove it to be real. Just personally speaking, if something looks too good to be true, it probably is too good to be true.</p>]]></content><author><name></name></author><category term="post" /><category term="phishing" /><category term="awareness" /><category term="post" /><category term="phishing" /><category term="awareness" /><summary type="html"><![CDATA[Around this time last year, I was a graphic designer and video editor. And one thing I learned while working in that field and trying to find freelance or W2 work, was that there were a lot of fake job postings.]]></summary></entry><entry><title type="html">Can you cheat while hacking? Jangow Walkthrough</title><link href="http://localhost:4000/cyber-turtle/post/hacking/2023/06/05/jangow_walkthrough.html" rel="alternate" type="text/html" title="Can you cheat while hacking? Jangow Walkthrough" /><published>2023-06-05T18:53:33-04:00</published><updated>2023-06-05T18:53:33-04:00</updated><id>http://localhost:4000/cyber-turtle/post/hacking/2023/06/05/jangow_walkthrough</id><content type="html" xml:base="http://localhost:4000/cyber-turtle/post/hacking/2023/06/05/jangow_walkthrough.html"><![CDATA[<p>Can You Cheat While Hacking? Jangow Walkthrough
-I want to get back into hacking. Jangow is a vulnerable machine rated as ‘easy’ on Vulnhub, so in order to get back into hacking I figured that a machine like that would be perfect.</p>
-
-<p>In a Capture the Flag like this, there are two flags to get. The first flag is the user flag, and the second is when the hacker gets to the root user.</p>
-
-<p>I first created a directory specifically for this machine. I wanted to make sure I put all the files in the same place, and document all my findings.</p>
-
-<p>The next step in this CTF was to get the IP address and make sure it was on the same network as my Kali Linux machine. I know the IP address was in the log in screen, but I did want to do it in a more “official” way. I did this using a simple nmap scan of the network.</p>
-
-<p>After I did that, I also saw that two ports were open. FTP on port 21 and HTTP on port 80. I then tried to see if I could log in to the FTP anonymously. Anonymous FTP logins use the username anonymous and any password, sometimes the anonymous user’s email as a way of documenting who is coming in and out.</p>
-
-<p>That didn’t work, so my next step was to check out the HTTP website. I inspected the page source for any kind of comments in the HTML and JavaScript, but there was nothing there.</p>
-
-<p>Bootstrap is a CSS framework, a way of easily formatting the appearance of a website.</p>
-
-<p>I noticed there was a link on the website to a page called “buscar”. I remembered enough Spanish to recognize it as such, but didn’t remember enough to translate (sorry to all my Spanish teachers from fifth grade to high school).</p>
-
-<p>This looked like this was a way of remote code execution, but I did want to gather a little bit more info.</p>
-
-<p>To do that, I first used nmap -sV to get the service versions of the FTP and HTTP, to see if there were any vulnerabilities.</p>
-
-<p>I then did a dirb scan of the website, although I will admit that I didn’t take a look at this afterwards.</p>
-
-<p>My next move was to actually open up Burpsuite and intercept a request on that buscar page, to play around with it and test if my theory was correct. I opened up the browser in Burpsuite, intercepted a request, and sent it to the repeater.</p>
-
-<p>My theory was correct. I executed whoami, and I got back ‘www-data’. I tested out a few more commands, and I used https://www.urlencoder.org/ to encode them.</p>
-
-<p>I got the /etc/passwd file, and saw the user jangow01. I checked out the /home directory, and saw that this user had a directory. I looked inside, and I found the user.txt flag. Encoding the command to open up that user.txt, I got the first flag.</p>
-
-<p>Important to know the version, and this comes to play later
-Next step was to try to establish a more permanent presence. I first tried to do this by establish a reverse shell.</p>
-
-<p>I have absolutely no idea why, but nothing I did worked. I first tried to do it through executing it through the URL, but that failed.</p>
-
-<p>So I took a look around and found this config.php file in a wordpress directory.</p>
-
-<p>Maybe those were the same credentials for the FTP?</p>
-
-<p>I tried to log in, first with that username and password, but that failed. I then used jangow01, and managed to get in.</p>
-
-<p>The next few steps were quite frustrating, because they were trying to establish a shell on the target machine, and each one failed.</p>
-
-<p>I first made a bash script on my Kali machine, used the FTP credentials to put it in the /tmp directory of the target machine and confirmed that it was on the target machine.</p>
-
-<p>Pro-Tip: Don’t name your reverse shell script ‘reverse_shell.sh’.
-When I tried to execute that file, it still failed.</p>
-
-<p>So at a loss, I decided to do one thing I didn’t really want to do when I started this, but it was quite necessary at this stage, because I had no idea why my efforts to establish a shell weren’t working.</p>
-
-<p>I logged in through the actual machine. Is that cheating? I don’t know, but I did it anyway.</p>
-
-<p>So having (technically) gotten access, I resolved to get to root. Through, researching the kernel version, I found this exploit for this kernel version. I downloaded it to my Kali machine first, compiled it on my kali machine, and used FTP to get it on the target machine.</p>
-
-<p>I don’t think ‘normal_elf’ is a particularly good name for malicious binaries either
-However, there were a few bumps in the road.</p>
-
-<p>First, while on the Jangow machine, I couldn’t use the ‘/’ key. When executing a binary, you need to type ‘./binary_name’. So that was the first problem.</p>
-
-<p>I managed to figure out a way around this, but to my chagrin I got the “version ‘glibc_2.34’ not found”. In this scenario, this just means I shouldn’t have compiled this binary on my Kali machine.</p>
-
-<p>So I went through this again, except I just put the source code on the target machine and compiled it there.</p>
-
-<p>But how did I get around not being able to use the ‘/’ key?</p>
-
-<p>I compiled the source code, which the output was a file named ‘a.out’. I don’t know why, but I wasn’t able to name the output file. I had to figure out a way to get ‘./a.out’ into the command line. I used the find command, and outputted the results of that to a text file.</p>
-
-<p>I then opened up the text file, and then used this ‘$(!!)’ to execute ‘./a.out’. This executed the a.out file, and I finally got to root.</p>]]></content><author><name></name></author><category term="post" /><category term="hacking" /><category term="post" /><category term="hacking" /><summary type="html"><![CDATA[Can You Cheat While Hacking? Jangow Walkthrough I want to get back into hacking. Jangow is a vulnerable machine rated as ‘easy’ on Vulnhub, so in order to get back into hacking I figured that a machine like that would be perfect.]]></summary></entry></feed>
+<p>If you’re having trouble figuring out if a job posting is fake or not, in my experience if there is something about it that doesn’t look right, doing my research on the company will usually prove it to be real. Just personally speaking, if something looks too good to be true, it probably is too good to be true.</p>]]></content><author><name></name></author><category term="post" /><category term="phishing" /><category term="awareness" /><category term="post" /><category term="phishing" /><category term="awareness" /><summary type="html"><![CDATA[Around this time last year, I was a graphic designer and video editor. And one thing I learned while working in that field and trying to find freelance or W2 work, was that there were a lot of fake job postings.]]></summary></entry></feed>
