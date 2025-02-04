@@ -3,7 +3,7 @@ layout: post
 title:  "A Secret Mission: ICA Vulnerable Machine Walkthrough"
 date:   2023-06-05 17:53:33 -0500
 categories: [post, hacking]
-tags: [post, hacking]
+tags: [post, hacking, medium]
 ---
 
 “According to information from our intelligence network, ICA is working on a secret project. We need to find out what the project is.

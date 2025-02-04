@@ -3,7 +3,7 @@ layout: post
 title:  "My Experience Working the Night Shift"
 date:   2023-10-08 17:53:33 -0500
 categories: [post, personal]
-tags: [post, personal]
+tags: [post, personal, medium]
 ---
 
 It was November of 2017. Eleven months after graduating from college, I was working in the job of nobody’s dreams: retail stock associate. Holiday season was fast approaching, and my manager at work approached me to ask a simple question.

@@ -1,0 +1,51 @@
+---
+layout: post
+title: "30 Days of THM Day 25"
+date: 2024-07-09 10:00:00 +0000
+categories: [post, hacking]
+tags: [post, hacking, medium]
+---
+
+Welcome back to 30 Days of TryHackMe, where I try to build a learning streak using the cybersecurity training platform, TryHackMe. Today, I am tackling the next room, SQL Injection. Here are some notes I took while going through this room.
+
+
+SQL stands for Structured Query Language, and a SQL injection is an attack on a web application database.
+
+A Database is a way of storing a collecting of data for a web application. It is controlled by a Database Management System. There are two types of Database Management Systems, relational and non-relation. SQL is the language that relational database management systems use to store this data. Within a Database Management System (DBMS), there can be multiple databases with related data. This data is stored in tables, made up of columns and rows.
+
+Columns have a unique name per table. When columns are created, the type of data it will contain can be set. Integers and strings are common types of data. This ensures that the correct type of data is stored in that column. These columns can have an auto-increment feature enabled, that gives each row of data a unique number that grows with each row.
+
+When data is added to a table, a new row/record is created, and when data is removed, a row/record is removed.
+
+The difference between relational and non-relational is that relational databases store information in tables, and they share information between each other. These tables have a column that is a unique ID that is used in other tables to reference it. Non-relational databases don’t use tables.
+
+SQL uses queries/statements to interact with the database. SELECT is a common command, and it is used to retrieve data. For example, ‘select * from users;’ tells the database that it wants to retrieve some data (in this case all data, since the * means all) from the table ‘users’. There is a clause, LIMIT, that forces the database to return only the specified rows of data. LIMIT 1 will return only 1 row, for example. There is also the WHERE clause, where we can specify data picked out more finely. For example, ‘select * from users where username=’tom’;’ will select all the data from the users table where the username is equal to ‘tom’. You can also combine the words ‘and’ and ‘or’, and ‘like’ to specify further.
+
+The UNION statement will combine the results of two or more SELECT queries to retrieve data. For example, ‘SELECT name,address,phone from customers UNION SELECT company,address,phone from suppliers;’.
+
+The INSERT statement tells the database to insert a new row of data into the table.
+
+The UPDATE statement tells the database to updata one or more rows of data within a table.
+
+The DELETE statement tells the database to delete one or more rows of data.
+
+A SQL injection is when user-provided data in a web application can get included into a SQL query. For example, say we have a website, http://sample.com/blog?id=1. When this URL is visited, the web application retrieves an article from the database, and uses a SQL statement like this:
+
+SELECT * from articles where id=1 and private=0 LIMIT 1;
+
+A SQL injection could look something like this:
+
+http://sample.com/blog?id=2;--
+
+The two dashes comments everything out after it, so the SQL query will look something like:
+
+SELECT * from articles where id=2; —
+
+In-Band SQL Injections are the easiest to detect and exploit. In-Band is a method of communication being used to exploit the vulnerability, for example discovering a SQL injection vulnerability and then being able to extract data from the website.
+
+Error-based SQL Injections are sql injections where errors are used to obtain information about the database.
+
+Union-Based SQL Injections utilize the UNION statement to return additional results to the page.
+
+Blind SQL injections are when we get little to no feedback from the screen because the error messages have been disabled.
+

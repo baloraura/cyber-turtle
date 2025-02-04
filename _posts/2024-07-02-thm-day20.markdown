@@ -1,0 +1,21 @@
+---
+layout: post
+title: "30 Days of THM Day 20"
+date: 2024-07-02 10:00:00 +0000
+categories: [post, hacking]
+tags: [post, hacking, medium]
+---
+
+Welcome back to 30 Days of TryHackMe, where I try to build a learning streak using the cybersecurity training platform TryHackMe. Today, I am sharing some notes on the next room in the Web Fundamentals section, IDOR.
+
+
+IDOR stands for Insecure Direct Object Reference. They occur when a web server places too much trust on user supplied input data to retrieve objects. If the data is not validated on the server-side, then there is an IDOR.
+
+For example, say you are going to an online store, onlinestore.com. You log in and you see your order, onlinestore.com/order/1353. If you change 1353 to another number, 1000, and you can see that order and it belongs to another user, then that is an IDOR vulnerability.
+
+Data is frequently encoded on websites. Data such as post data, query strings, or cookies. Raw data is frequently taken and encoded into an ASCII string to make sure web servers can understand it. The most common encoding technique is base64. There are plenty of online tools to decode this type of data, edit it, and then re-encode it.
+
+Hashing is irreversible, unlike encoding, and when IDs are hashed, they could be more difficult to deal with. However, there are websites, like crackstation, which has billions of hash values, that we can use in order to find matches for the hashes.
+
+If the ID can’t be detected using the above methods, then another way of IDOR detection is to create two different accounts, and try to swap ID numbers. If you can view one while still being logged in, then there is an IDOR.
+

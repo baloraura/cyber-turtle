@@ -3,7 +3,7 @@ layout: post
 title:  "Under the Wire Cyborg Walkthrough"
 date:   2023-05-16 17:53:33 -0500
 categories: [post, networking]
-tags: [post, networking]
+tags: [post, networking, medium]
 ---
 
 Networking Basics: Network Types

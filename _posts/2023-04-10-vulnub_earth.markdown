@@ -3,7 +3,7 @@ layout: post
 title: "Vulnhub Earth Walkthrough"
 date: 2023-04-10 10:00:00 +0000
 categories: [post, hacking]
-tags: [post, hacking]
+tags: [post, hacking, medium]
 ---
 This blog post will be focused on a walkthrough on hacking Vulnhub’s The Planets: Earth machine. There are two flags to be found according to the description: “a user and root flag which include an md5 hash”. The tools covered here will be nmap, dirb, and CyberChef.
 

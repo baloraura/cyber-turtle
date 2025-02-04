@@ -3,7 +3,7 @@ layout: post
 title: "Vulnhub Empire: Breakout"
 date: 2023-04-25 10:00:00 +0000
 categories: [post, hacking]
-tags: [post, hacking]
+tags: [post, hacking, medium]
 ---
 
 Vulnhub Empire: Breakout Walkthrough

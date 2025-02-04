@@ -1,0 +1,14 @@
+---
+layout: post
+title: "30 Days of THM Day 29"
+date: 2024-07-14 10:00:00 +0000
+categories: [post, hacking]
+tags: [post, hacking, medium]
+---
+
+Welcome back to 30 Days of TryHackMe, where I try to build a learning streak using the cybersecurity training platform TryHackMe. Today, I am continuing with the Web Fundamentals path with the final section in the path for me, Burp Suite: Extensions.
+
+If you want Burp to do other things, there are plenty of extensions out there. The documentation for extensions can be found here. This post is going to be more pictures than actual notes, because I didn’t think I needed to take that many notes for this room.
+
+I did however complete the Web Fundamentals pathway and earned the certificate.
+

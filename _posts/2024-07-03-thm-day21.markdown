@@ -1,0 +1,35 @@
+---
+layout: post
+title: "30 Days of THM Day 21"
+date: 2024-07-03 10:00:00 +0000
+categories: [post, hacking]
+tags: [post, hacking, medium]
+---
+
+Welcome back to 30 Days of TryHackMe, where I try to build a learning streak using the cybersecurity training platform, TryHackMe. Today, I am tackling the File Inclusion room.
+
+
+Web applications are sometimes written to request access to files on a given system using parameters. Parameters are strings attached to the URL that can retrieve data or perform actions.
+
+For example:
+http://mywebapp.com/get.php?file=user.txt
+
+To break this down:
+http — the protocol
+mywebapp.com — the domain name
+get.php — the file name
+? — the query string beginning
+file=user.txt — the parameters
+
+File inclusion vulnerabilities are when those programming languages for web applications do not sanitize or validate user input. When that happens, the user can pass any input to the function.
+
+Directory Traversal, or Path Traversal, is a web security vulnerability that allows an attacker to read local files on the server running the web application. When a user input is passed to a function, such as file_get_contents in PHP, and there is poor input validation, directory traversal vulnerabilities can occur.
+
+Path traversal attacks utilize the ‘../’ that you would use in a command line environment to change directories. They use the input to change the directory from the web application directory to look for other files.
+
+Local File Inclusion is when the web application exposes the files on the local server. The payload looks very similar to the path traversal, but the way it is set up, it will call any files to the current page.
+
+Remote File inclusion is like local file inclusion, but it is used to include remote files in a vulnerable application.
+
+Remediating these vulnerabilities includes keeping the web application updated, turning off PHP errors to avoid leaking any sensitive information. Web application firewalls can help mitigate attacks. Disabling PHP features that can cause file inclusion vulnerabilities. Never trusting user input, and implementing blacklisting.
+

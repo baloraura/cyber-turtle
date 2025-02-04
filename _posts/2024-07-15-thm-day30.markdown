@@ -1,0 +1,48 @@
+---
+layout: post
+title: "30 Days of THM Day 29"
+date: 2024-07-15 10:00:00 +0000
+categories: [post, hacking]
+tags: [post, hacking, medium]
+---
+
+Welcome back to the final day of 30 days of TryHackMe, where I have built a continuous learning streak on TryHackMe. Today, to end this series, I am doing the entire section of Introduction to Cyber Security, to see what kind of things I can learn about the cybersecurity industry.
+
+
+
+Offensive Security
+
+Offensive security is the process of hacking into systems and finding bugs and vulnerabilities so they can be fixed before a malicious hacker tries to exploit them. This is called Red Team. Some job titles in offensive security are Penetration Tester, Red Teamer, and Security Engineer.
+
+
+
+Defensive Security
+
+
+Defensive Security is all about preventing intrusions and detecting intrusions. This is called Blue Team. Defensive security includes cyber security awareness, patching, utilizing security devices, and logging and monitoring.
+
+A topic closely related to Defensive Security is the Security Operation Center, where a team of professionals will monitor the network. Threat intelligence is a part of a SOC, and it includes gathering information about potential adversaries.
+
+Another important area is Digital Forensics and Incident Response. Digital Forensics is analyzing evidence of an attack in the file system, system memory and logs, and network logs. Incident response is how an incident, such as a data breach or cyber attack (they can be less critical as well) is responded to. The four phases of an incident response are (1) preparation, (2) detection and analysis, (3) containment, eradication and recovery, and (4) post-incident activity.
+
+Malware analysis is learning about malicious programs and software, using either static analysis (inspecting without running it) or dynamic analysis (running in a controlled environment.
+
+
+Careers in Cyber
+
+Security Analyst — integral to constructing security measures across organizations.
+
+Security Engineer — develop and implement security solutions using threats and vulnerability data
+
+Incident Responder — respond to security breaches
+
+Digital Forensic Examiner — collecting and analyzing evidence to help solve crimes
+
+Malware Analyst — Analyzing suspicious programs, discovering what they do and writing reports
+
+Penetration Tester — testing the security of the systems and software within a company
+
+Red Teamer — like penetration testers, except testing the company’s detection and response capabilities
+
+
+The end of this section had a little quiz to see what kind of career you’d like, and I got Incident Responder. I thought I would’ve gotten Penetration Tester.

@@ -1,0 +1,33 @@
+---
+layout: post
+title: "30 Days of THM Day 26"
+date: 2024-07-10 10:00:00 +0000
+categories: [post, hacking]
+tags: [post, hacking, medium]
+---
+
+Welcome back to 30 Days of TryHackMe, where I try to build a learning streak using the cybersecurity training platform, TryHackMe. Today, still on the Web Fundamentals pathway, I am going to the next uncompleted section: Burp Suite. In the previous pathway, I completed Burp Suite: The Basics, and now I am going on to Burp Suite: Repeater.
+
+
+The Burp Suite Repeater enables us to modify and resend intercepted requests to a target. We can take the captured requests in the Burp Proxy and manipulate them, or we can create requests from scratch. This is useful for manual exploration of endpoints, and provides a graphical interface for crafting request payloads.
+
+The sections of the Repeater are:
+
+1. Request List
+
+2. Request Controls
+
+3. Request and Response View
+
+4. Layout Options
+
+5. Inspector
+
+6. Target
+
+Typically, the basic usage of the repeater involves capturing a request in the proxy, right clicking on the request and selecting send to repeater. Once in the repeater, the captured request is in the Request View. Then, we can click the Send button to see the Response view. We can update the Request and send again.
+
+We can also change the presentation of the request and response. Pretty is the default, and it takes the response and formats it. Raw is the unmodified response directly from the server. Hex allows us to examine the byte-level representation, and render allows us to see what the response would look like in a web browser.
+
+The Inspector is used for modifying, adding and removing items from the request. The Request Query Parameters refer to data sent to the server in a url. For example: http://webapp.com/?redirect=false, the query parameter redirect has a value of false. The Request Body Parameters is specific to POST requests. The Request Cookies contain a modifiable list of cookies. Request Headers enables us to view and modify headers sent with our requests. And Response Headers displays the headers returned by the server.
+

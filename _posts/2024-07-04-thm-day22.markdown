@@ -1,0 +1,30 @@
+---
+layout: post
+title: "30 Days of THM Day 22"
+date: 2024-07-04 10:00:00 +0000
+categories: [post, hacking]
+tags: [post, hacking, medium]
+---
+
+Welcome back to 30 Days of TryHackMe, where I try to build a learning streak using the cybersecurity training platform, TryHackMe. Today, I am tackling the next room in the Web Fundamentals path, Intro to SSRF.
+
+
+SSRF is server-side request forgery, and it is a vulnerability that allows the attacker to cause the webserver to make HTTP requests to a resource of the attacker’s choosing. The first type of SSRF are regular SSRF, where data is returned to the attacker’s screen. The second type of SSRF is blind SSRF, where even though the attack occurs, no information is returned to the attacker’s screen.
+
+As an example:
+Say there is an online store, store.com. You make a request to this store, http://store.com/stock?url=http://api.store.com/api/stock/item?id=123. Everything after url is expected. A hacker can change that to something like http://api.store.com/api/user, to get data about the user.
+
+A hacker could also utilize directory traversal in the requesting url to reach the desired pages. This would look something like ?url=/../user to retrieve user data.
+
+The server’s subdomain can also be controlled in a SSRF. This would look something like ?url=api.store.com/api/user&x=&id=111.
+
+There can also be requests to a webserver of the attacker’s choice. This would something like ?url=http://evil_domain.com/.
+
+SSRF can be found when there are full urls in the address bar, when there is a hidden value in a form, when there is a partial url such as a hostname, or there is a path in the url, such as /forms/contact.
+
+There are some checks to the SSRF vulnerabilities. There is a deny list, where requests are accepted apart from those that are matching a specific pattern. A specific endpoint that is blocked is the localhost (127.0.0.1). Attackers can bypass this by using alternatives for the localhost, such as 0.0.0.0.
+
+An allow list is where all requests are denied except those on a specific list or matching a pattern. An attacker can bypass this by creating a subdomain on an attacker’s domain name. For example, if https://target.this is using a deny list, a way around this would be https://target.this.attack.this.
+
+If neither of those bypasses work, the open redirect is another tool. An open redirect is an endpoint on the server where the visitor gets redirected to another website.
+

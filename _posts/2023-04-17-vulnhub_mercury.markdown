@@ -3,7 +3,7 @@ layout: post
 title: "The Planets: Mercury Walkthrough"
 date: 2023-04-17 10:00:00 +0000
 categories: [post, hacking]
-tags: [post, hacking]
+tags: [post, hacking, medium]
 ---
 
 When I went on to Vulnhub to look for a vulnerable machine to test my hacking skills, I found one called The Planets: Earth. I immediately started with that one, not knowing it was the third in a series. For this post, I’m going to be going through the first one, Mercury. I would eventually like to get to Venus at some point as well.

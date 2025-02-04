@@ -3,7 +3,7 @@ layout: post
 title: "30 Days of THM: Day 8"
 date: 2024-06-19 10:00:00 +0000
 categories: [post, hacking]
-tags: [post, hacking]
+tags: [post, hacking, tryhackme, medium]
 ---
 
 Welcome to 30 Days of TryHackMe, where I try to build a streak of learning about cybersecurity through the website TryHackMe. Today we are picking up where we left off on the complete beginner path in the room Common Linux Privesc. Privesc stands for privilege escalation.

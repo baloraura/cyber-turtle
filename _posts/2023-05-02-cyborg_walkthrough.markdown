@@ -3,7 +3,7 @@ layout: post
 title:  "Under the Wire Cyborg Walkthrough"
 date:   2023-05-02 17:53:33 -0500
 categories: [post, hacking]
-tags: [post, hacking]
+tags: [post, hacking, medium]
 ---
 
 In this post, I am going to be continuing my PowerShell training with a walkthrough of Under the Wire’s Cyborg. The goal of each level is to find the password for the next level using PS. I already have a walkthrough of the previous game, Century. To play these games, you will need an SSH client. I used the recommended Putty.

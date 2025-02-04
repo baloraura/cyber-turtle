@@ -1,0 +1,16 @@
+---
+layout: post
+title: "30 Days of THM Day 19"
+date: 2024-07-01 10:00:00 +0000
+categories: [post, hacking]
+tags: [post, hacking, medium, tryhackme]
+---
+
+Welcome back to 30 Days of TryHackMe, where I try to build a learning streak using the online cybersecurity platform, TryHackMe. Today, I am continuing on the Web Fundamentals pathway, with some notes from Authentication Bypass.
+
+Authentication is identifying the user correctly. This is usually done through usernames and passwords.
+
+Creating a list of valid usernames is helpful when trying to find authentication vulnerabilities. Sometimes a website will give errors when trying to sign up, such as ‘an account with this username already exists.’ We can use this error message to create a wordlist of usernames for brute forcing purposes.
+
+Taking advantage of logic flaws in the application are also a great way of bypassing authentication. Another way of bypassing authentication is through the manipulation of cookies. Some cookies are in plain text, something like ‘logged_in=true’. Other cookies are hashed, which would look something like “bd439a0add6eae840e37c990d6ac8971”. Other cookies are encoded, using base32 or base64. The point of encoding is to convert binary data to human-readable text.
+

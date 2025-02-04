@@ -3,7 +3,7 @@ layout: post
 title: "Active Directory Help Desk Lab"
 date: 2023-04-20 10:00:00 +0000
 categories: [post, active directory]
-tags: [post, active directory]
+tags: [post, active directory, medium]
 ---
 
 Active Directory Help Desk Lab: Using PowerShell

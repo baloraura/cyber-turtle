@@ -3,7 +3,7 @@ layout: post
 title: "30 Days of THM Day 11"
 date: 2024-06-22 10:00:00 +0000
 categories: [post, hacking]
-tags: [post, hacking]
+tags: [post, hacking, medium, tryhackme]
 ---
 
 Welcome to 30 Days of TryHackMe, where I try to build a learning streak using the online cybersecurity training platform, TryHackMe. Today, I will be tackling the next room in the Basic Computer Exploitation section.

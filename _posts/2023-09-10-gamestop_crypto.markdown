@@ -3,7 +3,7 @@ layout: post
 title:  "Gamestop's Crypto Push"
 date:   2023-09-10 17:53:33 -0500
 categories: [post]
-tags: [post]
+tags: [post, medium]
 ---
 
 It was around 2008 when my Playstation3 stopped working. I was 14 years old. My machine got the yellow light of death, and I had sent it to a video game repair company to try to fix it. They weren’t able to, and thanks to my teenage mind’s inability to figure out online payments, never even got my console back (but I also never paid for it!).

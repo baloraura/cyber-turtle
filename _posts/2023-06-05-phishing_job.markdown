@@ -3,7 +3,7 @@ layout: post
 title:  "Phishing: Fake Job Postings"
 date:   2023-06-05 17:53:33 -0500
 categories: [post, phishing, awareness]
-tags: [post, phishing, awareness]
+tags: [post, phishing, awareness, medium]
 ---
 
 Around this time last year, I was a graphic designer and video editor. And one thing I learned while working in that field and trying to find freelance or W2 work, was that there were a lot of fake job postings.

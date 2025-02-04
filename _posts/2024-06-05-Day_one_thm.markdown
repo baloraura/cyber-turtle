@@ -3,7 +3,7 @@ layout: post
 title: "30 Days of THM: Day 1"
 date: 2024-06-05 10:00:00 +0000
 categories: [post, hacking, tryhackme]
-tags: [post, hacking, tryhackme]
+tags: [post, hacking, tryhackme, medium]
 ---
 
 

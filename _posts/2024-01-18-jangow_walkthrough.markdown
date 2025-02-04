@@ -3,7 +3,7 @@ layout: post
 title:  "Can you cheat while hacking? Jangow Walkthrough"
 date:   2023-06-05 17:53:33 -0500
 categories: [post, hacking]
-tags: [post, hacking]
+tags: [post, hacking, medium]
 ---
 
 Can You Cheat While Hacking? Jangow Walkthrough

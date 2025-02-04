@@ -1,0 +1,25 @@
+---
+layout: post
+title: "30 Days of THM Day 28"
+date: 2024-07-13 10:00:00 +0000
+categories: [post, hacking]
+tags: [post, hacking, medium]
+---
+
+Welcome back to 30 Days of TryHackMe, where I try to build a learning streak using the cybersecurity training platform, TryHackMe. Today, I am going to continue in the Burp Suite section by tackling the module, Burp Suite: Other Modules. Here are some notes from that section.
+
+
+The ‘Other Modules’ in this case are the Decoder, Comparer, Sequencer, and Organizer tools.
+
+The Decoder gives the user data manipulation capabilities. It allows us to decode data intercepted, encode our own data, create hashsums of data. It also has the Smart Decode function, which decodes recursively until it is plaintext.
+
+
+
+The Comparer lets us compare two pieces of data, either by ASCII words or by bytes.
+
+
+The Sequencer allows us to evaluate and analyze the entropy or randomness of tokens such as session cookies or CSRF tokens.
+
+
+The Organizer Module is used to store and annotate copies of HTTP requests. This will keep track of the tool where you sent it from, the time, the method, and the path. This is very useful for keeping organized and saving interesting requests. These saved requests are read-only.
+

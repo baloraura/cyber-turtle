@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "30 Days of THM Day 16"
-date: 2024-06-28 10:00:00 +0000
+title: "30 Days of THM Day 17"
+date: 2024-06-29 10:00:00 +0000
 categories: [post, hacking]
-tags: [post, hacking]
+tags: [post, hacking, medium, tryhackme]
 ---
 
 

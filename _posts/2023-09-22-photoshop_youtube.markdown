@@ -3,7 +3,7 @@ layout: post
 title:  "Photoshop Youtube"
 date:   2023-09-22 17:53:33 -0500
 categories: [post, photoshop]
-tags: [post, photoshop]
+tags: [post, photoshop, medium]
 ---
 
 In around July of 2020, I purchased a subscription to the Adobe Creative Cloud in order to start learning more about Photoshop. My original goal was to learn a little bit about photo editing: color correction, portrait retouching, that kind of stuff. I had just returned to work after the Covid lockdowns were beginning to loosen up, was absolutely miserable at that job, and wanted a bit of a new creative outlet.

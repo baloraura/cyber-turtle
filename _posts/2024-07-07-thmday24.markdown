@@ -1,0 +1,23 @@
+---
+layout: post
+title: "30 Days of THM Day 24"
+date: 2024-07-07 10:00:00 +0000
+categories: [post, hacking]
+tags: [post, hacking, medium]
+---
+
+Welcome back to 30 Days of TryHackMe, where I try to build a learning streak using the cybersecurity training platform, TryHackMe. Today, I am tackling the next room of the Web Fundamentals path, Command Injection.
+
+
+Command injection is also known as Remote Code Execution. It is the ability to remotely execute code within an application. These vulnerabilities are attractive to an attacker because it means the attacker can interact directly with the vulnerable system.
+
+Applications often use functions in programming languages to pass data and make system calls on the machine’s operating system. This can often be what leads to the vulnerability.
+
+Command injections can be detected through blind command injections and verbose command injections. Blind command injections are where there is no direct output from the application when testing payloads. Verbose is when there is direct feedback from the application.
+
+When detecting blind command injections, the output is not immediately noticeable, so payloads with time delays are necessary. Ping and sleep are typical commands to test. Another way to detect is to use redirect operators such as the ‘>’ symbol.
+
+When detecting verbose command injections, it is arguably easier, since the output will be displayed on the web application.
+
+In the PHP language, many functions interact with the operating system to execute commands. Exec, passthru, system. Checking the data that is given to these functions is a way of remediating command injections. Sanitizing any input from a user is a great way to prevent command injections.
+

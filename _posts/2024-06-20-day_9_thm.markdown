@@ -3,7 +3,7 @@ layout: post
 title: "30 Days of THM Day 9"
 date: 2024-06-20 10:00:00 +0000
 categories: [post, hacking]
-tags: [post, hacking]
+tags: [post, hacking, tryhackme, medium]
 ---
 
 Welcome to 30 Days of TryHackMe, where I go through a room on the cybersecurity website TryHackMe every day. Today, the room I will be going through is the Linux Privesc room, a continuation of yesterday’s room, where the goal is to learn and gain experience with all sorts of privilege escalation techniques on Linux boxes.

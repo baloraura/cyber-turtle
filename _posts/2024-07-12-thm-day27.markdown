@@ -1,0 +1,47 @@
+---
+layout: post
+title: "30 Days of THM Day 27"
+date: 2024-07-12 10:00:00 +0000
+categories: [post, hacking]
+tags: [post, hacking, medium]
+---
+
+Welcome back to 30 Days of TryHackMe, where I try to build a learning streak using the cybersecurity training platform TryHackMe. Today, I am going to continue the Burp Suite section with the next section, Burp Suite: Intruder. Here are some notes from that section.
+
+
+The Intruder module allows automated request manipulation and enables tasks such as fuzzing and brute forcing. Fuzzing is an automated process of entering lots of data into a program and seeing what happens. Intruder is similar to command line tools like wfuzz and ffuf. Intruder in the Burp Community (free) Edition is rate-limited, so most security practitioners use those tools instead.
+
+The four sub-tabs within Intruder are:
+
+Positions
+
+
+Payloads
+
+
+Resource Pool
+
+Settings
+
+The Positions tab is for the locations where our payloads will be introduced/inserted. Those sections are highlighted in green and enclosed in this ‘§’ symbol.
+
+In the payloads tab we can create, assign, and configure payloads for the attack. The sections within the Positions tab are:
+
+Payload Sets, where we can figure a payload set.
+
+Payload Settings: provides options specific to the selected payload
+
+Payload Processing: we can define rules to be applied to each payload
+
+Payload Encoding: Allows us to customize the encoding options.
+
+There are a few different types of attacks:
+
+Sniper: cycles through the payloads, inserting one payload at a time into each position defined in the request.
+
+Battering Ram: sends all payloads simultaneously.
+
+Pitchfork: Enables the simultaneous test of multiple positions with different payloads. There are multiple payload sets defined, and each are associated with a specific position.
+
+Cluster Bomb: Performs a sniper-like attack on each position but simultaneously tests all payloads from each set.
+
